@@ -131,7 +131,7 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.cache/wt [current_project]
   set_property parent.project_path C:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.xpr [current_project]
-  set_property ip_repo_paths C:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/netlist/ip [current_project]
+  set_property ip_repo_paths C:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz-heun/netlist/ip [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

@@ -29,74 +29,72 @@
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
 -endlib
+-makelib ies_lib/lib_cdc_v1_0_2 \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
+-endlib
+-makelib ies_lib/proc_sys_reset_v5_0_13 \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_rst_ps7_0_100M_0/sim/design_1_rst_ps7_0_100M_0.vhd" \
+-endlib
 -makelib ies_lib/xbip_utils_v3_0_10 \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_c_addsub_v12_0_i0/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/c_reg_fd_v12_0_6 \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/hdl/c_reg_fd_v12_0_vh_rfs.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_c_addsub_v12_0_i0/hdl/c_reg_fd_v12_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/xbip_dsp48_wrapper_v3_0_4 \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_c_addsub_v12_0_i0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/xbip_pipe_v3_0_6 \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_c_addsub_v12_0_i0/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/xbip_dsp48_addsub_v3_0_6 \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_c_addsub_v12_0_i0/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/xbip_addsub_v3_0_6 \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/hdl/xbip_addsub_v3_0_vh_rfs.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_c_addsub_v12_0_i0/hdl/xbip_addsub_v3_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/c_addsub_v12_0_14 \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/hdl/c_addsub_v12_0_vh_rfs.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_c_addsub_v12_0_i0/hdl/c_addsub_v12_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/sim/lorenz_hardware_c_addsub_v12_0_i0.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i1/sim/lorenz_hardware_c_addsub_v12_0_i1.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i2/sim/lorenz_hardware_c_addsub_v12_0_i2.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i3/sim/lorenz_hardware_c_addsub_v12_0_i3.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i4/sim/lorenz_hardware_c_addsub_v12_0_i4.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i5/sim/lorenz_hardware_c_addsub_v12_0_i5.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i6/sim/lorenz_hardware_c_addsub_v12_0_i6.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i7/sim/lorenz_hardware_c_addsub_v12_0_i7.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i8/sim/lorenz_hardware_c_addsub_v12_0_i8.vhd" \
+  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_c_addsub_v12_0_i0/sim/lorenz_hardware_c_addsub_v12_0_i0.vhd" \
+  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_c_addsub_v12_0_i1/sim/lorenz_hardware_c_addsub_v12_0_i1.vhd" \
+  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_c_addsub_v12_0_i2/sim/lorenz_hardware_c_addsub_v12_0_i2.vhd" \
+  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_c_addsub_v12_0_i3/sim/lorenz_hardware_c_addsub_v12_0_i3.vhd" \
+  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_c_addsub_v12_0_i4/sim/lorenz_hardware_c_addsub_v12_0_i4.vhd" \
 -endlib
 -makelib ies_lib/xbip_bram18k_v3_0_6 \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i0/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i0/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/mult_gen_v12_0_16 \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i0/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i0/hdl/mult_gen_v12_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i0/sim/lorenz_hardware_mult_gen_v12_0_i0.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i1/sim/lorenz_hardware_mult_gen_v12_0_i1.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i10/sim/lorenz_hardware_mult_gen_v12_0_i10.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i11/sim/lorenz_hardware_mult_gen_v12_0_i11.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i2/sim/lorenz_hardware_mult_gen_v12_0_i2.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i3/sim/lorenz_hardware_mult_gen_v12_0_i3.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i4/sim/lorenz_hardware_mult_gen_v12_0_i4.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i5/sim/lorenz_hardware_mult_gen_v12_0_i5.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i6/sim/lorenz_hardware_mult_gen_v12_0_i6.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i7/sim/lorenz_hardware_mult_gen_v12_0_i7.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/sim/lorenz_hardware_mult_gen_v12_0_i8.vhd" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i9/sim/lorenz_hardware_mult_gen_v12_0_i9.vhd" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/conv_pkg.vhd" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/synth_reg.vhd" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/synth_reg_w_init.vhd" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/srl17e.vhd" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/srl33e.vhd" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/synth_reg_reg.vhd" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/single_reg_w_init.vhd" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/xlclockdriver_rd.vhd" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/lorenz_hardware_entity_declarations.vhd" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/lorenz_hardware.vhd" \
+  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i0/sim/lorenz_hardware_mult_gen_v12_0_i0.vhd" \
+  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i1/sim/lorenz_hardware_mult_gen_v12_0_i1.vhd" \
+  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i2/sim/lorenz_hardware_mult_gen_v12_0_i2.vhd" \
+  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i3/sim/lorenz_hardware_mult_gen_v12_0_i3.vhd" \
+  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i4/sim/lorenz_hardware_mult_gen_v12_0_i4.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/conv_pkg.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/synth_reg.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/synth_reg_w_init.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/srl17e.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/srl33e.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/synth_reg_reg.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/single_reg_w_init.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/xlclockdriver_rd.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/lorenz_hardware_entity_declarations.vhd" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/lorenz_hardware.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/lorenz_hardware_axi_lite_interface_verilog.v" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/synth_reg.v" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/synth_reg_w_init.v" \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6fef/hdl/convert_type.v" \
-  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_0/sim/design_1_lorenz_hardware_0_0.v" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/lorenz_hardware_axi_lite_interface_verilog.v" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/synth_reg.v" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/synth_reg_w_init.v" \
+  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/convert_type.v" \
+  "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/sim/design_1_lorenz_hardware_0_1.v" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
   "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -122,14 +120,7 @@
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 -endlib
--makelib ies_lib/lib_cdc_v1_0_2 \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
--endlib
--makelib ies_lib/proc_sys_reset_v5_0_13 \
-  "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
--endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_rst_ps7_0_100M_0/sim/design_1_rst_ps7_0_100M_0.vhd" \
   "../../../bd/design_1/sim/design_1.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \

@@ -83,7 +83,7 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_repo_paths c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/netlist/ip [current_project]
+set_property ip_repo_paths c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz-heun/netlist/ip [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -92,11 +92,11 @@ OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib C:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
 add_files C:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/constrs/lorenz_hardware.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/constrs/lorenz_hardware.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
