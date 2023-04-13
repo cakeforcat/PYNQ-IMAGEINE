@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Thu Apr  6 16:51:24 2023
---Host        : HALALSUCCESOR running 64-bit major release  (build 9200)
+--Date        : Wed Apr 12 16:39:54 2023
+--Host        : Laptopiszcze running 64-bit major release  (build 9200)
 --Command     : generate_target lorenz_hardware_bd_wrapper.bd
 --Design      : lorenz_hardware_bd_wrapper
 --Purpose     : IP block netlist
@@ -33,8 +33,7 @@ entity lorenz_hardware_bd_wrapper is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    test1 : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    FIXED_IO_ps_srstb : inout STD_LOGIC
   );
 end lorenz_hardware_bd_wrapper;
 
@@ -61,8 +60,7 @@ architecture STRUCTURE of lorenz_hardware_bd_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    test1 : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    FIXED_IO_ps_porb : inout STD_LOGIC
   );
   end component lorenz_hardware_bd;
 begin
@@ -88,7 +86,6 @@ lorenz_hardware_bd_i: component lorenz_hardware_bd
       FIXED_IO_mio(53 downto 0) => FIXED_IO_mio(53 downto 0),
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
-      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      test1(31 downto 0) => test1(31 downto 0)
+      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb
     );
 end STRUCTURE;

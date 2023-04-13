@@ -48,7 +48,7 @@
 
 
 // IP VLNV: User_Company:SysGen:lorenz_hardware:1.0
-// IP Revision: 311705465
+// IP Revision: 312137870
 
 `timescale 1ns/1ps
 
@@ -66,7 +66,6 @@ module design_1_lorenz_hardware_0_1 (
   lorenz_hardware_s_axi_araddr,
   lorenz_hardware_s_axi_arvalid,
   lorenz_hardware_s_axi_rready,
-  test1,
   lorenz_hardware_s_axi_awready,
   lorenz_hardware_s_axi_wready,
   lorenz_hardware_s_axi_bresp,
@@ -101,10 +100,6 @@ input wire [4 : 0] lorenz_hardware_s_axi_araddr;
 input wire lorenz_hardware_s_axi_arvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 lorenz_hardware_s_axi RREADY" *)
 input wire lorenz_hardware_s_axi_rready;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME test1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}}\
- value 24} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 test1 DATA" *)
-output wire [31 : 0] test1;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 lorenz_hardware_s_axi AWREADY" *)
 output wire lorenz_hardware_s_axi_awready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 lorenz_hardware_s_axi WREADY" *)
@@ -136,7 +131,6 @@ output wire lorenz_hardware_s_axi_rvalid;
     .lorenz_hardware_s_axi_araddr(lorenz_hardware_s_axi_araddr),
     .lorenz_hardware_s_axi_arvalid(lorenz_hardware_s_axi_arvalid),
     .lorenz_hardware_s_axi_rready(lorenz_hardware_s_axi_rready),
-    .test1(test1),
     .lorenz_hardware_s_axi_awready(lorenz_hardware_s_axi_awready),
     .lorenz_hardware_s_axi_wready(lorenz_hardware_s_axi_wready),
     .lorenz_hardware_s_axi_bresp(lorenz_hardware_s_axi_bresp),

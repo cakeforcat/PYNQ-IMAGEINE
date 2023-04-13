@@ -1,287 +1,412 @@
 {
-  'Line_1071' => {
-    'CodeInstance' => 'lorenz_hardware_struct/subsystem3/addsub18',
+  'Line_1047' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem2/addsub18',
     'Instance' => 'addsub18',
-    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem3/AddSub18'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem2/AddSub18'
   },
-  'Line_108' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/addsub4',
-    'Instance' => 'addsub4',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/AddSub4'
-  },
-  'Line_1102' => {
-    'CodeInstance' => 'lorenz_hardware_struct/subsystem3/addsub21',
+  'Line_1078' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem2/addsub21',
     'Instance' => 'addsub21',
-    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem3/AddSub21'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem2/AddSub21'
   },
-  'Line_1133' => {
-    'CodeInstance' => 'lorenz_hardware_struct/subsystem3/mult25',
-    'Instance' => 'mult25',
-    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem3/Mult25'
+  'Line_110' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/addsub4',
+    'Instance' => 'addsub4',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/AddSub4'
   },
-  'Line_1227' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1',
+  'Line_1109' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem2/cmult3',
+    'Instance' => 'cmult3',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem2/CMult3'
+  },
+  'Line_1142' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem2/delay',
+    'Instance' => 'delay',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem2/Delay'
+  },
+  'Line_1157' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem2/delay1',
+    'Instance' => 'delay1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem2/Delay1'
+  },
+  'Line_1206' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem3/addsub18',
+    'Instance' => 'addsub18',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem3/AddSub18'
+  },
+  'Line_1237' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem3/addsub21',
+    'Instance' => 'addsub21',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem3/AddSub21'
+  },
+  'Line_1268' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem3/cmult3',
+    'Instance' => 'cmult3',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem3/CMult3'
+  },
+  'Line_1301' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem3/delay',
+    'Instance' => 'delay',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem3/Delay'
+  },
+  'Line_1316' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem3/delay1',
+    'Instance' => 'delay1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem3/Delay1'
+  },
+  'Line_1400' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1',
     'Instance' => 'lorenz_derivatives1',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1'
   },
-  'Line_1238' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3',
-    'Instance' => 'lorenz_derivatives3',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3'
-  },
-  'Line_1249' => {
-    'CodeInstance' => 'lorenz_hardware_struct/subsystem1',
-    'Instance' => 'subsystem1',
-    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem1'
-  },
-  'Line_1259' => {
-    'CodeInstance' => 'lorenz_hardware_struct/subsystem2',
-    'Instance' => 'subsystem2',
-    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem2'
-  },
-  'Line_1269' => {
-    'CodeInstance' => 'lorenz_hardware_struct/subsystem3',
-    'Instance' => 'subsystem3',
-    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem3'
-  },
-  'Line_1279' => {
-    'CodeInstance' => 'lorenz_hardware_struct/addsub1',
-    'Instance' => 'addsub1',
-    'SimulinkInstance' => 'Lorenz_Hardware/AddSub1'
-  },
-  'Line_1310' => {
-    'CodeInstance' => 'lorenz_hardware_struct/addsub2',
-    'Instance' => 'addsub2',
-    'SimulinkInstance' => 'Lorenz_Hardware/AddSub2'
-  },
-  'Line_1341' => {
-    'CodeInstance' => 'lorenz_hardware_struct/addsub6',
-    'Instance' => 'addsub6',
-    'SimulinkInstance' => 'Lorenz_Hardware/AddSub6'
-  },
-  'Line_1372' => {
-    'CodeInstance' => 'lorenz_hardware_struct/mult2',
-    'Instance' => 'mult2',
-    'SimulinkInstance' => 'Lorenz_Hardware/Mult2'
-  },
-  'Line_139' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/addsub5',
+  'Line_141' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/addsub5',
     'Instance' => 'addsub5',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/AddSub5'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/AddSub5'
   },
-  'Line_1409' => {
-    'CodeInstance' => 'lorenz_hardware_struct/mult4',
-    'Instance' => 'mult4',
-    'SimulinkInstance' => 'Lorenz_Hardware/Mult4'
+  'Line_1411' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2',
+    'Instance' => 'lorenz_derivatives2',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2'
   },
-  'Line_1446' => {
-    'CodeInstance' => 'lorenz_hardware_struct/mult5',
-    'Instance' => 'mult5',
-    'SimulinkInstance' => 'Lorenz_Hardware/Mult5'
+  'Line_1422' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem1',
+    'Instance' => 'subsystem1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem1'
   },
-  'Line_1483' => {
-    'CodeInstance' => 'lorenz_hardware_struct/x2',
-    'Instance' => 'x2',
-    'SimulinkInstance' => 'Lorenz_Hardware/h//2'
+  'Line_1431' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem2',
+    'Instance' => 'subsystem2',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem2'
   },
-  'Line_1490' => {
-    'CodeInstance' => 'lorenz_hardware_struct/k1',
-    'Instance' => 'k1',
-    'SimulinkInstance' => 'Lorenz_Hardware/k1'
+  'Line_1440' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem3',
+    'Instance' => 'subsystem3',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem3'
   },
-  'Line_1505' => {
-    'CodeInstance' => 'lorenz_hardware_struct/k2',
-    'Instance' => 'k2',
-    'SimulinkInstance' => 'Lorenz_Hardware/k2'
+  'Line_1449' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/addsub1',
+    'Instance' => 'addsub1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/AddSub1'
   },
-  'Line_1520' => {
-    'CodeInstance' => 'lorenz_hardware_struct/l1',
-    'Instance' => 'l1',
-    'SimulinkInstance' => 'Lorenz_Hardware/l1'
+  'Line_1480' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/addsub2',
+    'Instance' => 'addsub2',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/AddSub2'
   },
-  'Line_1535' => {
-    'CodeInstance' => 'lorenz_hardware_struct/l2',
-    'Instance' => 'l2',
-    'SimulinkInstance' => 'Lorenz_Hardware/l2'
+  'Line_1511' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/addsub6',
+    'Instance' => 'addsub6',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/AddSub6'
   },
-  'Line_1550' => {
-    'CodeInstance' => 'lorenz_hardware_struct/m1',
-    'Instance' => 'm1',
-    'SimulinkInstance' => 'Lorenz_Hardware/m1'
+  'Line_1542' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/cmult1',
+    'Instance' => 'cmult1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/CMult1'
   },
-  'Line_1565' => {
-    'CodeInstance' => 'lorenz_hardware_struct/m2',
-    'Instance' => 'm2',
-    'SimulinkInstance' => 'Lorenz_Hardware/m2'
+  'Line_1575' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/delay',
+    'Instance' => 'delay',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Delay'
   },
-  'Line_1597' => {
+  'Line_1590' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/register_x0',
+    'Instance' => 'register_x0',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Register'
+  },
+  'Line_1603' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/register1',
+    'Instance' => 'register1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Register1'
+  },
+  'Line_1616' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/register10',
+    'Instance' => 'register10',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Register10'
+  },
+  'Line_1629' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/register11',
+    'Instance' => 'register11',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Register11'
+  },
+  'Line_1642' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/register2',
+    'Instance' => 'register2',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Register2'
+  },
+  'Line_1655' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/register3',
+    'Instance' => 'register3',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Register3'
+  },
+  'Line_1668' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/register4',
+    'Instance' => 'register4',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Register4'
+  },
+  'Line_1681' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/register5',
+    'Instance' => 'register5',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Register5'
+  },
+  'Line_1694' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/register6',
+    'Instance' => 'register6',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Register6'
+  },
+  'Line_1707' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/register7',
+    'Instance' => 'register7',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Register7'
+  },
+  'Line_172' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/cmult',
+    'Instance' => 'cmult',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/CMult'
+  },
+  'Line_1720' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/register8',
+    'Instance' => 'register8',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Register8'
+  },
+  'Line_1733' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/register9',
+    'Instance' => 'register9',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Register9'
+  },
+  'Line_1746' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/delay1',
+    'Instance' => 'delay1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Delay1'
+  },
+  'Line_1761' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/delay2',
+    'Instance' => 'delay2',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Delay2'
+  },
+  'Line_1776' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/delay3',
+    'Instance' => 'delay3',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Delay3'
+  },
+  'Line_1791' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/delay4',
+    'Instance' => 'delay4',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Delay4'
+  },
+  'Line_1806' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/delay5',
+    'Instance' => 'delay5',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Delay5'
+  },
+  'Line_1821' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/delay6',
+    'Instance' => 'delay6',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Delay6'
+  },
+  'Line_1836' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/delay7',
+    'Instance' => 'delay7',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Delay7'
+  },
+  'Line_1851' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/delay8',
+    'Instance' => 'delay8',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Delay8'
+  },
+  'Line_1866' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/cmult2',
+    'Instance' => 'cmult2',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/CMult2'
+  },
+  'Line_1899' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/cmult3',
+    'Instance' => 'cmult3',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/CMult3'
+  },
+  'Line_1968' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem',
+    'Instance' => 'subsystem',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem'
+  },
+  'Line_1996' => {
     'CodeInstance' => 'lorenz_hardware_default_clock_driver/clockdriver',
     'Instance' => 'clockdriver',
     'SimulinkInstance' => ''
   },
-  'Line_1652' => {
+  'Line_205' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/cmult1',
+    'Instance' => 'cmult1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/CMult1'
+  },
+  'Line_2050' => {
     'CodeInstance' => 'lorenz_hardware_axi_lite_interface',
     'Instance' => 'lorenz_hardware_axi_lite_interface',
     'SimulinkInstance' => ''
   },
-  'Line_1681' => {
+  'Line_2079' => {
     'CodeInstance' => 'lorenz_hardware_default_clock_driver',
     'Instance' => 'lorenz_hardware_default_clock_driver',
     'SimulinkInstance' => ''
   },
-  'Line_1689' => {
+  'Line_2087' => {
     'CodeInstance' => 'lorenz_hardware_struct',
     'Instance' => 'lorenz_hardware_struct',
     'SimulinkInstance' => 'Lorenz_Hardware'
   },
-  'Line_170' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/constant1',
-    'Instance' => 'constant1',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/Constant1'
+  'Line_238' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/cmult2',
+    'Instance' => 'cmult2',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/CMult2'
   },
-  'Line_177' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/constant3',
-    'Instance' => 'constant3',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/Constant3'
+  'Line_271' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/delay',
+    'Instance' => 'delay',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/Delay'
   },
-  'Line_184' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/constant5',
-    'Instance' => 'constant5',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/Constant5'
+  'Line_286' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/delay1',
+    'Instance' => 'delay1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/Delay1'
   },
-  'Line_191' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/mult1',
+  'Line_301' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/mult1',
     'Instance' => 'mult1',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/Mult1'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/Mult1'
   },
-  'Line_228' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/mult2',
-    'Instance' => 'mult2',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/Mult2'
-  },
-  'Line_265' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/mult3',
+  'Line_338' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/mult3',
     'Instance' => 'mult3',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/Mult3'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/Mult3'
   },
-  'Line_302' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/mult4',
-    'Instance' => 'mult4',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/Mult4'
+  'Line_375' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/register_x0',
+    'Instance' => 'register_x0',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/Register'
   },
-  'Line_339' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/mult6',
-    'Instance' => 'mult6',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/Mult6'
+  'Line_388' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/register1',
+    'Instance' => 'register1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/Register1'
   },
-  'Line_376' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/negate',
-    'Instance' => 'negate',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/Negate'
+  'Line_401' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/register14',
+    'Instance' => 'register14',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/Register14'
   },
-  'Line_430' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/addsub1',
+  'Line_414' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/register2',
+    'Instance' => 'register2',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/Register2'
+  },
+  'Line_475' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/addsub1',
     'Instance' => 'addsub1',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/AddSub1'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/AddSub1'
   },
-  'Line_46' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/addsub1',
+  'Line_48' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/addsub1',
     'Instance' => 'addsub1',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/AddSub1'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/AddSub1'
   },
-  'Line_461' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/addsub3',
+  'Line_506' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/addsub3',
     'Instance' => 'addsub3',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/AddSub3'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/AddSub3'
   },
-  'Line_492' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/addsub4',
+  'Line_537' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/addsub4',
     'Instance' => 'addsub4',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/AddSub4'
-  },
-  'Line_523' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/addsub5',
-    'Instance' => 'addsub5',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/AddSub5'
-  },
-  'Line_554' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/constant1',
-    'Instance' => 'constant1',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/Constant1'
-  },
-  'Line_561' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/constant3',
-    'Instance' => 'constant3',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/Constant3'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/AddSub4'
   },
   'Line_568' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/constant5',
-    'Instance' => 'constant5',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/Constant5'
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/addsub5',
+    'Instance' => 'addsub5',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/AddSub5'
   },
-  'Line_575' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/mult1',
+  'Line_599' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/cmult',
+    'Instance' => 'cmult',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/CMult'
+  },
+  'Line_632' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/cmult1',
+    'Instance' => 'cmult1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/CMult1'
+  },
+  'Line_665' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/cmult2',
+    'Instance' => 'cmult2',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/CMult2'
+  },
+  'Line_698' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/delay',
+    'Instance' => 'delay',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/Delay'
+  },
+  'Line_713' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/delay1',
+    'Instance' => 'delay1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/Delay1'
+  },
+  'Line_728' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/mult1',
     'Instance' => 'mult1',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/Mult1'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/Mult1'
   },
-  'Line_612' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/mult2',
-    'Instance' => 'mult2',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/Mult2'
-  },
-  'Line_649' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/mult3',
+  'Line_765' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/mult3',
     'Instance' => 'mult3',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/Mult3'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/Mult3'
   },
-  'Line_686' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/mult4',
-    'Instance' => 'mult4',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/Mult4'
-  },
-  'Line_723' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/mult6',
-    'Instance' => 'mult6',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/Mult6'
-  },
-  'Line_760' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives3/negate',
-    'Instance' => 'negate',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives3/Negate'
-  },
-  'Line_77' => {
-    'CodeInstance' => 'lorenz_hardware_struct/lorenz_derivatives1/addsub3',
+  'Line_79' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives1/addsub3',
     'Instance' => 'addsub3',
-    'SimulinkInstance' => 'Lorenz_Hardware/Lorenz derivatives1/AddSub3'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives1/AddSub3'
   },
-  'Line_803' => {
-    'CodeInstance' => 'lorenz_hardware_struct/subsystem1/addsub18',
+  'Line_802' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/register_x0',
+    'Instance' => 'register_x0',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/Register'
+  },
+  'Line_815' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/register1',
+    'Instance' => 'register1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/Register1'
+  },
+  'Line_828' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/register14',
+    'Instance' => 'register14',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/Register14'
+  },
+  'Line_841' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/lorenz_derivatives2/register2',
+    'Instance' => 'register2',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Lorenz derivatives2/Register2'
+  },
+  'Line_888' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem1/addsub18',
     'Instance' => 'addsub18',
-    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem1/AddSub18'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem1/AddSub18'
   },
-  'Line_834' => {
-    'CodeInstance' => 'lorenz_hardware_struct/subsystem1/addsub21',
+  'Line_919' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem1/addsub21',
     'Instance' => 'addsub21',
-    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem1/AddSub21'
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem1/AddSub21'
   },
-  'Line_865' => {
-    'CodeInstance' => 'lorenz_hardware_struct/subsystem1/mult25',
-    'Instance' => 'mult25',
-    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem1/Mult25'
+  'Line_950' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem1/cmult3',
+    'Instance' => 'cmult3',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem1/CMult3'
   },
-  'Line_937' => {
-    'CodeInstance' => 'lorenz_hardware_struct/subsystem2/addsub18',
-    'Instance' => 'addsub18',
-    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem2/AddSub18'
+  'Line_983' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem1/delay',
+    'Instance' => 'delay',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem1/Delay'
   },
-  'Line_968' => {
-    'CodeInstance' => 'lorenz_hardware_struct/subsystem2/addsub21',
-    'Instance' => 'addsub21',
-    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem2/AddSub21'
-  },
-  'Line_999' => {
-    'CodeInstance' => 'lorenz_hardware_struct/subsystem2/mult25',
-    'Instance' => 'mult25',
-    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem2/Mult25'
+  'Line_998' => {
+    'CodeInstance' => 'lorenz_hardware_struct/subsystem/subsystem1/delay1',
+    'Instance' => 'delay1',
+    'SimulinkInstance' => 'Lorenz_Hardware/Subsystem/Subsystem1/Delay1'
   }
 }

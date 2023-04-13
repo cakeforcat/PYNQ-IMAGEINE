@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x1225907DDB644964",
+      "boundary_crc": "0xCC6CFA53C0928857",
       "design_src": "SYSGEN",
       "device": "xc7z020clg400-1",
       "name": "lorenz_hardware_bd",
@@ -82,20 +82,6 @@
           "CAN_DEBUG": {
             "value": "false",
             "value_src": "default"
-          }
-        }
-      }
-    },
-    "ports": {
-      "test1": {
-        "type": "data",
-        "direction": "O",
-        "left": "31",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}",
-            "value_src": "const_prop"
           }
         }
       }
@@ -364,16 +350,16 @@
               }
             },
             "interface_nets": {
-              "s00_couplers_to_auto_pc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
               "auto_pc_to_s00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_pc/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_pc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_pc/S_AXI"
                 ]
               }
             },
@@ -394,16 +380,16 @@
           }
         },
         "interface_nets": {
-          "processing_system_1_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
           "s00_couplers_to_processing_system_1_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "s00_couplers/M_AXI"
+            ]
+          },
+          "processing_system_1_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           }
         },
@@ -440,6 +426,12 @@
       }
     },
     "interface_nets": {
+      "processing_system_1_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "processing_system_1_axi_periph/M00_AXI",
+          "lorenz_hardware_1/lorenz_hardware_s_axi"
+        ]
+      },
       "processing_system_1_DDR": {
         "interface_ports": [
           "DDR",
@@ -456,12 +448,6 @@
         "interface_ports": [
           "processing_system_1/M_AXI_GP0",
           "processing_system_1_axi_periph/S00_AXI"
-        ]
-      },
-      "processing_system_1_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "processing_system_1_axi_periph/M00_AXI",
-          "lorenz_hardware_1/lorenz_hardware_s_axi"
         ]
       }
     },
@@ -490,12 +476,6 @@
           "lorenz_hardware_1/lorenz_hardware_aresetn",
           "processing_system_1_axi_periph/M00_ARESETN",
           "processing_system_1_axi_periph/ARESETN"
-        ]
-      },
-      "lorenz_hardware_1_test1": {
-        "ports": [
-          "lorenz_hardware_1/test1",
-          "test1"
         ]
       }
     },

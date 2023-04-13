@@ -11,7 +11,6 @@
     lorenz_hardware_s_axi_araddr => lorenz_hardware_s_axi_araddr,
     lorenz_hardware_s_axi_arvalid => lorenz_hardware_s_axi_arvalid,
     lorenz_hardware_s_axi_rready => lorenz_hardware_s_axi_rready,
-    test1 => test1,
     lorenz_hardware_s_axi_awready => lorenz_hardware_s_axi_awready,
     lorenz_hardware_s_axi_wready => lorenz_hardware_s_axi_wready,
     lorenz_hardware_s_axi_bresp => lorenz_hardware_s_axi_bresp,

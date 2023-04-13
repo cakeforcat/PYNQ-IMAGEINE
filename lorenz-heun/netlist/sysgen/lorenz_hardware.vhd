@@ -1,4 +1,4 @@
--- Generated from Simulink block Lorenz_Hardware/Lorenz derivatives1
+-- Generated from Simulink block Lorenz_Hardware/Subsystem/Lorenz derivatives1
 library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
@@ -16,28 +16,30 @@ entity lorenz_hardware_lorenz_derivatives1 is
   );
 end lorenz_hardware_lorenz_derivatives1;
 architecture structural of lorenz_hardware_lorenz_derivatives1 is 
-  signal mult3_p_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub1_s_net : std_logic_vector( 32-1 downto 0 );
-  signal x_net : std_logic_vector( 32-1 downto 0 );
-  signal ce_net : std_logic;
-  signal constant1_op_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub4_s_net : std_logic_vector( 33-1 downto 0 );
-  signal mult2_p_net : std_logic_vector( 32-1 downto 0 );
-  signal mult6_p_net : std_logic_vector( 32-1 downto 0 );
-  signal mult4_p_net : std_logic_vector( 32-1 downto 0 );
-  signal z_net : std_logic_vector( 32-1 downto 0 );
-  signal clk_net : std_logic;
-  signal mult1_p_net : std_logic_vector( 32-1 downto 0 );
   signal y_net : std_logic_vector( 32-1 downto 0 );
+  signal clk_net : std_logic;
+  signal mult3_p_net : std_logic_vector( 32-1 downto 0 );
+  signal z_net : std_logic_vector( 32-1 downto 0 );
+  signal x_net : std_logic_vector( 32-1 downto 0 );
+  signal register14_q_net : std_logic_vector( 33-1 downto 0 );
+  signal addsub1_s_net : std_logic_vector( 32-1 downto 0 );
+  signal mult1_p_net : std_logic_vector( 32-1 downto 0 );
+  signal delay1_q_net : std_logic_vector( 32-1 downto 0 );
   signal addsub3_s_net : std_logic_vector( 33-1 downto 0 );
+  signal cmult1_p_net : std_logic_vector( 32-1 downto 0 );
+  signal delay_q_net : std_logic_vector( 32-1 downto 0 );
   signal addsub5_s_net : std_logic_vector( 33-1 downto 0 );
-  signal negate_op_net : std_logic_vector( 32-1 downto 0 );
-  signal constant3_op_net : std_logic_vector( 10-1 downto 0 );
-  signal constant5_op_net : std_logic_vector( 10-1 downto 0 );
+  signal addsub4_s_net : std_logic_vector( 33-1 downto 0 );
+  signal ce_net : std_logic;
+  signal cmult2_p_net : std_logic_vector( 32-1 downto 0 );
+  signal cmult_p_net : std_logic_vector( 32-1 downto 0 );
+  signal register1_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register2_q_net : std_logic_vector( 32-1 downto 0 );
 begin
-  dx <= mult4_p_net;
+  dx <= cmult1_p_net;
   dy <= addsub5_s_net;
-  dz <= addsub4_s_net;
+  dz <= register14_q_net;
   x_net <= x;
   y_net <= y;
   z_net <= z;
@@ -52,13 +54,13 @@ begin
     b_bin_pt => 24,
     b_width => 32,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 33,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i0",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 33,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -68,8 +70,8 @@ begin
   port map (
     clr => '0',
     en => "1",
-    a => mult1_p_net,
-    b => mult2_p_net,
+    a => delay1_q_net,
+    b => mult1_p_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub1_s_net
@@ -83,13 +85,13 @@ begin
     b_bin_pt => 24,
     b_width => 32,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 33,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i1",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 33,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -99,8 +101,8 @@ begin
   port map (
     clr => '0',
     en => "1",
-    a => y_net,
-    b => x_net,
+    a => delay1_q_net,
+    b => delay_q_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub3_s_net
@@ -114,13 +116,13 @@ begin
     b_bin_pt => 24,
     b_width => 32,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 33,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i1",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 33,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -131,7 +133,7 @@ begin
     clr => '0',
     en => "1",
     a => mult3_p_net,
-    b => mult6_p_net,
+    b => cmult2_p_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub4_s_net
@@ -145,13 +147,13 @@ begin
     b_bin_pt => 24,
     b_width => 32,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 33,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i1",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 33,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -161,32 +163,140 @@ begin
   port map (
     clr => '0',
     en => "1",
-    a => addsub1_s_net,
-    b => y_net,
+    a => cmult_p_net,
+    b => addsub1_s_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub5_s_net
   );
-  constant1 : entity xil_defaultlib.sysgen_constant_f556625018 
+  cmult : entity xil_defaultlib.lorenz_hardware_xlcmult 
+  generic map (
+    a_arith => xlSigned,
+    a_bin_pt => 24,
+    a_width => 32,
+    b_bin_pt => 0,
+    c_a_type => 0,
+    c_a_width => 32,
+    c_b_type => 1,
+    c_b_width => 5,
+    c_output_width => 37,
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i2",
+    extra_registers => 0,
+    multsign => 2,
+    overflow => 2,
+    p_arith => xlSigned,
+    p_bin_pt => 24,
+    p_width => 32,
+    quantization => 1,
+    zero_const => 0
+  )
   port map (
-    clk => '0',
-    ce => '0',
     clr => '0',
-    op => constant1_op_net
+    core_clr => '1',
+    en => "1",
+    rst => "0",
+    a => delay_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    core_clk => clk_net,
+    core_ce => ce_net,
+    p => cmult_p_net
   );
-  constant3 : entity xil_defaultlib.sysgen_constant_a2a0d372de 
+  cmult1 : entity xil_defaultlib.lorenz_hardware_xlcmult 
+  generic map (
+    a_arith => xlSigned,
+    a_bin_pt => 24,
+    a_width => 33,
+    b_bin_pt => 0,
+    c_a_type => 0,
+    c_a_width => 33,
+    c_b_type => 1,
+    c_b_width => 4,
+    c_output_width => 37,
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i3",
+    extra_registers => 0,
+    multsign => 2,
+    overflow => 2,
+    p_arith => xlSigned,
+    p_bin_pt => 24,
+    p_width => 32,
+    quantization => 1,
+    zero_const => 0
+  )
   port map (
-    clk => '0',
-    ce => '0',
     clr => '0',
-    op => constant3_op_net
+    core_clr => '1',
+    en => "1",
+    rst => "0",
+    a => addsub3_s_net,
+    clk => clk_net,
+    ce => ce_net,
+    core_clk => clk_net,
+    core_ce => ce_net,
+    p => cmult1_p_net
   );
-  constant5 : entity xil_defaultlib.sysgen_constant_4124fe8b13 
+  cmult2 : entity xil_defaultlib.lorenz_hardware_xlcmult 
+  generic map (
+    a_arith => xlSigned,
+    a_bin_pt => 24,
+    a_width => 32,
+    b_bin_pt => 56,
+    c_a_type => 0,
+    c_a_width => 32,
+    c_b_type => 1,
+    c_b_width => 64,
+    c_output_width => 96,
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i4",
+    extra_registers => 0,
+    multsign => 2,
+    overflow => 2,
+    p_arith => xlSigned,
+    p_bin_pt => 24,
+    p_width => 32,
+    quantization => 1,
+    zero_const => 0
+  )
   port map (
-    clk => '0',
-    ce => '0',
     clr => '0',
-    op => constant5_op_net
+    core_clr => '1',
+    en => "1",
+    rst => "0",
+    a => register1_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    core_clk => clk_net,
+    core_ce => ce_net,
+    p => cmult2_p_net
+  );
+  delay : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 3,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => register_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay_q_net
+  );
+  delay1 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 3,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => register2_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay1_q_net
   );
   mult1 : entity xil_defaultlib.lorenz_hardware_xlmult 
   generic map (
@@ -203,7 +313,7 @@ begin
     c_baat => 32,
     c_output_width => 64,
     c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i1",
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i5",
     extra_registers => 0,
     multsign => 2,
     overflow => 1,
@@ -217,50 +327,13 @@ begin
     core_clr => '1',
     en => "1",
     rst => "0",
-    a => negate_op_net,
-    b => z_net,
+    a => register_q_net,
+    b => register1_q_net,
     clk => clk_net,
     ce => ce_net,
     core_clk => clk_net,
     core_ce => ce_net,
     p => mult1_p_net
-  );
-  mult2 : entity xil_defaultlib.lorenz_hardware_xlmult 
-  generic map (
-    a_arith => xlSigned,
-    a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
-    b_bin_pt => 4,
-    b_width => 10,
-    c_a_type => 0,
-    c_a_width => 32,
-    c_b_type => 0,
-    c_b_width => 10,
-    c_baat => 32,
-    c_output_width => 42,
-    c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i2",
-    extra_registers => 0,
-    multsign => 2,
-    overflow => 1,
-    p_arith => xlSigned,
-    p_bin_pt => 24,
-    p_width => 32,
-    quantization => 1
-  )
-  port map (
-    clr => '0',
-    core_clr => '1',
-    en => "1",
-    rst => "0",
-    a => x_net,
-    b => constant5_op_net,
-    clk => clk_net,
-    ce => ce_net,
-    core_clk => clk_net,
-    core_ce => ce_net,
-    p => mult2_p_net
   );
   mult3 : entity xil_defaultlib.lorenz_hardware_xlmult 
   generic map (
@@ -277,7 +350,7 @@ begin
     c_baat => 32,
     c_output_width => 64,
     c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i1",
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i5",
     extra_registers => 0,
     multsign => 2,
     overflow => 1,
@@ -291,103 +364,73 @@ begin
     core_clr => '1',
     en => "1",
     rst => "0",
-    a => x_net,
-    b => y_net,
+    a => register_q_net,
+    b => register2_q_net,
     clk => clk_net,
     ce => ce_net,
     core_clk => clk_net,
     core_ce => ce_net,
     p => mult3_p_net
   );
-  mult4 : entity xil_defaultlib.lorenz_hardware_xlmult 
+  register_x0 : entity xil_defaultlib.lorenz_hardware_xlregister 
   generic map (
-    a_arith => xlSigned,
-    a_bin_pt => 24,
-    a_width => 33,
-    b_arith => xlSigned,
-    b_bin_pt => 4,
-    b_width => 10,
-    c_a_type => 0,
-    c_a_width => 33,
-    c_b_type => 0,
-    c_b_width => 10,
-    c_baat => 33,
-    c_output_width => 43,
-    c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i3",
-    extra_registers => 0,
-    multsign => 2,
-    overflow => 1,
-    p_arith => xlSigned,
-    p_bin_pt => 24,
-    p_width => 32,
-    quantization => 1
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
   )
   port map (
-    clr => '0',
-    core_clr => '1',
     en => "1",
     rst => "0",
-    a => addsub3_s_net,
-    b => constant3_op_net,
+    d => x_net,
     clk => clk_net,
     ce => ce_net,
-    core_clk => clk_net,
-    core_ce => ce_net,
-    p => mult4_p_net
+    q => register_q_net
   );
-  mult6 : entity xil_defaultlib.lorenz_hardware_xlmult 
+  register1 : entity xil_defaultlib.lorenz_hardware_xlregister 
   generic map (
-    a_arith => xlSigned,
-    a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
-    b_bin_pt => 24,
-    b_width => 32,
-    c_a_type => 0,
-    c_a_width => 32,
-    c_b_type => 0,
-    c_b_width => 32,
-    c_baat => 32,
-    c_output_width => 64,
-    c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i1",
-    extra_registers => 0,
-    multsign => 2,
-    overflow => 1,
-    p_arith => xlSigned,
-    p_bin_pt => 24,
-    p_width => 32,
-    quantization => 1
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
   )
   port map (
-    clr => '0',
-    core_clr => '1',
     en => "1",
     rst => "0",
-    a => constant1_op_net,
-    b => z_net,
+    d => z_net,
     clk => clk_net,
     ce => ce_net,
-    core_clk => clk_net,
-    core_ce => ce_net,
-    p => mult6_p_net
+    q => register1_q_net
   );
-  negate : entity xil_defaultlib.sysgen_negate_da04cdf96e 
+  register14 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 33,
+    init_value => b"000000000000000000000000000000000"
+  )
   port map (
-    clr => '0',
-    ip => x_net,
+    en => "1",
+    rst => "0",
+    d => addsub4_s_net,
     clk => clk_net,
     ce => ce_net,
-    op => negate_op_net
+    q => register14_q_net
+  );
+  register2 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => y_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => register2_q_net
   );
 end structural;
--- Generated from Simulink block Lorenz_Hardware/Lorenz derivatives3
+-- Generated from Simulink block Lorenz_Hardware/Subsystem/Lorenz derivatives2
 library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
-entity lorenz_hardware_lorenz_derivatives3 is
+entity lorenz_hardware_lorenz_derivatives2 is
   port (
     x : in std_logic_vector( 32-1 downto 0 );
     y : in std_logic_vector( 32-1 downto 0 );
@@ -398,30 +441,32 @@ entity lorenz_hardware_lorenz_derivatives3 is
     dy : out std_logic_vector( 33-1 downto 0 );
     dz : out std_logic_vector( 33-1 downto 0 )
   );
-end lorenz_hardware_lorenz_derivatives3;
-architecture structural of lorenz_hardware_lorenz_derivatives3 is 
-  signal mult4_p_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub2_s_net : std_logic_vector( 32-1 downto 0 );
-  signal mult2_p_net : std_logic_vector( 32-1 downto 0 );
-  signal mult3_p_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub4_s_net : std_logic_vector( 33-1 downto 0 );
-  signal ce_net : std_logic;
-  signal mult6_p_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub6_s_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub1_s_net_x0 : std_logic_vector( 32-1 downto 0 );
-  signal mult1_p_net : std_logic_vector( 32-1 downto 0 );
-  signal constant1_op_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub1_s_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub3_s_net : std_logic_vector( 33-1 downto 0 );
-  signal clk_net : std_logic;
-  signal constant3_op_net : std_logic_vector( 10-1 downto 0 );
+end lorenz_hardware_lorenz_derivatives2;
+architecture structural of lorenz_hardware_lorenz_derivatives2 is 
   signal addsub5_s_net : std_logic_vector( 33-1 downto 0 );
-  signal negate_op_net : std_logic_vector( 32-1 downto 0 );
-  signal constant5_op_net : std_logic_vector( 10-1 downto 0 );
+  signal addsub1_s_net_x0 : std_logic_vector( 32-1 downto 0 );
+  signal clk_net : std_logic;
+  signal addsub6_s_net : std_logic_vector( 32-1 downto 0 );
+  signal ce_net : std_logic;
+  signal addsub1_s_net : std_logic_vector( 32-1 downto 0 );
+  signal addsub2_s_net : std_logic_vector( 32-1 downto 0 );
+  signal register14_q_net : std_logic_vector( 33-1 downto 0 );
+  signal delay_q_net : std_logic_vector( 32-1 downto 0 );
+  signal addsub3_s_net : std_logic_vector( 33-1 downto 0 );
+  signal addsub4_s_net : std_logic_vector( 33-1 downto 0 );
+  signal cmult_p_net : std_logic_vector( 32-1 downto 0 );
+  signal delay1_q_net : std_logic_vector( 32-1 downto 0 );
+  signal mult1_p_net : std_logic_vector( 32-1 downto 0 );
+  signal cmult2_p_net : std_logic_vector( 32-1 downto 0 );
+  signal mult3_p_net : std_logic_vector( 32-1 downto 0 );
+  signal register1_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register2_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register_q_net : std_logic_vector( 32-1 downto 0 );
+  signal cmult1_p_net : std_logic_vector( 32-1 downto 0 );
 begin
-  dx <= mult4_p_net;
+  dx <= cmult1_p_net;
   dy <= addsub5_s_net;
-  dz <= addsub4_s_net;
+  dz <= register14_q_net;
   addsub2_s_net <= x;
   addsub1_s_net_x0 <= y;
   addsub6_s_net <= z;
@@ -436,13 +481,13 @@ begin
     b_bin_pt => 24,
     b_width => 32,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 33,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i0",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 33,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -452,8 +497,8 @@ begin
   port map (
     clr => '0',
     en => "1",
-    a => mult1_p_net,
-    b => mult2_p_net,
+    a => delay1_q_net,
+    b => mult1_p_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub1_s_net
@@ -467,13 +512,13 @@ begin
     b_bin_pt => 24,
     b_width => 32,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 33,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i1",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 33,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -483,8 +528,8 @@ begin
   port map (
     clr => '0',
     en => "1",
-    a => addsub1_s_net_x0,
-    b => addsub2_s_net,
+    a => delay1_q_net,
+    b => delay_q_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub3_s_net
@@ -498,13 +543,13 @@ begin
     b_bin_pt => 24,
     b_width => 32,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 33,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i1",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 33,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -515,7 +560,7 @@ begin
     clr => '0',
     en => "1",
     a => mult3_p_net,
-    b => mult6_p_net,
+    b => cmult2_p_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub4_s_net
@@ -529,13 +574,13 @@ begin
     b_bin_pt => 24,
     b_width => 32,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 33,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i1",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 33,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -545,32 +590,140 @@ begin
   port map (
     clr => '0',
     en => "1",
-    a => addsub1_s_net,
-    b => addsub1_s_net_x0,
+    a => cmult_p_net,
+    b => addsub1_s_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub5_s_net
   );
-  constant1 : entity xil_defaultlib.sysgen_constant_f556625018 
+  cmult : entity xil_defaultlib.lorenz_hardware_xlcmult 
+  generic map (
+    a_arith => xlSigned,
+    a_bin_pt => 24,
+    a_width => 32,
+    b_bin_pt => 0,
+    c_a_type => 0,
+    c_a_width => 32,
+    c_b_type => 1,
+    c_b_width => 5,
+    c_output_width => 37,
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i2",
+    extra_registers => 0,
+    multsign => 2,
+    overflow => 2,
+    p_arith => xlSigned,
+    p_bin_pt => 24,
+    p_width => 32,
+    quantization => 1,
+    zero_const => 0
+  )
   port map (
-    clk => '0',
-    ce => '0',
     clr => '0',
-    op => constant1_op_net
+    core_clr => '1',
+    en => "1",
+    rst => "0",
+    a => delay_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    core_clk => clk_net,
+    core_ce => ce_net,
+    p => cmult_p_net
   );
-  constant3 : entity xil_defaultlib.sysgen_constant_a2a0d372de 
+  cmult1 : entity xil_defaultlib.lorenz_hardware_xlcmult 
+  generic map (
+    a_arith => xlSigned,
+    a_bin_pt => 24,
+    a_width => 33,
+    b_bin_pt => 0,
+    c_a_type => 0,
+    c_a_width => 33,
+    c_b_type => 1,
+    c_b_width => 4,
+    c_output_width => 37,
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i3",
+    extra_registers => 0,
+    multsign => 2,
+    overflow => 2,
+    p_arith => xlSigned,
+    p_bin_pt => 24,
+    p_width => 32,
+    quantization => 1,
+    zero_const => 0
+  )
   port map (
-    clk => '0',
-    ce => '0',
     clr => '0',
-    op => constant3_op_net
+    core_clr => '1',
+    en => "1",
+    rst => "0",
+    a => addsub3_s_net,
+    clk => clk_net,
+    ce => ce_net,
+    core_clk => clk_net,
+    core_ce => ce_net,
+    p => cmult1_p_net
   );
-  constant5 : entity xil_defaultlib.sysgen_constant_4124fe8b13 
+  cmult2 : entity xil_defaultlib.lorenz_hardware_xlcmult 
+  generic map (
+    a_arith => xlSigned,
+    a_bin_pt => 24,
+    a_width => 32,
+    b_bin_pt => 56,
+    c_a_type => 0,
+    c_a_width => 32,
+    c_b_type => 1,
+    c_b_width => 64,
+    c_output_width => 96,
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i4",
+    extra_registers => 0,
+    multsign => 2,
+    overflow => 2,
+    p_arith => xlSigned,
+    p_bin_pt => 24,
+    p_width => 32,
+    quantization => 1,
+    zero_const => 0
+  )
   port map (
-    clk => '0',
-    ce => '0',
     clr => '0',
-    op => constant5_op_net
+    core_clr => '1',
+    en => "1",
+    rst => "0",
+    a => register1_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    core_clk => clk_net,
+    core_ce => ce_net,
+    p => cmult2_p_net
+  );
+  delay : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 3,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => register_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay_q_net
+  );
+  delay1 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 3,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => register2_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay1_q_net
   );
   mult1 : entity xil_defaultlib.lorenz_hardware_xlmult 
   generic map (
@@ -587,7 +740,7 @@ begin
     c_baat => 32,
     c_output_width => 64,
     c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i1",
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i5",
     extra_registers => 0,
     multsign => 2,
     overflow => 1,
@@ -601,50 +754,13 @@ begin
     core_clr => '1',
     en => "1",
     rst => "0",
-    a => negate_op_net,
-    b => addsub6_s_net,
+    a => register_q_net,
+    b => register1_q_net,
     clk => clk_net,
     ce => ce_net,
     core_clk => clk_net,
     core_ce => ce_net,
     p => mult1_p_net
-  );
-  mult2 : entity xil_defaultlib.lorenz_hardware_xlmult 
-  generic map (
-    a_arith => xlSigned,
-    a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
-    b_bin_pt => 4,
-    b_width => 10,
-    c_a_type => 0,
-    c_a_width => 32,
-    c_b_type => 0,
-    c_b_width => 10,
-    c_baat => 32,
-    c_output_width => 42,
-    c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i2",
-    extra_registers => 0,
-    multsign => 2,
-    overflow => 1,
-    p_arith => xlSigned,
-    p_bin_pt => 24,
-    p_width => 32,
-    quantization => 1
-  )
-  port map (
-    clr => '0',
-    core_clr => '1',
-    en => "1",
-    rst => "0",
-    a => addsub2_s_net,
-    b => constant5_op_net,
-    clk => clk_net,
-    ce => ce_net,
-    core_clk => clk_net,
-    core_ce => ce_net,
-    p => mult2_p_net
   );
   mult3 : entity xil_defaultlib.lorenz_hardware_xlmult 
   generic map (
@@ -661,7 +777,7 @@ begin
     c_baat => 32,
     c_output_width => 64,
     c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i1",
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i5",
     extra_registers => 0,
     multsign => 2,
     overflow => 1,
@@ -675,98 +791,68 @@ begin
     core_clr => '1',
     en => "1",
     rst => "0",
-    a => addsub2_s_net,
-    b => addsub1_s_net_x0,
+    a => register_q_net,
+    b => register2_q_net,
     clk => clk_net,
     ce => ce_net,
     core_clk => clk_net,
     core_ce => ce_net,
     p => mult3_p_net
   );
-  mult4 : entity xil_defaultlib.lorenz_hardware_xlmult 
+  register_x0 : entity xil_defaultlib.lorenz_hardware_xlregister 
   generic map (
-    a_arith => xlSigned,
-    a_bin_pt => 24,
-    a_width => 33,
-    b_arith => xlSigned,
-    b_bin_pt => 4,
-    b_width => 10,
-    c_a_type => 0,
-    c_a_width => 33,
-    c_b_type => 0,
-    c_b_width => 10,
-    c_baat => 33,
-    c_output_width => 43,
-    c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i3",
-    extra_registers => 0,
-    multsign => 2,
-    overflow => 1,
-    p_arith => xlSigned,
-    p_bin_pt => 24,
-    p_width => 32,
-    quantization => 1
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
   )
   port map (
-    clr => '0',
-    core_clr => '1',
     en => "1",
     rst => "0",
-    a => addsub3_s_net,
-    b => constant3_op_net,
+    d => addsub2_s_net,
     clk => clk_net,
     ce => ce_net,
-    core_clk => clk_net,
-    core_ce => ce_net,
-    p => mult4_p_net
+    q => register_q_net
   );
-  mult6 : entity xil_defaultlib.lorenz_hardware_xlmult 
+  register1 : entity xil_defaultlib.lorenz_hardware_xlregister 
   generic map (
-    a_arith => xlSigned,
-    a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
-    b_bin_pt => 24,
-    b_width => 32,
-    c_a_type => 0,
-    c_a_width => 32,
-    c_b_type => 0,
-    c_b_width => 32,
-    c_baat => 32,
-    c_output_width => 64,
-    c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i1",
-    extra_registers => 0,
-    multsign => 2,
-    overflow => 1,
-    p_arith => xlSigned,
-    p_bin_pt => 24,
-    p_width => 32,
-    quantization => 1
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
   )
   port map (
-    clr => '0',
-    core_clr => '1',
     en => "1",
     rst => "0",
-    a => constant1_op_net,
-    b => addsub6_s_net,
+    d => addsub6_s_net,
     clk => clk_net,
     ce => ce_net,
-    core_clk => clk_net,
-    core_ce => ce_net,
-    p => mult6_p_net
+    q => register1_q_net
   );
-  negate : entity xil_defaultlib.sysgen_negate_da04cdf96e 
+  register14 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 33,
+    init_value => b"000000000000000000000000000000000"
+  )
   port map (
-    clr => '0',
-    ip => addsub2_s_net,
+    en => "1",
+    rst => "0",
+    d => addsub4_s_net,
     clk => clk_net,
     ce => ce_net,
-    op => negate_op_net
+    q => register14_q_net
+  );
+  register2 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => addsub1_s_net_x0,
+    clk => clk_net,
+    ce => ce_net,
+    q => register2_q_net
   );
 end structural;
--- Generated from Simulink block Lorenz_Hardware/Subsystem1
+-- Generated from Simulink block Lorenz_Hardware/Subsystem/Subsystem1
 library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
@@ -776,28 +862,27 @@ entity lorenz_hardware_subsystem1 is
     z : in std_logic_vector( 32-1 downto 0 );
     n2 : in std_logic_vector( 32-1 downto 0 );
     n1 : in std_logic_vector( 32-1 downto 0 );
-    h2 : in std_logic_vector( 32-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     dz : out std_logic_vector( 32-1 downto 0 )
   );
 end lorenz_hardware_subsystem1;
 architecture structural of lorenz_hardware_subsystem1 is 
-  signal k2_q_net : std_logic_vector( 32-1 downto 0 );
-  signal clk_net : std_logic;
   signal addsub21_s_net : std_logic_vector( 32-1 downto 0 );
-  signal mult25_p_net : std_logic_vector( 65-1 downto 0 );
-  signal x2_op_net : std_logic_vector( 32-1 downto 0 );
   signal addsub18_s_net : std_logic_vector( 33-1 downto 0 );
-  signal k1_q_net : std_logic_vector( 32-1 downto 0 );
-  signal x_net : std_logic_vector( 32-1 downto 0 );
+  signal delay3_q_net : std_logic_vector( 32-1 downto 0 );
+  signal cmult1_p_net : std_logic_vector( 32-1 downto 0 );
+  signal delay6_q_net : std_logic_vector( 32-1 downto 0 );
+  signal clk_net : std_logic;
   signal ce_net : std_logic;
+  signal cmult3_p_net : std_logic_vector( 65-1 downto 0 );
+  signal delay1_q_net : std_logic_vector( 32-1 downto 0 );
+  signal delay_q_net : std_logic_vector( 32-1 downto 0 );
 begin
   dz <= addsub21_s_net;
-  x_net <= z;
-  k2_q_net <= n2;
-  k1_q_net <= n1;
-  x2_op_net <= h2;
+  delay3_q_net <= z;
+  cmult1_p_net <= n2;
+  delay6_q_net <= n1;
   clk_net <= clk_1;
   ce_net <= ce_1;
   addsub18 : entity xil_defaultlib.lorenz_hardware_xladdsub 
@@ -809,13 +894,13 @@ begin
     b_bin_pt => 24,
     b_width => 32,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 33,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i0",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 33,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -825,8 +910,8 @@ begin
   port map (
     clr => '0',
     en => "1",
-    a => k2_q_net,
-    b => k1_q_net,
+    a => cmult1_p_net,
+    b => delay6_q_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub18_s_net
@@ -840,13 +925,13 @@ begin
     b_bin_pt => 24,
     b_width => 32,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 66,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i2",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 66,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -856,51 +941,77 @@ begin
   port map (
     clr => '0',
     en => "1",
-    a => mult25_p_net,
-    b => x_net,
+    a => cmult3_p_net,
+    b => delay1_q_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub21_s_net
   );
-  mult25 : entity xil_defaultlib.lorenz_hardware_xlmult 
+  cmult3 : entity xil_defaultlib.lorenz_hardware_xlcmult 
   generic map (
     a_arith => xlSigned,
     a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
+    a_width => 33,
     b_bin_pt => 24,
-    b_width => 33,
     c_a_type => 0,
-    c_a_width => 32,
-    c_b_type => 0,
-    c_b_width => 33,
-    c_baat => 32,
+    c_a_width => 33,
+    c_b_type => 1,
+    c_b_width => 32,
     c_output_width => 65,
-    c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i0",
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i6",
     extra_registers => 0,
     multsign => 2,
     overflow => 1,
     p_arith => xlSigned,
     p_bin_pt => 48,
     p_width => 65,
-    quantization => 1
+    quantization => 1,
+    zero_const => 0
   )
   port map (
     clr => '0',
     core_clr => '1',
     en => "1",
     rst => "0",
-    a => x2_op_net,
-    b => addsub18_s_net,
+    a => addsub18_s_net,
     clk => clk_net,
     ce => ce_net,
     core_clk => clk_net,
     core_ce => ce_net,
-    p => mult25_p_net
+    p => cmult3_p_net
+  );
+  delay : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => delay3_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay_q_net
+  );
+  delay1 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => delay_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay1_q_net
   );
 end structural;
--- Generated from Simulink block Lorenz_Hardware/Subsystem2
+-- Generated from Simulink block Lorenz_Hardware/Subsystem/Subsystem2
 library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
@@ -910,28 +1021,27 @@ entity lorenz_hardware_subsystem2 is
     z : in std_logic_vector( 32-1 downto 0 );
     n2 : in std_logic_vector( 33-1 downto 0 );
     n1 : in std_logic_vector( 33-1 downto 0 );
-    h2 : in std_logic_vector( 32-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     dz : out std_logic_vector( 32-1 downto 0 )
   );
 end lorenz_hardware_subsystem2;
 architecture structural of lorenz_hardware_subsystem2 is 
+  signal delay4_q_net : std_logic_vector( 32-1 downto 0 );
+  signal addsub5_s_net : std_logic_vector( 33-1 downto 0 );
   signal addsub21_s_net : std_logic_vector( 32-1 downto 0 );
-  signal y_net : std_logic_vector( 32-1 downto 0 );
-  signal mult25_p_net : std_logic_vector( 66-1 downto 0 );
-  signal ce_net : std_logic;
-  signal l2_q_net : std_logic_vector( 33-1 downto 0 );
-  signal l1_q_net : std_logic_vector( 33-1 downto 0 );
-  signal x2_op_net : std_logic_vector( 32-1 downto 0 );
+  signal delay7_q_net : std_logic_vector( 33-1 downto 0 );
   signal clk_net : std_logic;
+  signal ce_net : std_logic;
+  signal delay1_q_net : std_logic_vector( 32-1 downto 0 );
+  signal delay_q_net : std_logic_vector( 32-1 downto 0 );
   signal addsub18_s_net : std_logic_vector( 34-1 downto 0 );
+  signal cmult3_p_net : std_logic_vector( 66-1 downto 0 );
 begin
   dz <= addsub21_s_net;
-  y_net <= z;
-  l2_q_net <= n2;
-  l1_q_net <= n1;
-  x2_op_net <= h2;
+  delay4_q_net <= z;
+  addsub5_s_net <= n2;
+  delay7_q_net <= n1;
   clk_net <= clk_1;
   ce_net <= ce_1;
   addsub18 : entity xil_defaultlib.lorenz_hardware_xladdsub 
@@ -943,13 +1053,13 @@ begin
     b_bin_pt => 24,
     b_width => 33,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 34,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i3",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 34,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -959,8 +1069,8 @@ begin
   port map (
     clr => '0',
     en => "1",
-    a => l2_q_net,
-    b => l1_q_net,
+    a => addsub5_s_net,
+    b => delay7_q_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub18_s_net
@@ -974,13 +1084,13 @@ begin
     b_bin_pt => 24,
     b_width => 32,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 67,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i4",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 67,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -990,51 +1100,77 @@ begin
   port map (
     clr => '0',
     en => "1",
-    a => mult25_p_net,
-    b => y_net,
+    a => cmult3_p_net,
+    b => delay1_q_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub21_s_net
   );
-  mult25 : entity xil_defaultlib.lorenz_hardware_xlmult 
+  cmult3 : entity xil_defaultlib.lorenz_hardware_xlcmult 
   generic map (
     a_arith => xlSigned,
     a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
+    a_width => 34,
     b_bin_pt => 24,
-    b_width => 34,
     c_a_type => 0,
-    c_a_width => 32,
-    c_b_type => 0,
-    c_b_width => 34,
-    c_baat => 32,
+    c_a_width => 34,
+    c_b_type => 1,
+    c_b_width => 32,
     c_output_width => 66,
-    c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i4",
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i7",
     extra_registers => 0,
     multsign => 2,
     overflow => 1,
     p_arith => xlSigned,
     p_bin_pt => 48,
     p_width => 66,
-    quantization => 1
+    quantization => 1,
+    zero_const => 0
   )
   port map (
     clr => '0',
     core_clr => '1',
     en => "1",
     rst => "0",
-    a => x2_op_net,
-    b => addsub18_s_net,
+    a => addsub18_s_net,
     clk => clk_net,
     ce => ce_net,
     core_clk => clk_net,
     core_ce => ce_net,
-    p => mult25_p_net
+    p => cmult3_p_net
+  );
+  delay : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => delay4_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay_q_net
+  );
+  delay1 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => delay_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay1_q_net
   );
 end structural;
--- Generated from Simulink block Lorenz_Hardware/Subsystem3
+-- Generated from Simulink block Lorenz_Hardware/Subsystem/Subsystem3
 library IEEE;
 use IEEE.std_logic_1164.all;
 library xil_defaultlib;
@@ -1044,28 +1180,27 @@ entity lorenz_hardware_subsystem3 is
     z : in std_logic_vector( 32-1 downto 0 );
     n2 : in std_logic_vector( 33-1 downto 0 );
     n1 : in std_logic_vector( 33-1 downto 0 );
-    h2 : in std_logic_vector( 32-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
     dz : out std_logic_vector( 32-1 downto 0 )
   );
 end lorenz_hardware_subsystem3;
 architecture structural of lorenz_hardware_subsystem3 is 
-  signal mult25_p_net : std_logic_vector( 66-1 downto 0 );
-  signal addsub21_s_net : std_logic_vector( 32-1 downto 0 );
-  signal z_net : std_logic_vector( 32-1 downto 0 );
-  signal clk_net : std_logic;
-  signal m2_q_net : std_logic_vector( 33-1 downto 0 );
-  signal x2_op_net : std_logic_vector( 32-1 downto 0 );
+  signal cmult3_p_net : std_logic_vector( 66-1 downto 0 );
+  signal register14_q_net : std_logic_vector( 33-1 downto 0 );
   signal ce_net : std_logic;
+  signal delay5_q_net : std_logic_vector( 32-1 downto 0 );
   signal addsub18_s_net : std_logic_vector( 34-1 downto 0 );
-  signal m1_q_net : std_logic_vector( 33-1 downto 0 );
+  signal delay8_q_net : std_logic_vector( 33-1 downto 0 );
+  signal addsub21_s_net : std_logic_vector( 32-1 downto 0 );
+  signal clk_net : std_logic;
+  signal delay1_q_net : std_logic_vector( 32-1 downto 0 );
+  signal delay_q_net : std_logic_vector( 32-1 downto 0 );
 begin
   dz <= addsub21_s_net;
-  z_net <= z;
-  m2_q_net <= n2;
-  m1_q_net <= n1;
-  x2_op_net <= h2;
+  delay5_q_net <= z;
+  register14_q_net <= n2;
+  delay8_q_net <= n1;
   clk_net <= clk_1;
   ce_net <= ce_1;
   addsub18 : entity xil_defaultlib.lorenz_hardware_xladdsub 
@@ -1077,13 +1212,13 @@ begin
     b_bin_pt => 24,
     b_width => 33,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 34,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i3",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 34,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -1093,8 +1228,8 @@ begin
   port map (
     clr => '0',
     en => "1",
-    a => m2_q_net,
-    b => m1_q_net,
+    a => register14_q_net,
+    b => delay8_q_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub18_s_net
@@ -1108,13 +1243,13 @@ begin
     b_bin_pt => 24,
     b_width => 32,
     c_has_c_out => 0,
-    c_latency => 0,
+    c_latency => 1,
     c_output_width => 67,
     core_name0 => "lorenz_hardware_c_addsub_v12_0_i4",
     extra_registers => 0,
     full_s_arith => 2,
     full_s_width => 67,
-    latency => 0,
+    latency => 1,
     overflow => 1,
     quantization => 1,
     s_arith => xlSigned,
@@ -1124,48 +1259,675 @@ begin
   port map (
     clr => '0',
     en => "1",
-    a => mult25_p_net,
-    b => z_net,
+    a => cmult3_p_net,
+    b => delay1_q_net,
     clk => clk_net,
     ce => ce_net,
     s => addsub21_s_net
   );
-  mult25 : entity xil_defaultlib.lorenz_hardware_xlmult 
+  cmult3 : entity xil_defaultlib.lorenz_hardware_xlcmult 
   generic map (
     a_arith => xlSigned,
     a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
+    a_width => 34,
     b_bin_pt => 24,
-    b_width => 34,
     c_a_type => 0,
-    c_a_width => 32,
-    c_b_type => 0,
-    c_b_width => 34,
-    c_baat => 32,
+    c_a_width => 34,
+    c_b_type => 1,
+    c_b_width => 32,
     c_output_width => 66,
-    c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i4",
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i7",
     extra_registers => 0,
     multsign => 2,
     overflow => 1,
     p_arith => xlSigned,
     p_bin_pt => 48,
     p_width => 66,
-    quantization => 1
+    quantization => 1,
+    zero_const => 0
   )
   port map (
     clr => '0',
     core_clr => '1',
     en => "1",
     rst => "0",
-    a => x2_op_net,
-    b => addsub18_s_net,
+    a => addsub18_s_net,
     clk => clk_net,
     ce => ce_net,
     core_clk => clk_net,
     core_ce => ce_net,
-    p => mult25_p_net
+    p => cmult3_p_net
+  );
+  delay : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => delay5_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay_q_net
+  );
+  delay1 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 1,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => delay_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay1_q_net
+  );
+end structural;
+-- Generated from Simulink block Lorenz_Hardware/Subsystem
+library IEEE;
+use IEEE.std_logic_1164.all;
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+entity lorenz_hardware_subsystem is
+  port (
+    x : in std_logic_vector( 32-1 downto 0 );
+    y : in std_logic_vector( 32-1 downto 0 );
+    z : in std_logic_vector( 32-1 downto 0 );
+    clk_1 : in std_logic;
+    ce_1 : in std_logic;
+    xnew : out std_logic_vector( 32-1 downto 0 );
+    ynew : out std_logic_vector( 32-1 downto 0 );
+    znew : out std_logic_vector( 32-1 downto 0 )
+  );
+end lorenz_hardware_subsystem;
+architecture structural of lorenz_hardware_subsystem is 
+  signal register14_q_net : std_logic_vector( 33-1 downto 0 );
+  signal addsub6_s_net : std_logic_vector( 32-1 downto 0 );
+  signal clk_net : std_logic;
+  signal addsub5_s_net : std_logic_vector( 33-1 downto 0 );
+  signal y_net : std_logic_vector( 32-1 downto 0 );
+  signal addsub5_s_net_x0 : std_logic_vector( 33-1 downto 0 );
+  signal addsub2_s_net : std_logic_vector( 32-1 downto 0 );
+  signal cmult1_p_net_x1 : std_logic_vector( 32-1 downto 0 );
+  signal ce_net : std_logic;
+  signal addsub1_s_net : std_logic_vector( 32-1 downto 0 );
+  signal delay6_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register14_q_net_x0 : std_logic_vector( 33-1 downto 0 );
+  signal delay5_q_net : std_logic_vector( 32-1 downto 0 );
+  signal delay8_q_net : std_logic_vector( 33-1 downto 0 );
+  signal addsub21_s_net : std_logic_vector( 32-1 downto 0 );
+  signal addsub21_s_net_x1 : std_logic_vector( 32-1 downto 0 );
+  signal z_net : std_logic_vector( 32-1 downto 0 );
+  signal delay4_q_net : std_logic_vector( 32-1 downto 0 );
+  signal cmult1_p_net_x0 : std_logic_vector( 32-1 downto 0 );
+  signal register1_q_net : std_logic_vector( 32-1 downto 0 );
+  signal delay3_q_net : std_logic_vector( 32-1 downto 0 );
+  signal delay7_q_net : std_logic_vector( 33-1 downto 0 );
+  signal addsub21_s_net_x0 : std_logic_vector( 32-1 downto 0 );
+  signal x_net : std_logic_vector( 32-1 downto 0 );
+  signal register_q_net : std_logic_vector( 32-1 downto 0 );
+  signal cmult3_p_net : std_logic_vector( 32-1 downto 0 );
+  signal cmult1_p_net : std_logic_vector( 32-1 downto 0 );
+  signal delay1_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register10_q_net : std_logic_vector( 33-1 downto 0 );
+  signal delay_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register4_q_net : std_logic_vector( 33-1 downto 0 );
+  signal cmult2_p_net : std_logic_vector( 32-1 downto 0 );
+  signal delay2_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register2_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register7_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register8_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register3_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register11_q_net : std_logic_vector( 33-1 downto 0 );
+  signal register6_q_net : std_logic_vector( 32-1 downto 0 );
+  signal register5_q_net : std_logic_vector( 33-1 downto 0 );
+  signal register9_q_net : std_logic_vector( 32-1 downto 0 );
+begin
+  xnew <= addsub21_s_net_x1;
+  ynew <= addsub21_s_net_x0;
+  znew <= addsub21_s_net;
+  x_net <= x;
+  y_net <= y;
+  z_net <= z;
+  clk_net <= clk_1;
+  ce_net <= ce_1;
+  lorenz_derivatives1 : entity xil_defaultlib.lorenz_hardware_lorenz_derivatives1 
+  port map (
+    x => x_net,
+    y => y_net,
+    z => z_net,
+    clk_1 => clk_net,
+    ce_1 => ce_net,
+    dx => cmult1_p_net_x1,
+    dy => addsub5_s_net_x0,
+    dz => register14_q_net_x0
+  );
+  lorenz_derivatives2 : entity xil_defaultlib.lorenz_hardware_lorenz_derivatives2 
+  port map (
+    x => addsub2_s_net,
+    y => addsub1_s_net,
+    z => addsub6_s_net,
+    clk_1 => clk_net,
+    ce_1 => ce_net,
+    dx => cmult1_p_net_x0,
+    dy => addsub5_s_net,
+    dz => register14_q_net
+  );
+  subsystem1 : entity xil_defaultlib.lorenz_hardware_subsystem1 
+  port map (
+    z => delay3_q_net,
+    n2 => cmult1_p_net_x0,
+    n1 => delay6_q_net,
+    clk_1 => clk_net,
+    ce_1 => ce_net,
+    dz => addsub21_s_net_x1
+  );
+  subsystem2 : entity xil_defaultlib.lorenz_hardware_subsystem2 
+  port map (
+    z => delay4_q_net,
+    n2 => addsub5_s_net,
+    n1 => delay7_q_net,
+    clk_1 => clk_net,
+    ce_1 => ce_net,
+    dz => addsub21_s_net_x0
+  );
+  subsystem3 : entity xil_defaultlib.lorenz_hardware_subsystem3 
+  port map (
+    z => delay5_q_net,
+    n2 => register14_q_net,
+    n1 => delay8_q_net,
+    clk_1 => clk_net,
+    ce_1 => ce_net,
+    dz => addsub21_s_net
+  );
+  addsub1 : entity xil_defaultlib.lorenz_hardware_xladdsub 
+  generic map (
+    a_arith => xlSigned,
+    a_bin_pt => 24,
+    a_width => 32,
+    b_arith => xlSigned,
+    b_bin_pt => 24,
+    b_width => 32,
+    c_has_c_out => 0,
+    c_latency => 1,
+    c_output_width => 33,
+    core_name0 => "lorenz_hardware_c_addsub_v12_0_i0",
+    extra_registers => 0,
+    full_s_arith => 2,
+    full_s_width => 33,
+    latency => 1,
+    overflow => 1,
+    quantization => 1,
+    s_arith => xlSigned,
+    s_bin_pt => 24,
+    s_width => 32
+  )
+  port map (
+    clr => '0',
+    en => "1",
+    a => register1_q_net,
+    b => cmult2_p_net,
+    clk => clk_net,
+    ce => ce_net,
+    s => addsub1_s_net
+  );
+  addsub2 : entity xil_defaultlib.lorenz_hardware_xladdsub 
+  generic map (
+    a_arith => xlSigned,
+    a_bin_pt => 24,
+    a_width => 32,
+    b_arith => xlSigned,
+    b_bin_pt => 24,
+    b_width => 32,
+    c_has_c_out => 0,
+    c_latency => 1,
+    c_output_width => 33,
+    core_name0 => "lorenz_hardware_c_addsub_v12_0_i0",
+    extra_registers => 0,
+    full_s_arith => 2,
+    full_s_width => 33,
+    latency => 1,
+    overflow => 1,
+    quantization => 1,
+    s_arith => xlSigned,
+    s_bin_pt => 24,
+    s_width => 32
+  )
+  port map (
+    clr => '0',
+    en => "1",
+    a => register2_q_net,
+    b => cmult1_p_net,
+    clk => clk_net,
+    ce => ce_net,
+    s => addsub2_s_net
+  );
+  addsub6 : entity xil_defaultlib.lorenz_hardware_xladdsub 
+  generic map (
+    a_arith => xlSigned,
+    a_bin_pt => 24,
+    a_width => 32,
+    b_arith => xlSigned,
+    b_bin_pt => 24,
+    b_width => 32,
+    c_has_c_out => 0,
+    c_latency => 1,
+    c_output_width => 33,
+    core_name0 => "lorenz_hardware_c_addsub_v12_0_i0",
+    extra_registers => 0,
+    full_s_arith => 2,
+    full_s_width => 33,
+    latency => 1,
+    overflow => 1,
+    quantization => 1,
+    s_arith => xlSigned,
+    s_bin_pt => 24,
+    s_width => 32
+  )
+  port map (
+    clr => '0',
+    en => "1",
+    a => cmult3_p_net,
+    b => register_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    s => addsub6_s_net
+  );
+  cmult1 : entity xil_defaultlib.lorenz_hardware_xlcmult 
+  generic map (
+    a_arith => xlSigned,
+    a_bin_pt => 24,
+    a_width => 32,
+    b_bin_pt => 56,
+    c_a_type => 0,
+    c_a_width => 32,
+    c_b_type => 1,
+    c_b_width => 64,
+    c_output_width => 96,
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i0",
+    extra_registers => 0,
+    multsign => 2,
+    overflow => 2,
+    p_arith => xlSigned,
+    p_bin_pt => 24,
+    p_width => 32,
+    quantization => 1,
+    zero_const => 0
+  )
+  port map (
+    clr => '0',
+    core_clr => '1',
+    en => "1",
+    rst => "0",
+    a => cmult1_p_net_x1,
+    clk => clk_net,
+    ce => ce_net,
+    core_clk => clk_net,
+    core_ce => ce_net,
+    p => cmult1_p_net
+  );
+  delay : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 6,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => x_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay_q_net
+  );
+  register_x0 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => delay2_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => register_q_net
+  );
+  register1 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => delay1_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => register1_q_net
+  );
+  register10 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 33,
+    init_value => b"000000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => register4_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => register10_q_net
+  );
+  register11 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 33,
+    init_value => b"000000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => register5_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => register11_q_net
+  );
+  register2 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => delay_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => register2_q_net
+  );
+  register3 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => cmult1_p_net_x1,
+    clk => clk_net,
+    ce => ce_net,
+    q => register3_q_net
+  );
+  register4 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 33,
+    init_value => b"000000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => addsub5_s_net_x0,
+    clk => clk_net,
+    ce => ce_net,
+    q => register4_q_net
+  );
+  register5 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 33,
+    init_value => b"000000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => register14_q_net_x0,
+    clk => clk_net,
+    ce => ce_net,
+    q => register5_q_net
+  );
+  register6 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => register_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => register6_q_net
+  );
+  register7 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => register1_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => register7_q_net
+  );
+  register8 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => register2_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => register8_q_net
+  );
+  register9 : entity xil_defaultlib.lorenz_hardware_xlregister 
+  generic map (
+    d_width => 32,
+    init_value => b"00000000000000000000000000000000"
+  )
+  port map (
+    en => "1",
+    rst => "0",
+    d => register3_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => register9_q_net
+  );
+  delay1 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 6,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => y_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay1_q_net
+  );
+  delay2 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 6,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => z_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay2_q_net
+  );
+  delay3 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 6,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => register8_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay3_q_net
+  );
+  delay4 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 6,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => register7_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay4_q_net
+  );
+  delay5 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 6,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => register6_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay5_q_net
+  );
+  delay6 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 6,
+    reg_retiming => 0,
+    reset => 0,
+    width => 32
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => register9_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay6_q_net
+  );
+  delay7 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 6,
+    reg_retiming => 0,
+    reset => 0,
+    width => 33
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => register10_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay7_q_net
+  );
+  delay8 : entity xil_defaultlib.lorenz_hardware_xldelay 
+  generic map (
+    latency => 6,
+    reg_retiming => 0,
+    reset => 0,
+    width => 33
+  )
+  port map (
+    en => '1',
+    rst => '0',
+    d => register11_q_net,
+    clk => clk_net,
+    ce => ce_net,
+    q => delay8_q_net
+  );
+  cmult2 : entity xil_defaultlib.lorenz_hardware_xlcmult 
+  generic map (
+    a_arith => xlSigned,
+    a_bin_pt => 24,
+    a_width => 33,
+    b_bin_pt => 56,
+    c_a_type => 0,
+    c_a_width => 33,
+    c_b_type => 1,
+    c_b_width => 64,
+    c_output_width => 97,
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i1",
+    extra_registers => 0,
+    multsign => 2,
+    overflow => 2,
+    p_arith => xlSigned,
+    p_bin_pt => 24,
+    p_width => 32,
+    quantization => 1,
+    zero_const => 0
+  )
+  port map (
+    clr => '0',
+    core_clr => '1',
+    en => "1",
+    rst => "0",
+    a => addsub5_s_net_x0,
+    clk => clk_net,
+    ce => ce_net,
+    core_clk => clk_net,
+    core_ce => ce_net,
+    p => cmult2_p_net
+  );
+  cmult3 : entity xil_defaultlib.lorenz_hardware_xlcmult 
+  generic map (
+    a_arith => xlSigned,
+    a_bin_pt => 24,
+    a_width => 33,
+    b_bin_pt => 56,
+    c_a_type => 0,
+    c_a_width => 33,
+    c_b_type => 1,
+    c_b_width => 64,
+    c_output_width => 97,
+    core_name0 => "lorenz_hardware_mult_gen_v12_0_i1",
+    extra_registers => 0,
+    multsign => 2,
+    overflow => 2,
+    p_arith => xlSigned,
+    p_bin_pt => 24,
+    p_width => 32,
+    quantization => 1,
+    zero_const => 0
+  )
+  port map (
+    clr => '0',
+    core_clr => '1',
+    en => "1",
+    rst => "0",
+    a => register14_q_net_x0,
+    clk => clk_net,
+    ce => ce_net,
+    core_clk => clk_net,
+    core_ce => ce_net,
+    p => cmult3_p_net
   );
 end structural;
 -- Generated from Simulink block Lorenz_Hardware_struct
@@ -1180,402 +1942,39 @@ entity lorenz_hardware_struct is
     z : in std_logic_vector( 32-1 downto 0 );
     clk_1 : in std_logic;
     ce_1 : in std_logic;
-    test1 : out std_logic_vector( 32-1 downto 0 );
     xnew : out std_logic_vector( 32-1 downto 0 );
     ynew : out std_logic_vector( 32-1 downto 0 );
     znew : out std_logic_vector( 32-1 downto 0 )
   );
 end lorenz_hardware_struct;
 architecture structural of lorenz_hardware_struct is 
-  signal addsub21_s_net_x1 : std_logic_vector( 32-1 downto 0 );
-  signal x_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub6_s_net : std_logic_vector( 32-1 downto 0 );
-  signal k2_q_net : std_logic_vector( 32-1 downto 0 );
-  signal k1_q_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub21_s_net : std_logic_vector( 32-1 downto 0 );
-  signal l2_q_net : std_logic_vector( 33-1 downto 0 );
-  signal l1_q_net : std_logic_vector( 33-1 downto 0 );
   signal addsub21_s_net_x0 : std_logic_vector( 32-1 downto 0 );
-  signal m1_q_net : std_logic_vector( 33-1 downto 0 );
-  signal m2_q_net : std_logic_vector( 33-1 downto 0 );
-  signal x2_op_net : std_logic_vector( 32-1 downto 0 );
-  signal y_net : std_logic_vector( 32-1 downto 0 );
-  signal mult4_p_net_x1 : std_logic_vector( 32-1 downto 0 );
-  signal clk_net : std_logic;
+  signal addsub21_s_net_x1 : std_logic_vector( 32-1 downto 0 );
   signal ce_net : std_logic;
+  signal y_net : std_logic_vector( 32-1 downto 0 );
+  signal addsub21_s_net : std_logic_vector( 32-1 downto 0 );
   signal z_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub5_s_net : std_logic_vector( 33-1 downto 0 );
-  signal addsub4_s_net : std_logic_vector( 33-1 downto 0 );
-  signal mult4_p_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub5_s_net_x0 : std_logic_vector( 33-1 downto 0 );
-  signal addsub2_s_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub1_s_net : std_logic_vector( 32-1 downto 0 );
-  signal addsub4_s_net_x0 : std_logic_vector( 33-1 downto 0 );
-  signal mult2_p_net : std_logic_vector( 32-1 downto 0 );
-  signal mult4_p_net_x0 : std_logic_vector( 32-1 downto 0 );
-  signal mult5_p_net : std_logic_vector( 32-1 downto 0 );
+  signal clk_net : std_logic;
+  signal x_net : std_logic_vector( 32-1 downto 0 );
 begin
-  test1 <= mult4_p_net_x1;
-  xnew <= addsub21_s_net;
+  xnew <= addsub21_s_net_x1;
   ynew <= addsub21_s_net_x0;
-  znew <= addsub21_s_net_x1;
+  znew <= addsub21_s_net;
   x_net <= x;
   y_net <= y;
   z_net <= z;
   clk_net <= clk_1;
   ce_net <= ce_1;
-  lorenz_derivatives1 : entity xil_defaultlib.lorenz_hardware_lorenz_derivatives1 
+  subsystem : entity xil_defaultlib.lorenz_hardware_subsystem 
   port map (
     x => x_net,
     y => y_net,
     z => z_net,
     clk_1 => clk_net,
     ce_1 => ce_net,
-    dx => mult4_p_net_x1,
-    dy => addsub5_s_net,
-    dz => addsub4_s_net
-  );
-  lorenz_derivatives3 : entity xil_defaultlib.lorenz_hardware_lorenz_derivatives3 
-  port map (
-    x => addsub2_s_net,
-    y => addsub1_s_net,
-    z => addsub6_s_net,
-    clk_1 => clk_net,
-    ce_1 => ce_net,
-    dx => mult4_p_net,
-    dy => addsub5_s_net_x0,
-    dz => addsub4_s_net_x0
-  );
-  subsystem1 : entity xil_defaultlib.lorenz_hardware_subsystem1 
-  port map (
-    z => x_net,
-    n2 => k2_q_net,
-    n1 => k1_q_net,
-    h2 => x2_op_net,
-    clk_1 => clk_net,
-    ce_1 => ce_net,
-    dz => addsub21_s_net
-  );
-  subsystem2 : entity xil_defaultlib.lorenz_hardware_subsystem2 
-  port map (
-    z => y_net,
-    n2 => l2_q_net,
-    n1 => l1_q_net,
-    h2 => x2_op_net,
-    clk_1 => clk_net,
-    ce_1 => ce_net,
-    dz => addsub21_s_net_x0
-  );
-  subsystem3 : entity xil_defaultlib.lorenz_hardware_subsystem3 
-  port map (
-    z => z_net,
-    n2 => m2_q_net,
-    n1 => m1_q_net,
-    h2 => x2_op_net,
-    clk_1 => clk_net,
-    ce_1 => ce_net,
-    dz => addsub21_s_net_x1
-  );
-  addsub1 : entity xil_defaultlib.lorenz_hardware_xladdsub 
-  generic map (
-    a_arith => xlSigned,
-    a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
-    b_bin_pt => 24,
-    b_width => 32,
-    c_has_c_out => 0,
-    c_latency => 0,
-    c_output_width => 33,
-    core_name0 => "lorenz_hardware_c_addsub_v12_0_i0",
-    extra_registers => 0,
-    full_s_arith => 2,
-    full_s_width => 33,
-    latency => 0,
-    overflow => 1,
-    quantization => 1,
-    s_arith => xlSigned,
-    s_bin_pt => 24,
-    s_width => 32
-  )
-  port map (
-    clr => '0',
-    en => "1",
-    a => y_net,
-    b => mult2_p_net,
-    clk => clk_net,
-    ce => ce_net,
-    s => addsub1_s_net
-  );
-  addsub2 : entity xil_defaultlib.lorenz_hardware_xladdsub 
-  generic map (
-    a_arith => xlSigned,
-    a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
-    b_bin_pt => 24,
-    b_width => 32,
-    c_has_c_out => 0,
-    c_latency => 0,
-    c_output_width => 33,
-    core_name0 => "lorenz_hardware_c_addsub_v12_0_i0",
-    extra_registers => 0,
-    full_s_arith => 2,
-    full_s_width => 33,
-    latency => 0,
-    overflow => 1,
-    quantization => 1,
-    s_arith => xlSigned,
-    s_bin_pt => 24,
-    s_width => 32
-  )
-  port map (
-    clr => '0',
-    en => "1",
-    a => x_net,
-    b => mult4_p_net_x0,
-    clk => clk_net,
-    ce => ce_net,
-    s => addsub2_s_net
-  );
-  addsub6 : entity xil_defaultlib.lorenz_hardware_xladdsub 
-  generic map (
-    a_arith => xlSigned,
-    a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
-    b_bin_pt => 24,
-    b_width => 32,
-    c_has_c_out => 0,
-    c_latency => 0,
-    c_output_width => 33,
-    core_name0 => "lorenz_hardware_c_addsub_v12_0_i0",
-    extra_registers => 0,
-    full_s_arith => 2,
-    full_s_width => 33,
-    latency => 0,
-    overflow => 1,
-    quantization => 1,
-    s_arith => xlSigned,
-    s_bin_pt => 24,
-    s_width => 32
-  )
-  port map (
-    clr => '0',
-    en => "1",
-    a => mult5_p_net,
-    b => z_net,
-    clk => clk_net,
-    ce => ce_net,
-    s => addsub6_s_net
-  );
-  mult2 : entity xil_defaultlib.lorenz_hardware_xlmult 
-  generic map (
-    a_arith => xlSigned,
-    a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
-    b_bin_pt => 24,
-    b_width => 33,
-    c_a_type => 0,
-    c_a_width => 32,
-    c_b_type => 0,
-    c_b_width => 33,
-    c_baat => 32,
-    c_output_width => 65,
-    c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i0",
-    extra_registers => 0,
-    multsign => 2,
-    overflow => 1,
-    p_arith => xlSigned,
-    p_bin_pt => 24,
-    p_width => 32,
-    quantization => 1
-  )
-  port map (
-    clr => '0',
-    core_clr => '1',
-    en => "1",
-    rst => "0",
-    a => x2_op_net,
-    b => l1_q_net,
-    clk => clk_net,
-    ce => ce_net,
-    core_clk => clk_net,
-    core_ce => ce_net,
-    p => mult2_p_net
-  );
-  mult4 : entity xil_defaultlib.lorenz_hardware_xlmult 
-  generic map (
-    a_arith => xlSigned,
-    a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
-    b_bin_pt => 24,
-    b_width => 32,
-    c_a_type => 0,
-    c_a_width => 32,
-    c_b_type => 0,
-    c_b_width => 32,
-    c_baat => 32,
-    c_output_width => 64,
-    c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i1",
-    extra_registers => 0,
-    multsign => 2,
-    overflow => 1,
-    p_arith => xlSigned,
-    p_bin_pt => 24,
-    p_width => 32,
-    quantization => 1
-  )
-  port map (
-    clr => '0',
-    core_clr => '1',
-    en => "1",
-    rst => "0",
-    a => x2_op_net,
-    b => k1_q_net,
-    clk => clk_net,
-    ce => ce_net,
-    core_clk => clk_net,
-    core_ce => ce_net,
-    p => mult4_p_net_x0
-  );
-  mult5 : entity xil_defaultlib.lorenz_hardware_xlmult 
-  generic map (
-    a_arith => xlSigned,
-    a_bin_pt => 24,
-    a_width => 32,
-    b_arith => xlSigned,
-    b_bin_pt => 24,
-    b_width => 33,
-    c_a_type => 0,
-    c_a_width => 32,
-    c_b_type => 0,
-    c_b_width => 33,
-    c_baat => 32,
-    c_output_width => 65,
-    c_type => 0,
-    core_name0 => "lorenz_hardware_mult_gen_v12_0_i0",
-    extra_registers => 0,
-    multsign => 2,
-    overflow => 1,
-    p_arith => xlSigned,
-    p_bin_pt => 24,
-    p_width => 32,
-    quantization => 1
-  )
-  port map (
-    clr => '0',
-    core_clr => '1',
-    en => "1",
-    rst => "0",
-    a => x2_op_net,
-    b => m1_q_net,
-    clk => clk_net,
-    ce => ce_net,
-    core_clk => clk_net,
-    core_ce => ce_net,
-    p => mult5_p_net
-  );
-  x2 : entity xil_defaultlib.sysgen_constant_ecfb47cec3 
-  port map (
-    clk => '0',
-    ce => '0',
-    clr => '0',
-    op => x2_op_net
-  );
-  k1 : entity xil_defaultlib.lorenz_hardware_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 32
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => mult4_p_net_x1,
-    clk => clk_net,
-    ce => ce_net,
-    q => k1_q_net
-  );
-  k2 : entity xil_defaultlib.lorenz_hardware_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 32
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => mult4_p_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => k2_q_net
-  );
-  l1 : entity xil_defaultlib.lorenz_hardware_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 33
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => addsub5_s_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => l1_q_net
-  );
-  l2 : entity xil_defaultlib.lorenz_hardware_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 33
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => addsub5_s_net_x0,
-    clk => clk_net,
-    ce => ce_net,
-    q => l2_q_net
-  );
-  m1 : entity xil_defaultlib.lorenz_hardware_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 33
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => addsub4_s_net,
-    clk => clk_net,
-    ce => ce_net,
-    q => m1_q_net
-  );
-  m2 : entity xil_defaultlib.lorenz_hardware_xldelay 
-  generic map (
-    latency => 1,
-    reg_retiming => 0,
-    reset => 0,
-    width => 33
-  )
-  port map (
-    en => '1',
-    rst => '0',
-    d => addsub4_s_net_x0,
-    clk => clk_net,
-    ce => ce_net,
-    q => m2_q_net
+    xnew => addsub21_s_net_x1,
+    ynew => addsub21_s_net_x0,
+    znew => addsub21_s_net
   );
 end structural;
 -- Generated from Simulink block 
@@ -1625,7 +2024,6 @@ entity lorenz_hardware is
     lorenz_hardware_s_axi_araddr : in std_logic_vector( 5-1 downto 0 );
     lorenz_hardware_s_axi_arvalid : in std_logic;
     lorenz_hardware_s_axi_rready : in std_logic;
-    test1 : out std_logic_vector( 32-1 downto 0 );
     lorenz_hardware_s_axi_awready : out std_logic;
     lorenz_hardware_s_axi_wready : out std_logic;
     lorenz_hardware_s_axi_bresp : out std_logic_vector( 2-1 downto 0 );
@@ -1638,15 +2036,15 @@ entity lorenz_hardware is
 end lorenz_hardware;
 architecture structural of lorenz_hardware is 
   attribute core_generation_info : string;
-  attribute core_generation_info of structural : architecture is "lorenz_hardware,sysgen_core_2020_1,{,compilation=IP Catalog,block_icon_display=Default,family=zynq,part=xc7z020,speed=-1,package=clg400,synthesis_language=vhdl,hdl_library=xil_defaultlib,synthesis_strategy=Vivado Synthesis Defaults,implementation_strategy=Vivado Implementation Defaults,testbench=0,interface_doc=1,ce_clr=0,clock_period=10,system_simulink_period=1e-08,waveform_viewer=0,axilite_interface=1,ip_catalog_plugin=0,hwcosim_burst_mode=0,simulation_time=1e-05,addsub=17,constant=7,delay=6,mult=16,negate=2,}";
-  signal znew : std_logic_vector( 32-1 downto 0 );
-  signal x : std_logic_vector( 32-1 downto 0 );
-  signal y : std_logic_vector( 32-1 downto 0 );
-  signal z : std_logic_vector( 32-1 downto 0 );
+  attribute core_generation_info of structural : architecture is "lorenz_hardware,sysgen_core_2020_1,{,compilation=IP Catalog,block_icon_display=Default,family=zynq,part=xc7z020,speed=-1,package=clg400,synthesis_language=vhdl,hdl_library=xil_defaultlib,synthesis_strategy=Vivado Synthesis Defaults,implementation_strategy=Vivado Implementation Defaults,testbench=0,interface_doc=1,ce_clr=0,clock_period=10,system_simulink_period=1e-08,waveform_viewer=0,axilite_interface=1,ip_catalog_plugin=0,hwcosim_burst_mode=0,simulation_time=6.8e-07,addsub=17,cmult=12,delay=19,mult=4,register=20,}";
   signal clk_1_net : std_logic;
+  signal z : std_logic_vector( 32-1 downto 0 );
+  signal ynew : std_logic_vector( 32-1 downto 0 );
+  signal y : std_logic_vector( 32-1 downto 0 );
   signal ce_1_net : std_logic;
   signal xnew : std_logic_vector( 32-1 downto 0 );
-  signal ynew : std_logic_vector( 32-1 downto 0 );
+  signal x : std_logic_vector( 32-1 downto 0 );
+  signal znew : std_logic_vector( 32-1 downto 0 );
   signal clk_net : std_logic;
 begin
   lorenz_hardware_axi_lite_interface : entity xil_defaultlib.lorenz_hardware_axi_lite_interface 
@@ -1693,7 +2091,6 @@ begin
     z => z,
     clk_1 => clk_1_net,
     ce_1 => ce_1_net,
-    test1 => test1,
     xnew => xnew,
     ynew => ynew,
     znew => znew

@@ -58,7 +58,7 @@ vlog -work xilinx_vip  -sv2k12 "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/
 "C:/Xilinx/Vivado/2020.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
 "C:/Xilinx/Vivado/2020.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
 
-vlog -work xpm  -sv2k12 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work xpm  -sv2k12 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
 "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
@@ -66,16 +66,16 @@ vlog -work xpm  -sv2k12 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/i
 vcom -work xpm -93 \
 "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
-vlog -work axi_infrastructure_v1_1_0  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work axi_infrastructure_v1_1_0  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 
-vlog -work axi_vip_v1_1_7  -sv2k12 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work axi_vip_v1_1_7  -sv2k12 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ce6c/hdl/axi_vip_v1_1_vl_rfs.sv" \
 
-vlog -work processing_system7_vip_v1_0_9  -sv2k12 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work processing_system7_vip_v1_0_9  -sv2k12 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl/processing_system7_vip_v1_0_vl_rfs.sv" \
 
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
 
 vcom -work lib_cdc_v1_0_2 -93 \
@@ -127,46 +127,48 @@ vcom -work xil_defaultlib -93 \
 "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i2/sim/lorenz_hardware_mult_gen_v12_0_i2.vhd" \
 "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i3/sim/lorenz_hardware_mult_gen_v12_0_i3.vhd" \
 "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i4/sim/lorenz_hardware_mult_gen_v12_0_i4.vhd" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/conv_pkg.vhd" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/synth_reg.vhd" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/synth_reg_w_init.vhd" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/srl17e.vhd" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/srl33e.vhd" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/synth_reg_reg.vhd" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/single_reg_w_init.vhd" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/xlclockdriver_rd.vhd" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/lorenz_hardware_entity_declarations.vhd" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/lorenz_hardware.vhd" \
+"../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i5/sim/lorenz_hardware_mult_gen_v12_0_i5.vhd" \
+"../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i6/sim/lorenz_hardware_mult_gen_v12_0_i6.vhd" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/conv_pkg.vhd" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/synth_reg.vhd" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/synth_reg_w_init.vhd" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/srl17e.vhd" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/srl33e.vhd" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/synth_reg_reg.vhd" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/single_reg_w_init.vhd" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/xlclockdriver_rd.vhd" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/lorenz_hardware_entity_declarations.vhd" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/lorenz_hardware.vhd" \
 
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/lorenz_hardware_axi_lite_interface_verilog.v" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/synth_reg.v" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/synth_reg_w_init.v" \
-"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl/convert_type.v" \
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/lorenz_hardware_axi_lite_interface_verilog.v" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/synth_reg.v" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/synth_reg_w_init.v" \
+"../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl/convert_type.v" \
 "../../../bd/design_1/ip/design_1_lorenz_hardware_0_1/sim/design_1_lorenz_hardware_0_1.v" \
 
-vlog -work generic_baseblocks_v2_1_0  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work generic_baseblocks_v2_1_0  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 
-vlog -work fifo_generator_v13_2_5  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work fifo_generator_v13_2_5  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v" \
 
 vcom -work fifo_generator_v13_2_5 -93 \
 "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/276e/hdl/fifo_generator_v13_2_rfs.vhd" \
 
-vlog -work fifo_generator_v13_2_5  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work fifo_generator_v13_2_5  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/276e/hdl/fifo_generator_v13_2_rfs.v" \
 
-vlog -work axi_data_fifo_v2_1_20  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work axi_data_fifo_v2_1_20  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/47c9/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 
-vlog -work axi_register_slice_v2_1_21  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work axi_register_slice_v2_1_21  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/2ef9/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 
-vlog -work axi_protocol_converter_v2_1_21  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work axi_protocol_converter_v2_1_21  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/8dfa/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/97c7/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../lorenz.srcs/sources_1/bd/design_1/ipshared/d9b0/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 
 vcom -work xil_defaultlib -93 \

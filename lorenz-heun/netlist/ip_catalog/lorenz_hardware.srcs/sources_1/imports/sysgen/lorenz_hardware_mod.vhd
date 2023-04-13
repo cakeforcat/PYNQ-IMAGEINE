@@ -15,7 +15,6 @@ entity lorenz_hardware_stub is
     lorenz_hardware_s_axi_araddr : in std_logic_vector( 5-1 downto 0 );
     lorenz_hardware_s_axi_arvalid : in std_logic;
     lorenz_hardware_s_axi_rready : in std_logic;
-    test1 : out std_logic_vector( 32-1 downto 0 );
     lorenz_hardware_s_axi_awready : out std_logic;
     lorenz_hardware_s_axi_wready : out std_logic;
     lorenz_hardware_s_axi_bresp : out std_logic_vector( 2-1 downto 0 );
@@ -41,7 +40,6 @@ begin
     lorenz_hardware_s_axi_araddr => lorenz_hardware_s_axi_araddr,
     lorenz_hardware_s_axi_arvalid => lorenz_hardware_s_axi_arvalid,
     lorenz_hardware_s_axi_rready => lorenz_hardware_s_axi_rready,
-    test1 => test1,
     lorenz_hardware_s_axi_awready => lorenz_hardware_s_axi_awready,
     lorenz_hardware_s_axi_wready => lorenz_hardware_s_axi_wready,
     lorenz_hardware_s_axi_bresp => lorenz_hardware_s_axi_bresp,

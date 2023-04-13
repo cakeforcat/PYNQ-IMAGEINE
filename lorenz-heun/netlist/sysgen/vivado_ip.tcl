@@ -51,11 +51,11 @@ lappend params_list CONFIG.Borrow_Sense {Active_Low}
 lappend params_list CONFIG.Bypass {false}
 lappend params_list CONFIG.Bypass_CE_Priority {Bypass_Overrides_CE}
 lappend params_list CONFIG.Bypass_Sense {Active_Low}
-lappend params_list CONFIG.CE {false}
+lappend params_list CONFIG.CE {true}
 lappend params_list CONFIG.C_In {false}
 lappend params_list CONFIG.C_Out {false}
 lappend params_list CONFIG.Implementation {Fabric}
-lappend params_list CONFIG.Latency {0}
+lappend params_list CONFIG.Latency {1}
 lappend params_list CONFIG.Out_Width {33}
 lappend params_list CONFIG.SCLR {false}
 lappend params_list CONFIG.SINIT {false}
@@ -73,17 +73,19 @@ if {[lsearch $existingipslist lorenz_hardware_mult_gen_v12_0_i0] < 0} {
 create_ip -name mult_gen -version 12.0 -vendor xilinx.com -library ip -module_name lorenz_hardware_mult_gen_v12_0_i0
 set params_list [list]
 lappend params_list CONFIG.Component_Name {lorenz_hardware_mult_gen_v12_0_i0}
-lappend params_list CONFIG.clockenable {false}
-lappend params_list CONFIG.multiplier_construction {Use_Mults}
-lappend params_list CONFIG.optgoal {Speed}
-lappend params_list CONFIG.outputwidthhigh {64}
-lappend params_list CONFIG.pipestages {0}
+lappend params_list CONFIG.ccmimp {Distributed_Memory}
+lappend params_list CONFIG.clockenable {true}
+lappend params_list CONFIG.constvalue {360287970189640}
+lappend params_list CONFIG.internaluser {0}
+lappend params_list CONFIG.multtype {Constant_Coefficient_Multiplier}
+lappend params_list CONFIG.outputwidthhigh {95}
+lappend params_list CONFIG.outputwidthlow {0}
+lappend params_list CONFIG.pipestages {1}
 lappend params_list CONFIG.portatype {Signed}
 lappend params_list CONFIG.portawidth {32}
-lappend params_list CONFIG.portbtype {Signed}
-lappend params_list CONFIG.portbwidth {33}
-lappend params_list CONFIG.sclrcepriority {CE_Overrides_SCLR}
-lappend params_list CONFIG.syncclear {false}
+lappend params_list CONFIG.portbtype {Unsigned}
+lappend params_list CONFIG.portbwidth {64}
+lappend params_list CONFIG.syncclear {true}
 lappend params_list CONFIG.use_custom_output_width {true}
 
 set_property -dict $params_list [get_ips lorenz_hardware_mult_gen_v12_0_i0]
@@ -95,17 +97,19 @@ if {[lsearch $existingipslist lorenz_hardware_mult_gen_v12_0_i1] < 0} {
 create_ip -name mult_gen -version 12.0 -vendor xilinx.com -library ip -module_name lorenz_hardware_mult_gen_v12_0_i1
 set params_list [list]
 lappend params_list CONFIG.Component_Name {lorenz_hardware_mult_gen_v12_0_i1}
-lappend params_list CONFIG.clockenable {false}
-lappend params_list CONFIG.multiplier_construction {Use_Mults}
-lappend params_list CONFIG.optgoal {Speed}
-lappend params_list CONFIG.outputwidthhigh {63}
-lappend params_list CONFIG.pipestages {0}
+lappend params_list CONFIG.ccmimp {Distributed_Memory}
+lappend params_list CONFIG.clockenable {true}
+lappend params_list CONFIG.constvalue {360287970189640}
+lappend params_list CONFIG.internaluser {0}
+lappend params_list CONFIG.multtype {Constant_Coefficient_Multiplier}
+lappend params_list CONFIG.outputwidthhigh {96}
+lappend params_list CONFIG.outputwidthlow {0}
+lappend params_list CONFIG.pipestages {1}
 lappend params_list CONFIG.portatype {Signed}
-lappend params_list CONFIG.portawidth {32}
-lappend params_list CONFIG.portbtype {Signed}
-lappend params_list CONFIG.portbwidth {32}
-lappend params_list CONFIG.sclrcepriority {CE_Overrides_SCLR}
-lappend params_list CONFIG.syncclear {false}
+lappend params_list CONFIG.portawidth {33}
+lappend params_list CONFIG.portbtype {Unsigned}
+lappend params_list CONFIG.portbwidth {64}
+lappend params_list CONFIG.syncclear {true}
 lappend params_list CONFIG.use_custom_output_width {true}
 
 set_property -dict $params_list [get_ips lorenz_hardware_mult_gen_v12_0_i1]
@@ -129,11 +133,11 @@ lappend params_list CONFIG.Borrow_Sense {Active_Low}
 lappend params_list CONFIG.Bypass {false}
 lappend params_list CONFIG.Bypass_CE_Priority {Bypass_Overrides_CE}
 lappend params_list CONFIG.Bypass_Sense {Active_Low}
-lappend params_list CONFIG.CE {false}
+lappend params_list CONFIG.CE {true}
 lappend params_list CONFIG.C_In {false}
 lappend params_list CONFIG.C_Out {false}
 lappend params_list CONFIG.Implementation {Fabric}
-lappend params_list CONFIG.Latency {0}
+lappend params_list CONFIG.Latency {1}
 lappend params_list CONFIG.Out_Width {33}
 lappend params_list CONFIG.SCLR {false}
 lappend params_list CONFIG.SINIT {false}
@@ -151,17 +155,19 @@ if {[lsearch $existingipslist lorenz_hardware_mult_gen_v12_0_i2] < 0} {
 create_ip -name mult_gen -version 12.0 -vendor xilinx.com -library ip -module_name lorenz_hardware_mult_gen_v12_0_i2
 set params_list [list]
 lappend params_list CONFIG.Component_Name {lorenz_hardware_mult_gen_v12_0_i2}
-lappend params_list CONFIG.clockenable {false}
-lappend params_list CONFIG.multiplier_construction {Use_Mults}
-lappend params_list CONFIG.optgoal {Speed}
-lappend params_list CONFIG.outputwidthhigh {41}
-lappend params_list CONFIG.pipestages {0}
+lappend params_list CONFIG.ccmimp {Distributed_Memory}
+lappend params_list CONFIG.clockenable {true}
+lappend params_list CONFIG.constvalue {28}
+lappend params_list CONFIG.internaluser {0}
+lappend params_list CONFIG.multtype {Constant_Coefficient_Multiplier}
+lappend params_list CONFIG.outputwidthhigh {36}
+lappend params_list CONFIG.outputwidthlow {0}
+lappend params_list CONFIG.pipestages {1}
 lappend params_list CONFIG.portatype {Signed}
 lappend params_list CONFIG.portawidth {32}
-lappend params_list CONFIG.portbtype {Signed}
-lappend params_list CONFIG.portbwidth {10}
-lappend params_list CONFIG.sclrcepriority {CE_Overrides_SCLR}
-lappend params_list CONFIG.syncclear {false}
+lappend params_list CONFIG.portbtype {Unsigned}
+lappend params_list CONFIG.portbwidth {5}
+lappend params_list CONFIG.syncclear {true}
 lappend params_list CONFIG.use_custom_output_width {true}
 
 set_property -dict $params_list [get_ips lorenz_hardware_mult_gen_v12_0_i2]
@@ -173,20 +179,68 @@ if {[lsearch $existingipslist lorenz_hardware_mult_gen_v12_0_i3] < 0} {
 create_ip -name mult_gen -version 12.0 -vendor xilinx.com -library ip -module_name lorenz_hardware_mult_gen_v12_0_i3
 set params_list [list]
 lappend params_list CONFIG.Component_Name {lorenz_hardware_mult_gen_v12_0_i3}
-lappend params_list CONFIG.clockenable {false}
-lappend params_list CONFIG.multiplier_construction {Use_Mults}
-lappend params_list CONFIG.optgoal {Speed}
-lappend params_list CONFIG.outputwidthhigh {42}
-lappend params_list CONFIG.pipestages {0}
+lappend params_list CONFIG.ccmimp {Distributed_Memory}
+lappend params_list CONFIG.clockenable {true}
+lappend params_list CONFIG.constvalue {10}
+lappend params_list CONFIG.internaluser {0}
+lappend params_list CONFIG.multtype {Constant_Coefficient_Multiplier}
+lappend params_list CONFIG.outputwidthhigh {36}
+lappend params_list CONFIG.outputwidthlow {0}
+lappend params_list CONFIG.pipestages {1}
 lappend params_list CONFIG.portatype {Signed}
 lappend params_list CONFIG.portawidth {33}
-lappend params_list CONFIG.portbtype {Signed}
-lappend params_list CONFIG.portbwidth {10}
-lappend params_list CONFIG.sclrcepriority {CE_Overrides_SCLR}
-lappend params_list CONFIG.syncclear {false}
+lappend params_list CONFIG.portbtype {Unsigned}
+lappend params_list CONFIG.portbwidth {4}
+lappend params_list CONFIG.syncclear {true}
 lappend params_list CONFIG.use_custom_output_width {true}
 
 set_property -dict $params_list [get_ips lorenz_hardware_mult_gen_v12_0_i3]
+}
+
+
+set existingipslist [get_ips]
+if {[lsearch $existingipslist lorenz_hardware_mult_gen_v12_0_i4] < 0} {
+create_ip -name mult_gen -version 12.0 -vendor xilinx.com -library ip -module_name lorenz_hardware_mult_gen_v12_0_i4
+set params_list [list]
+lappend params_list CONFIG.Component_Name {lorenz_hardware_mult_gen_v12_0_i4}
+lappend params_list CONFIG.ccmimp {Distributed_Memory}
+lappend params_list CONFIG.clockenable {true}
+lappend params_list CONFIG.constvalue {192153584101141152}
+lappend params_list CONFIG.internaluser {0}
+lappend params_list CONFIG.multtype {Constant_Coefficient_Multiplier}
+lappend params_list CONFIG.outputwidthhigh {95}
+lappend params_list CONFIG.outputwidthlow {0}
+lappend params_list CONFIG.pipestages {3}
+lappend params_list CONFIG.portatype {Signed}
+lappend params_list CONFIG.portawidth {32}
+lappend params_list CONFIG.portbtype {Unsigned}
+lappend params_list CONFIG.portbwidth {64}
+lappend params_list CONFIG.syncclear {true}
+lappend params_list CONFIG.use_custom_output_width {true}
+
+set_property -dict $params_list [get_ips lorenz_hardware_mult_gen_v12_0_i4]
+}
+
+
+set existingipslist [get_ips]
+if {[lsearch $existingipslist lorenz_hardware_mult_gen_v12_0_i5] < 0} {
+create_ip -name mult_gen -version 12.0 -vendor xilinx.com -library ip -module_name lorenz_hardware_mult_gen_v12_0_i5
+set params_list [list]
+lappend params_list CONFIG.Component_Name {lorenz_hardware_mult_gen_v12_0_i5}
+lappend params_list CONFIG.clockenable {true}
+lappend params_list CONFIG.multiplier_construction {Use_Mults}
+lappend params_list CONFIG.optgoal {Speed}
+lappend params_list CONFIG.outputwidthhigh {63}
+lappend params_list CONFIG.pipestages {3}
+lappend params_list CONFIG.portatype {Signed}
+lappend params_list CONFIG.portawidth {32}
+lappend params_list CONFIG.portbtype {Signed}
+lappend params_list CONFIG.portbwidth {32}
+lappend params_list CONFIG.sclrcepriority {CE_Overrides_SCLR}
+lappend params_list CONFIG.syncclear {true}
+lappend params_list CONFIG.use_custom_output_width {true}
+
+set_property -dict $params_list [get_ips lorenz_hardware_mult_gen_v12_0_i5]
 }
 
 
@@ -207,11 +261,11 @@ lappend params_list CONFIG.Borrow_Sense {Active_Low}
 lappend params_list CONFIG.Bypass {false}
 lappend params_list CONFIG.Bypass_CE_Priority {Bypass_Overrides_CE}
 lappend params_list CONFIG.Bypass_Sense {Active_Low}
-lappend params_list CONFIG.CE {false}
+lappend params_list CONFIG.CE {true}
 lappend params_list CONFIG.C_In {false}
 lappend params_list CONFIG.C_Out {false}
 lappend params_list CONFIG.Implementation {Fabric}
-lappend params_list CONFIG.Latency {0}
+lappend params_list CONFIG.Latency {1}
 lappend params_list CONFIG.Out_Width {66}
 lappend params_list CONFIG.SCLR {false}
 lappend params_list CONFIG.SINIT {false}
@@ -221,6 +275,30 @@ lappend params_list CONFIG.Sync_CE_Priority {Sync_Overrides_CE}
 lappend params_list CONFIG.Sync_Ctrl_Priority {Reset_Overrides_Set}
 
 set_property -dict $params_list [get_ips lorenz_hardware_c_addsub_v12_0_i2]
+}
+
+
+set existingipslist [get_ips]
+if {[lsearch $existingipslist lorenz_hardware_mult_gen_v12_0_i6] < 0} {
+create_ip -name mult_gen -version 12.0 -vendor xilinx.com -library ip -module_name lorenz_hardware_mult_gen_v12_0_i6
+set params_list [list]
+lappend params_list CONFIG.Component_Name {lorenz_hardware_mult_gen_v12_0_i6}
+lappend params_list CONFIG.ccmimp {Distributed_Memory}
+lappend params_list CONFIG.clockenable {true}
+lappend params_list CONFIG.constvalue {83886}
+lappend params_list CONFIG.internaluser {0}
+lappend params_list CONFIG.multtype {Constant_Coefficient_Multiplier}
+lappend params_list CONFIG.outputwidthhigh {64}
+lappend params_list CONFIG.outputwidthlow {0}
+lappend params_list CONFIG.pipestages {1}
+lappend params_list CONFIG.portatype {Signed}
+lappend params_list CONFIG.portawidth {33}
+lappend params_list CONFIG.portbtype {Unsigned}
+lappend params_list CONFIG.portbwidth {32}
+lappend params_list CONFIG.syncclear {true}
+lappend params_list CONFIG.use_custom_output_width {true}
+
+set_property -dict $params_list [get_ips lorenz_hardware_mult_gen_v12_0_i6]
 }
 
 
@@ -241,11 +319,11 @@ lappend params_list CONFIG.Borrow_Sense {Active_Low}
 lappend params_list CONFIG.Bypass {false}
 lappend params_list CONFIG.Bypass_CE_Priority {Bypass_Overrides_CE}
 lappend params_list CONFIG.Bypass_Sense {Active_Low}
-lappend params_list CONFIG.CE {false}
+lappend params_list CONFIG.CE {true}
 lappend params_list CONFIG.C_In {false}
 lappend params_list CONFIG.C_Out {false}
 lappend params_list CONFIG.Implementation {Fabric}
-lappend params_list CONFIG.Latency {0}
+lappend params_list CONFIG.Latency {1}
 lappend params_list CONFIG.Out_Width {34}
 lappend params_list CONFIG.SCLR {false}
 lappend params_list CONFIG.SINIT {false}
@@ -275,11 +353,11 @@ lappend params_list CONFIG.Borrow_Sense {Active_Low}
 lappend params_list CONFIG.Bypass {false}
 lappend params_list CONFIG.Bypass_CE_Priority {Bypass_Overrides_CE}
 lappend params_list CONFIG.Bypass_Sense {Active_Low}
-lappend params_list CONFIG.CE {false}
+lappend params_list CONFIG.CE {true}
 lappend params_list CONFIG.C_In {false}
 lappend params_list CONFIG.C_Out {false}
 lappend params_list CONFIG.Implementation {Fabric}
-lappend params_list CONFIG.Latency {0}
+lappend params_list CONFIG.Latency {1}
 lappend params_list CONFIG.Out_Width {67}
 lappend params_list CONFIG.SCLR {false}
 lappend params_list CONFIG.SINIT {false}
@@ -293,24 +371,26 @@ set_property -dict $params_list [get_ips lorenz_hardware_c_addsub_v12_0_i4]
 
 
 set existingipslist [get_ips]
-if {[lsearch $existingipslist lorenz_hardware_mult_gen_v12_0_i4] < 0} {
-create_ip -name mult_gen -version 12.0 -vendor xilinx.com -library ip -module_name lorenz_hardware_mult_gen_v12_0_i4
+if {[lsearch $existingipslist lorenz_hardware_mult_gen_v12_0_i7] < 0} {
+create_ip -name mult_gen -version 12.0 -vendor xilinx.com -library ip -module_name lorenz_hardware_mult_gen_v12_0_i7
 set params_list [list]
-lappend params_list CONFIG.Component_Name {lorenz_hardware_mult_gen_v12_0_i4}
-lappend params_list CONFIG.clockenable {false}
-lappend params_list CONFIG.multiplier_construction {Use_Mults}
-lappend params_list CONFIG.optgoal {Speed}
+lappend params_list CONFIG.Component_Name {lorenz_hardware_mult_gen_v12_0_i7}
+lappend params_list CONFIG.ccmimp {Distributed_Memory}
+lappend params_list CONFIG.clockenable {true}
+lappend params_list CONFIG.constvalue {83886}
+lappend params_list CONFIG.internaluser {0}
+lappend params_list CONFIG.multtype {Constant_Coefficient_Multiplier}
 lappend params_list CONFIG.outputwidthhigh {65}
-lappend params_list CONFIG.pipestages {0}
+lappend params_list CONFIG.outputwidthlow {0}
+lappend params_list CONFIG.pipestages {1}
 lappend params_list CONFIG.portatype {Signed}
-lappend params_list CONFIG.portawidth {32}
-lappend params_list CONFIG.portbtype {Signed}
-lappend params_list CONFIG.portbwidth {34}
-lappend params_list CONFIG.sclrcepriority {CE_Overrides_SCLR}
-lappend params_list CONFIG.syncclear {false}
+lappend params_list CONFIG.portawidth {34}
+lappend params_list CONFIG.portbtype {Unsigned}
+lappend params_list CONFIG.portbwidth {32}
+lappend params_list CONFIG.syncclear {true}
 lappend params_list CONFIG.use_custom_output_width {true}
 
-set_property -dict $params_list [get_ips lorenz_hardware_mult_gen_v12_0_i4]
+set_property -dict $params_list [get_ips lorenz_hardware_mult_gen_v12_0_i7]
 }
 
 

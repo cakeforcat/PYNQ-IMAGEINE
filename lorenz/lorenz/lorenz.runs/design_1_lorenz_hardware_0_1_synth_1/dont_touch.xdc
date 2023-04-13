@@ -34,6 +34,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lorenz_hardware
 # IP: c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i4/lorenz_hardware_mult_gen_v12_0_i4.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lorenz_hardware_mult_gen_v12_0_i4 || ORIG_REF_NAME==lorenz_hardware_mult_gen_v12_0_i4} -quiet] -quiet
 
+# IP: c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i5/lorenz_hardware_mult_gen_v12_0_i5.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lorenz_hardware_mult_gen_v12_0_i5 || ORIG_REF_NAME==lorenz_hardware_mult_gen_v12_0_i5} -quiet] -quiet
+
+# IP: c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i6/lorenz_hardware_mult_gen_v12_0_i6.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lorenz_hardware_mult_gen_v12_0_i6 || ORIG_REF_NAME==lorenz_hardware_mult_gen_v12_0_i6} -quiet] -quiet
+
 # XDC: c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/constrs/lorenz_hardware.xdc
 # XDC: The top module name and the constraint reference have the same name: 'design_1_lorenz_hardware_0_1'. Do not add the DONT_TOUCH constraint.
 set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
@@ -70,6 +76,12 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
 # IP: c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i4/lorenz_hardware_mult_gen_v12_0_i4.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lorenz_hardware_mult_gen_v12_0_i4 || ORIG_REF_NAME==lorenz_hardware_mult_gen_v12_0_i4} -quiet] -quiet
+
+# IP: c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i5/lorenz_hardware_mult_gen_v12_0_i5.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lorenz_hardware_mult_gen_v12_0_i5 || ORIG_REF_NAME==lorenz_hardware_mult_gen_v12_0_i5} -quiet] -quiet
+
+# IP: c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/lorenz_hardware_mult_gen_v12_0_i6/lorenz_hardware_mult_gen_v12_0_i6.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lorenz_hardware_mult_gen_v12_0_i6 || ORIG_REF_NAME==lorenz_hardware_mult_gen_v12_0_i6} -quiet] -quiet
 
 # XDC: c:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz/lorenz/lorenz.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_1/constrs/lorenz_hardware.xdc
 # XDC: The top module name and the constraint reference have the same name: 'design_1_lorenz_hardware_0_1'. Do not add the DONT_TOUCH constraint.

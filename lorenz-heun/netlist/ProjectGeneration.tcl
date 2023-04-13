@@ -24,7 +24,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	set IP_LifeCycle_Menu {2}
 	set IP_Logo {sysgen_icon_100.png}
 	set IP_Name {}
-	set IP_Revision {311705465}
+	set IP_Revision {312223151}
 	set IP_Socket_IP {0}
 	set IP_Socket_IP_Proj_Path {}
 	set IP_Vendor_Text {User_Company}
@@ -63,30 +63,15 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 		{{lorenz_hardware.htm}}
 	}
 	set SimPeriod 1e-08
-	set SimTime 1e-05
-	set SimulationTime {10210.00000000 ns}
+	set SimTime 6.8e-07
+	set SimulationTime {890.00000000 ns}
 	set SynthStrategyName {Vivado Synthesis Defaults}
 	set SynthesisTool {Vivado}
 	set TargetDir {C:/Users/cakef/Documents/GitHub/pynq-math-visualisations/lorenz-heun/netlist}
 	set TopLevelModule {lorenz_hardware}
-	set TopLevelSimulinkHandle 0.000244141
+	set TopLevelSimulinkHandle 0.00012207
 	set VHDLLib {xil_defaultlib}
 	set TopLevelPortInterface {}
-	dict set TopLevelPortInterface test1 Name {test1}
-	dict set TopLevelPortInterface test1 Type Fix_32_24
-	dict set TopLevelPortInterface test1 ArithmeticType xlSigned
-	dict set TopLevelPortInterface test1 BinaryPoint 24
-	dict set TopLevelPortInterface test1 Width 32
-	dict set TopLevelPortInterface test1 DatFile {lorenz_hardware_test1.dat}
-	dict set TopLevelPortInterface test1 IconText {test1}
-	dict set TopLevelPortInterface test1 Direction out
-	dict set TopLevelPortInterface test1 Period 1
-	dict set TopLevelPortInterface test1 Interface 0
-	dict set TopLevelPortInterface test1 InterfaceName {}
-	dict set TopLevelPortInterface test1 InterfaceString {DATA}
-	dict set TopLevelPortInterface test1 ClockDomain {lorenz_hardware}
-	dict set TopLevelPortInterface test1 Locs {}
-	dict set TopLevelPortInterface test1 IOStandard {}
 	dict set TopLevelPortInterface lorenz_hardware_aresetn Name {lorenz_hardware_aresetn}
 	dict set TopLevelPortInterface lorenz_hardware_aresetn Type -
 	dict set TopLevelPortInterface lorenz_hardware_aresetn ArithmeticType xlUnsigned
@@ -379,7 +364,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	dict set MemoryMappedPort z ArithmeticType xlSigned
 	dict set MemoryMappedPort z BinaryPoint 24
 	dict set MemoryMappedPort z Width 32
-	dict set MemoryMappedPort z DatFile {lorenz_hardware_z.dat}
+	dict set MemoryMappedPort z DatFile {lorenz_hardware_subsystem_z.dat}
 	dict set MemoryMappedPort z AddressOffset 0
 	dict set MemoryMappedPort z IconText {z}
 	dict set MemoryMappedPort z Direction in
@@ -395,7 +380,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	dict set MemoryMappedPort y ArithmeticType xlSigned
 	dict set MemoryMappedPort y BinaryPoint 24
 	dict set MemoryMappedPort y Width 32
-	dict set MemoryMappedPort y DatFile {lorenz_hardware_y.dat}
+	dict set MemoryMappedPort y DatFile {lorenz_hardware_subsystem_y.dat}
 	dict set MemoryMappedPort y AddressOffset 4
 	dict set MemoryMappedPort y IconText {y}
 	dict set MemoryMappedPort y Direction in
@@ -411,7 +396,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	dict set MemoryMappedPort x ArithmeticType xlSigned
 	dict set MemoryMappedPort x BinaryPoint 24
 	dict set MemoryMappedPort x Width 32
-	dict set MemoryMappedPort x DatFile {lorenz_hardware_x.dat}
+	dict set MemoryMappedPort x DatFile {lorenz_hardware_subsystem_x.dat}
 	dict set MemoryMappedPort x AddressOffset 8
 	dict set MemoryMappedPort x IconText {x}
 	dict set MemoryMappedPort x Direction in
@@ -427,7 +412,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	dict set MemoryMappedPort xnew ArithmeticType xlSigned
 	dict set MemoryMappedPort xnew BinaryPoint 24
 	dict set MemoryMappedPort xnew Width 32
-	dict set MemoryMappedPort xnew DatFile {lorenz_hardware_xnew.dat}
+	dict set MemoryMappedPort xnew DatFile {lorenz_hardware_subsystem_xnew.dat}
 	dict set MemoryMappedPort xnew AddressOffset 12
 	dict set MemoryMappedPort xnew IconText {Xnew}
 	dict set MemoryMappedPort xnew Direction out
@@ -443,7 +428,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	dict set MemoryMappedPort ynew ArithmeticType xlSigned
 	dict set MemoryMappedPort ynew BinaryPoint 24
 	dict set MemoryMappedPort ynew Width 32
-	dict set MemoryMappedPort ynew DatFile {lorenz_hardware_ynew.dat}
+	dict set MemoryMappedPort ynew DatFile {lorenz_hardware_subsystem_ynew.dat}
 	dict set MemoryMappedPort ynew AddressOffset 16
 	dict set MemoryMappedPort ynew IconText {Ynew}
 	dict set MemoryMappedPort ynew Direction out
@@ -459,7 +444,7 @@ namespace eval ::xilinx::dsp::planaheaddriver {
 	dict set MemoryMappedPort znew ArithmeticType xlSigned
 	dict set MemoryMappedPort znew BinaryPoint 24
 	dict set MemoryMappedPort znew Width 32
-	dict set MemoryMappedPort znew DatFile {lorenz_hardware_znew.dat}
+	dict set MemoryMappedPort znew DatFile {lorenz_hardware_subsystem_znew.dat}
 	dict set MemoryMappedPort znew AddressOffset 20
 	dict set MemoryMappedPort znew IconText {Znew}
 	dict set MemoryMappedPort znew Direction out

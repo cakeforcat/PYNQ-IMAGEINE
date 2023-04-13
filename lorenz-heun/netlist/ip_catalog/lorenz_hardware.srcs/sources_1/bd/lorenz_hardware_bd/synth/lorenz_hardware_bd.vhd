@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Thu Apr  6 16:51:23 2023
---Host        : HALALSUCCESOR running 64-bit major release  (build 9200)
+--Date        : Wed Apr 12 16:39:54 2023
+--Host        : Laptopiszcze running 64-bit major release  (build 9200)
 --Command     : generate_target lorenz_hardware_bd.bd
 --Design      : lorenz_hardware_bd
 --Purpose     : IP block netlist
@@ -598,8 +598,7 @@ entity lorenz_hardware_bd is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    test1 : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    FIXED_IO_ps_srstb : inout STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
   attribute CORE_GENERATION_INFO of lorenz_hardware_bd : entity is "lorenz_hardware_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=lorenz_hardware_bd,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=4,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=0,numSysgenBlks=1,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SYSGEN,da_axi4_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
@@ -621,7 +620,6 @@ architecture STRUCTURE of lorenz_hardware_bd is
     lorenz_hardware_s_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     lorenz_hardware_s_axi_arvalid : in STD_LOGIC;
     lorenz_hardware_s_axi_rready : in STD_LOGIC;
-    test1 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     lorenz_hardware_s_axi_awready : out STD_LOGIC;
     lorenz_hardware_s_axi_wready : out STD_LOGIC;
     lorenz_hardware_s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -712,7 +710,6 @@ architecture STRUCTURE of lorenz_hardware_bd is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component lorenz_hardware_bd_rst_processing_system_1_50M_0;
-  signal lorenz_hardware_1_test1 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal processing_system_1_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system_1_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system_1_DDR_CAS_N : STD_LOGIC;
@@ -821,10 +818,7 @@ architecture STRUCTURE of lorenz_hardware_bd is
   attribute X_INTERFACE_INFO of DDR_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
-  attribute X_INTERFACE_INFO of test1 : signal is "xilinx.com:signal:data:1.0 DATA.TEST1 DATA";
-  attribute X_INTERFACE_PARAMETER of test1 : signal is "XIL_INTERFACENAME DATA.TEST1, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}";
 begin
-  test1(31 downto 0) <= lorenz_hardware_1_test1(31 downto 0);
 lorenz_hardware_1: component lorenz_hardware_bd_lorenz_hardware_1_0
      port map (
       clk => processing_system_1_FCLK_CLK0,
@@ -845,8 +839,7 @@ lorenz_hardware_1: component lorenz_hardware_bd_lorenz_hardware_1_0
       lorenz_hardware_s_axi_wdata(31 downto 0) => processing_system_1_axi_periph_M00_AXI_WDATA(31 downto 0),
       lorenz_hardware_s_axi_wready => processing_system_1_axi_periph_M00_AXI_WREADY,
       lorenz_hardware_s_axi_wstrb(3 downto 0) => processing_system_1_axi_periph_M00_AXI_WSTRB(3 downto 0),
-      lorenz_hardware_s_axi_wvalid => processing_system_1_axi_periph_M00_AXI_WVALID,
-      test1(31 downto 0) => lorenz_hardware_1_test1(31 downto 0)
+      lorenz_hardware_s_axi_wvalid => processing_system_1_axi_periph_M00_AXI_WVALID
     );
 processing_system_1: component lorenz_hardware_bd_processing_system_1_0
      port map (

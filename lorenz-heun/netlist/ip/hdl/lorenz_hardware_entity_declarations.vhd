@@ -39,25 +39,6 @@ use xil_defaultlib.conv_pkg.all;
 
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_constant_ecfb47cec3 is
-  port (
-    op : out std_logic_vector((32 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_ecfb47cec3;
-architecture behavior of sysgen_constant_ecfb47cec3
-is
-begin
-  op <= "00000000000000010100011110101110";
-end behavior;
-
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
-
-library IEEE;
-use IEEE.std_logic_1164.all;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
 
@@ -132,116 +113,80 @@ end architecture behavior;
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
 
+---------------------------------------------------------------------
+--
+--  Filename      : xlregister.vhd
+--
+--  Description   : VHDL description of an arbitrary wide register.
+--                  Unlike the delay block, an initial value is
+--                  specified and is considered valid at the start
+--                  of simulation.  The register is only one word
+--                  deep.
+--
+--  Mod. History  : Removed valid bit logic from wrapper.
+--                : Changed VHDL to use a bit_vector generic for its
+--
+---------------------------------------------------------------------
+
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_constant_f556625018 is
-  port (
-    op : out std_logic_vector((32 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_f556625018;
-architecture behavior of sysgen_constant_f556625018
-is
-begin
-  op <= "00000010101010101010101010101011";
-end behavior;
-
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
 
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_constant_a2a0d372de is
-  port (
-    op : out std_logic_vector((10 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_a2a0d372de;
-architecture behavior of sysgen_constant_a2a0d372de
-is
+
+entity lorenz_hardware_xlregister is
+
+   generic (d_width          : integer := 5;          -- Width of d input
+            init_value       : bit_vector := b"00");  -- Binary init value string
+
+   port (d   : in std_logic_vector (d_width-1 downto 0);
+         rst : in std_logic_vector(0 downto 0) := "0";
+         en  : in std_logic_vector(0 downto 0) := "1";
+         ce  : in std_logic;
+         clk : in std_logic;
+         q   : out std_logic_vector (d_width-1 downto 0));
+
+end lorenz_hardware_xlregister;
+
+architecture behavior of lorenz_hardware_xlregister is
+
+   component synth_reg_w_init
+      generic (width      : integer;
+               init_index : integer;
+               init_value : bit_vector;
+               latency    : integer);
+      port (i   : in std_logic_vector(width-1 downto 0);
+            ce  : in std_logic;
+            clr : in std_logic;
+            clk : in std_logic;
+            o   : out std_logic_vector(width-1 downto 0));
+   end component; -- end synth_reg_w_init
+
+   -- synthesis translate_off
+   signal real_d, real_q           : real;    -- For debugging info ports
+   -- synthesis translate_on
+   signal internal_clr             : std_logic;
+   signal internal_ce              : std_logic;
+
 begin
-  op <= "0010100000";
-end behavior;
 
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
+   internal_clr <= rst(0) and ce;
+   internal_ce  <= en(0) and ce;
 
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_constant_4124fe8b13 is
-  port (
-    op : out std_logic_vector((10 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_constant_4124fe8b13;
-architecture behavior of sysgen_constant_4124fe8b13
-is
-begin
-  op <= "0111000000";
-end behavior;
+   -- Synthesizable behavioral model
+   synth_reg_inst : synth_reg_w_init
+      generic map (width      => d_width,
+                   init_index => 2,
+                   init_value => init_value,
+                   latency    => 1)
+      port map (i   => d,
+                ce  => internal_ce,
+                clr => internal_clr,
+                clk => clk,
+                o   => q);
 
-library xil_defaultlib;
-use xil_defaultlib.conv_pkg.all;
+end architecture behavior;
 
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-entity sysgen_negate_da04cdf96e is
-  port (
-    ip : in std_logic_vector((32 - 1) downto 0);
-    op : out std_logic_vector((32 - 1) downto 0);
-    clk : in std_logic;
-    ce : in std_logic;
-    clr : in std_logic);
-end sysgen_negate_da04cdf96e;
-architecture behavior of sysgen_negate_da04cdf96e
-is
-  signal ip_18_25: signed((32 - 1) downto 0);
-  type array_type_op_mem_48_20 is array (0 to (1 - 1)) of signed((32 - 1) downto 0);
-  signal op_mem_48_20: array_type_op_mem_48_20 := (
-    0 => "00000000000000000000000000000000");
-  signal op_mem_48_20_front_din: signed((32 - 1) downto 0);
-  signal op_mem_48_20_back: signed((32 - 1) downto 0);
-  signal op_mem_48_20_push_front_pop_back_en: std_logic;
-  signal cast_35_24: signed((33 - 1) downto 0);
-  signal internal_ip_35_9_neg: signed((33 - 1) downto 0);
-  signal internal_ip_join_30_1: signed((33 - 1) downto 0);
-  signal internal_ip_40_3_convert: signed((32 - 1) downto 0);
-begin
-  ip_18_25 <= std_logic_vector_to_signed(ip);
-  op_mem_48_20_back <= op_mem_48_20(0);
-  proc_op_mem_48_20: process (clk)
-  is
-    variable i: integer;
-  begin
-    if (clk'event and (clk = '1')) then
-      if ((ce = '1') and (op_mem_48_20_push_front_pop_back_en = '1')) then
-        op_mem_48_20(0) <= op_mem_48_20_front_din;
-      end if;
-    end if;
-  end process proc_op_mem_48_20;
-  cast_35_24 <= s2s_cast(ip_18_25, 24, 33, 24);
-  internal_ip_35_9_neg <=  -cast_35_24;
-  proc_if_30_1: process (internal_ip_35_9_neg)
-  is
-  begin
-    if false then
-      internal_ip_join_30_1 <= std_logic_vector_to_signed("000000000000000000000000000000000");
-    else 
-      internal_ip_join_30_1 <= internal_ip_35_9_neg;
-    end if;
-  end process proc_if_30_1;
-  internal_ip_40_3_convert <= std_logic_vector_to_signed(convert_type(signed_to_std_logic_vector(internal_ip_join_30_1), 33, 24, xlSigned, 32, 24, xlSigned, xlTruncate, xlSaturate));
-  op_mem_48_20_front_din <= internal_ip_40_3_convert;
-  op_mem_48_20_push_front_pop_back_en <= '1';
-  op <= signed_to_std_logic_vector(op_mem_48_20_back);
-end behavior;
 
 library xil_defaultlib;
 use xil_defaultlib.conv_pkg.all;
@@ -485,6 +430,8 @@ entity lorenz_hardware_xladdsub is
  component lorenz_hardware_c_addsub_v12_0_i0
     port ( 
     a: in std_logic_vector(33 - 1 downto 0);
+    clk: in std_logic:= '0';
+    ce: in std_logic:= '0';
     s: out std_logic_vector(c_output_width - 1 downto 0);
     b: in std_logic_vector(33 - 1 downto 0) 
  		  ); 
@@ -493,6 +440,8 @@ entity lorenz_hardware_xladdsub is
  component lorenz_hardware_c_addsub_v12_0_i1
     port ( 
     a: in std_logic_vector(33 - 1 downto 0);
+    clk: in std_logic:= '0';
+    ce: in std_logic:= '0';
     s: out std_logic_vector(c_output_width - 1 downto 0);
     b: in std_logic_vector(33 - 1 downto 0) 
  		  ); 
@@ -501,6 +450,8 @@ entity lorenz_hardware_xladdsub is
  component lorenz_hardware_c_addsub_v12_0_i2
     port ( 
     a: in std_logic_vector(66 - 1 downto 0);
+    clk: in std_logic:= '0';
+    ce: in std_logic:= '0';
     s: out std_logic_vector(c_output_width - 1 downto 0);
     b: in std_logic_vector(66 - 1 downto 0) 
  		  ); 
@@ -509,6 +460,8 @@ entity lorenz_hardware_xladdsub is
  component lorenz_hardware_c_addsub_v12_0_i3
     port ( 
     a: in std_logic_vector(34 - 1 downto 0);
+    clk: in std_logic:= '0';
+    ce: in std_logic:= '0';
     s: out std_logic_vector(c_output_width - 1 downto 0);
     b: in std_logic_vector(34 - 1 downto 0) 
  		  ); 
@@ -517,6 +470,8 @@ entity lorenz_hardware_xladdsub is
  component lorenz_hardware_c_addsub_v12_0_i4
     port ( 
     a: in std_logic_vector(67 - 1 downto 0);
+    clk: in std_logic:= '0';
+    ce: in std_logic:= '0';
     s: out std_logic_vector(c_output_width - 1 downto 0);
     b: in std_logic_vector(67 - 1 downto 0) 
  		  ); 
@@ -541,6 +496,8 @@ begin
   core_instance0:lorenz_hardware_c_addsub_v12_0_i0
    port map ( 
          a => full_a,
+         clk => clk,
+         ce => internal_ce,
          s => core_s,
          b => full_b
   ); 
@@ -550,6 +507,8 @@ begin
   core_instance1:lorenz_hardware_c_addsub_v12_0_i1
    port map ( 
          a => full_a,
+         clk => clk,
+         ce => internal_ce,
          s => core_s,
          b => full_b
   ); 
@@ -559,6 +518,8 @@ begin
   core_instance2:lorenz_hardware_c_addsub_v12_0_i2
    port map ( 
          a => full_a,
+         clk => clk,
+         ce => internal_ce,
          s => core_s,
          b => full_b
   ); 
@@ -568,6 +529,8 @@ begin
   core_instance3:lorenz_hardware_c_addsub_v12_0_i3
    port map ( 
          a => full_a,
+         clk => clk,
+         ce => internal_ce,
          s => core_s,
          b => full_b
   ); 
@@ -577,6 +540,8 @@ begin
   core_instance4:lorenz_hardware_c_addsub_v12_0_i4
    port map ( 
          a => full_a,
+         clk => clk,
+         ce => internal_ce,
          s => core_s,
          b => full_b
   ); 
@@ -638,6 +603,310 @@ latency_test: if (extra_registers > 0) generate
  tie_dangling_cout: if (c_has_c_out = 0) generate
  c_out <= "0";
  end generate tie_dangling_cout;
+ end architecture behavior;
+
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+
+-------------------------------------------------------------------
+ -- System Generator VHDL source file.
+ --
+ -- Copyright(C) 2018 by Xilinx, Inc.  All rights reserved.  This
+ -- text/file contains proprietary, confidential information of Xilinx,
+ -- Inc., is distributed under license from Xilinx, Inc., and may be used,
+ -- copied and/or disclosed only pursuant to the terms of a valid license
+ -- agreement with Xilinx, Inc.  Xilinx hereby grants you a license to use
+ -- this text/file solely for design, simulation, implementation and
+ -- creation of design files limited to Xilinx devices or technologies.
+ -- Use with non-Xilinx devices or technologies is expressly prohibited
+ -- and immediately terminates your license unless covered by a separate
+ -- agreement.
+ --
+ -- Xilinx is providing this design, code, or information "as is" solely
+ -- for use in developing programs and solutions for Xilinx devices.  By
+ -- providing this design, code, or information as one possible
+ -- implementation of this feature, application or standard, Xilinx is
+ -- making no representation that this implementation is free from any
+ -- claims of infringement.  You are responsible for obtaining any rights
+ -- you may require for your implementation.  Xilinx expressly disclaims
+ -- any warranty whatsoever with respect to the adequacy of the
+ -- implementation, including but not limited to warranties of
+ -- merchantability or fitness for a particular purpose.
+ --
+ -- Xilinx products are not intended for use in life support appliances,
+ -- devices, or systems.  Use in such applications is expressly prohibited.
+ --
+ -- Any modifications that are made to the source code are done at the user's
+ -- sole risk and will be unsupported.
+ --
+ -- This copyright and support notice must be retained as part of this
+ -- text at all times.  (c) Copyright 1995-2018 Xilinx, Inc.  All rights
+ -- reserved.
+ -------------------------------------------------------------------
+ library IEEE;
+ use IEEE.std_logic_1164.all;
+ use IEEE.std_logic_arith.all;
+
+entity lorenz_hardware_xlcmult is 
+   generic (
+     core_name0: string := "";
+     a_width: integer := 4;
+     a_bin_pt: integer := 2;
+     a_arith: integer := xlSigned;
+     b_width: integer := 4;
+     b_bin_pt: integer := 2;
+     b_arith: integer := xlSigned;
+     p_width: integer := 8;
+     p_bin_pt: integer := 2;
+     p_arith: integer := xlSigned;
+     rst_width: integer := 1;
+     rst_bin_pt: integer := 0;
+     rst_arith: integer := xlUnsigned;
+     en_width: integer := 1;
+     en_bin_pt: integer := 0;
+     en_arith: integer := xlUnsigned;
+     multsign: integer := xlSigned;
+     quantization: integer := xlTruncate;
+     overflow: integer := xlWrap;
+     extra_registers: integer := 0;
+     c_a_width: integer := 7;
+     c_b_width: integer := 7;
+     c_a_type: integer := 0;
+     c_b_type: integer := 0;
+     c_type: integer := 0;
+     const_bin_pt: integer := 1;
+     zero_const : integer := 0;
+     c_output_width: integer := 16
+   );
+   port (
+     a: in std_logic_vector(a_width - 1 downto 0);
+     ce: in std_logic;
+     clr: in std_logic;
+     clk: in std_logic;
+     core_ce: in std_logic:= '0';
+     core_clr: in std_logic:= '0';
+     core_clk: in std_logic:= '0';
+     rst: in std_logic_vector(rst_width - 1 downto 0);
+     en: in std_logic_vector(en_width - 1 downto 0);
+     p: out std_logic_vector(p_width - 1 downto 0)
+   );
+ end lorenz_hardware_xlcmult;
+ 
+ architecture behavior of lorenz_hardware_xlcmult is
+ component synth_reg
+ generic (
+ width: integer := 16;
+ latency: integer := 5
+ );
+ port (
+ i: in std_logic_vector(width - 1 downto 0);
+ ce: in std_logic;
+ clr: in std_logic;
+ clk: in std_logic;
+ o: out std_logic_vector(width - 1 downto 0)
+ );
+ end component;
+ signal tmp_a: std_logic_vector(c_a_width - 1 downto 0);
+ signal tmp_p: std_logic_vector(c_output_width - 1 downto 0);
+ signal conv_p: std_logic_vector(p_width - 1 downto 0);
+ -- synthesis translate_off
+ signal real_a, real_p: real;
+ -- synthesis translate_on
+ signal nd: std_logic;
+ signal internal_ce: std_logic;
+ signal internal_clr: std_logic;
+ signal internal_core_ce: std_logic;
+
+
+ component lorenz_hardware_mult_gen_v12_0_i0
+    port ( 
+      clk: in std_logic;
+      ce: in std_logic;
+      sclr: in std_logic;
+      p: out std_logic_vector(c_output_width - 1 downto 0);
+      a: in std_logic_vector(c_a_width - 1 downto 0) 
+ 		  ); 
+ end component;
+
+ component lorenz_hardware_mult_gen_v12_0_i1
+    port ( 
+      clk: in std_logic;
+      ce: in std_logic;
+      sclr: in std_logic;
+      p: out std_logic_vector(c_output_width - 1 downto 0);
+      a: in std_logic_vector(c_a_width - 1 downto 0) 
+ 		  ); 
+ end component;
+
+ component lorenz_hardware_mult_gen_v12_0_i2
+    port ( 
+      clk: in std_logic;
+      ce: in std_logic;
+      sclr: in std_logic;
+      p: out std_logic_vector(c_output_width - 1 downto 0);
+      a: in std_logic_vector(c_a_width - 1 downto 0) 
+ 		  ); 
+ end component;
+
+ component lorenz_hardware_mult_gen_v12_0_i3
+    port ( 
+      clk: in std_logic;
+      ce: in std_logic;
+      sclr: in std_logic;
+      p: out std_logic_vector(c_output_width - 1 downto 0);
+      a: in std_logic_vector(c_a_width - 1 downto 0) 
+ 		  ); 
+ end component;
+
+ component lorenz_hardware_mult_gen_v12_0_i4
+    port ( 
+      clk: in std_logic;
+      ce: in std_logic;
+      sclr: in std_logic;
+      p: out std_logic_vector(c_output_width - 1 downto 0);
+      a: in std_logic_vector(c_a_width - 1 downto 0) 
+ 		  ); 
+ end component;
+
+ component lorenz_hardware_mult_gen_v12_0_i6
+    port ( 
+      clk: in std_logic;
+      ce: in std_logic;
+      sclr: in std_logic;
+      p: out std_logic_vector(c_output_width - 1 downto 0);
+      a: in std_logic_vector(c_a_width - 1 downto 0) 
+ 		  ); 
+ end component;
+
+ component lorenz_hardware_mult_gen_v12_0_i7
+    port ( 
+      clk: in std_logic;
+      ce: in std_logic;
+      sclr: in std_logic;
+      p: out std_logic_vector(c_output_width - 1 downto 0);
+      a: in std_logic_vector(c_a_width - 1 downto 0) 
+ 		  ); 
+ end component;
+
+begin
+ -- synthesis translate_off
+ -- synthesis translate_on
+ input_process: process(a)
+ variable tmp_p_bin_pt, tmp_p_arith: integer;
+ begin
+ tmp_a <= zero_ext(a, c_a_width);
+ end process;
+ output_process: process(tmp_p)
+ begin
+ conv_p <= convert_type(tmp_p, c_output_width, a_bin_pt+b_bin_pt, multsign,
+ p_width, p_bin_pt, p_arith, quantization, overflow);
+ end process;
+ internal_ce <= ce and en(0);
+ internal_core_ce <= core_ce and en(0);
+ internal_clr <= (clr or rst(0)) and ce;
+ nd <= internal_ce;
+
+
+ comp0: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i0")) generate 
+  core_instance0:lorenz_hardware_mult_gen_v12_0_i0
+   port map ( 
+      sclr => internal_clr,
+      clk => clk,
+      ce => internal_ce,
+      p => tmp_p,
+      a => tmp_a
+  ); 
+   end generate;
+
+ comp1: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i1")) generate 
+  core_instance1:lorenz_hardware_mult_gen_v12_0_i1
+   port map ( 
+      sclr => internal_clr,
+      clk => clk,
+      ce => internal_ce,
+      p => tmp_p,
+      a => tmp_a
+  ); 
+   end generate;
+
+ comp2: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i2")) generate 
+  core_instance2:lorenz_hardware_mult_gen_v12_0_i2
+   port map ( 
+      sclr => internal_clr,
+      clk => clk,
+      ce => internal_ce,
+      p => tmp_p,
+      a => tmp_a
+  ); 
+   end generate;
+
+ comp3: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i3")) generate 
+  core_instance3:lorenz_hardware_mult_gen_v12_0_i3
+   port map ( 
+      sclr => internal_clr,
+      clk => clk,
+      ce => internal_ce,
+      p => tmp_p,
+      a => tmp_a
+  ); 
+   end generate;
+
+ comp4: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i4")) generate 
+  core_instance4:lorenz_hardware_mult_gen_v12_0_i4
+   port map ( 
+      sclr => internal_clr,
+      clk => clk,
+      ce => internal_ce,
+      p => tmp_p,
+      a => tmp_a
+  ); 
+   end generate;
+
+ comp5: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i6")) generate 
+  core_instance5:lorenz_hardware_mult_gen_v12_0_i6
+   port map ( 
+      sclr => internal_clr,
+      clk => clk,
+      ce => internal_ce,
+      p => tmp_p,
+      a => tmp_a
+  ); 
+   end generate;
+
+ comp6: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i7")) generate 
+  core_instance6:lorenz_hardware_mult_gen_v12_0_i7
+   port map ( 
+      sclr => internal_clr,
+      clk => clk,
+      ce => internal_ce,
+      p => tmp_p,
+      a => tmp_a
+  ); 
+   end generate;
+
+latency_gt_0: if (extra_registers > 0) and (zero_const = 0)
+ generate
+ reg: synth_reg
+ generic map (
+ width => p_width,
+ latency => extra_registers
+ )
+ port map (
+ i => conv_p,
+ ce => internal_ce,
+ clr => internal_clr,
+ clk => clk,
+ o => p
+ );
+ end generate;
+ latency0: if ( (extra_registers = 0) and (zero_const = 0) )
+ generate
+ p <= conv_p;
+ end generate latency0;
+ zero_constant: if (zero_const = 1)
+ generate
+ p <= integer_to_std_logic_vector(0,p_width,p_arith);
+ end generate zero_constant;
  end architecture behavior;
 
 library xil_defaultlib;
@@ -744,42 +1013,13 @@ entity lorenz_hardware_xlmult is
  end component;
 
 
- component lorenz_hardware_mult_gen_v12_0_i0
+ component lorenz_hardware_mult_gen_v12_0_i5
     port ( 
       b: in std_logic_vector(c_b_width - 1 downto 0);
       p: out std_logic_vector(c_output_width - 1 downto 0);
-      a: in std_logic_vector(c_a_width - 1 downto 0) 
- 		  ); 
- end component;
-
- component lorenz_hardware_mult_gen_v12_0_i1
-    port ( 
-      b: in std_logic_vector(c_b_width - 1 downto 0);
-      p: out std_logic_vector(c_output_width - 1 downto 0);
-      a: in std_logic_vector(c_a_width - 1 downto 0) 
- 		  ); 
- end component;
-
- component lorenz_hardware_mult_gen_v12_0_i2
-    port ( 
-      b: in std_logic_vector(c_b_width - 1 downto 0);
-      p: out std_logic_vector(c_output_width - 1 downto 0);
-      a: in std_logic_vector(c_a_width - 1 downto 0) 
- 		  ); 
- end component;
-
- component lorenz_hardware_mult_gen_v12_0_i3
-    port ( 
-      b: in std_logic_vector(c_b_width - 1 downto 0);
-      p: out std_logic_vector(c_output_width - 1 downto 0);
-      a: in std_logic_vector(c_a_width - 1 downto 0) 
- 		  ); 
- end component;
-
- component lorenz_hardware_mult_gen_v12_0_i4
-    port ( 
-      b: in std_logic_vector(c_b_width - 1 downto 0);
-      p: out std_logic_vector(c_output_width - 1 downto 0);
+      clk: in std_logic;
+      ce: in std_logic;
+      sclr: in std_logic;
       a: in std_logic_vector(c_a_width - 1 downto 0) 
  		  ); 
  end component;
@@ -818,46 +1058,13 @@ signal tmp_a: std_logic_vector(c_a_width - 1 downto 0);
  end process;
 
 
- comp0: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i0")) generate 
-  core_instance0:lorenz_hardware_mult_gen_v12_0_i0
+ comp0: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i5")) generate 
+  core_instance0:lorenz_hardware_mult_gen_v12_0_i5
    port map ( 
         a => tmp_a,
-        p => tmp_p,
-        b => tmp_b
-  ); 
-   end generate;
-
- comp1: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i1")) generate 
-  core_instance1:lorenz_hardware_mult_gen_v12_0_i1
-   port map ( 
-        a => tmp_a,
-        p => tmp_p,
-        b => tmp_b
-  ); 
-   end generate;
-
- comp2: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i2")) generate 
-  core_instance2:lorenz_hardware_mult_gen_v12_0_i2
-   port map ( 
-        a => tmp_a,
-        p => tmp_p,
-        b => tmp_b
-  ); 
-   end generate;
-
- comp3: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i3")) generate 
-  core_instance3:lorenz_hardware_mult_gen_v12_0_i3
-   port map ( 
-        a => tmp_a,
-        p => tmp_p,
-        b => tmp_b
-  ); 
-   end generate;
-
- comp4: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i4")) generate 
-  core_instance4:lorenz_hardware_mult_gen_v12_0_i4
-   port map ( 
-        a => tmp_a,
+        clk => clk,
+        ce => internal_ce,
+        sclr => internal_clr,
         p => tmp_p,
         b => tmp_b
   ); 

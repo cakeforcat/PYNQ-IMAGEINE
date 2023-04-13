@@ -534,29 +534,6 @@
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
-    <spirit:busInterface>
-      <spirit:name>test1</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
-      <spirit:master/>
-      <spirit:portMaps>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>DATA</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>test1</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-      </spirit:portMaps>
-      <spirit:parameters>
-        <spirit:parameter>
-          <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.TEST1.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} signed {attribs {resolve_type i
-mmediate dependency {} format bool minimum {} maximum {}} value true}}}}}}</spirit:value>
-        </spirit:parameter>
-      </spirit:parameters>
-    </spirit:busInterface>
   </spirit:busInterfaces>
   <spirit:memoryMaps>
     <spirit:memoryMap>
@@ -594,11 +571,11 @@ mmediate dependency {} format bool minimum {} maximum {}} value true}}}}}}</spir
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 06 15:52:42 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 15:58:58 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:05e40e40</spirit:value>
+            <spirit:value>9:4977e3e8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -609,7 +586,7 @@ mmediate dependency {} format bool minimum {} maximum {}} value true}}}}}}</spir
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:05e40e40</spirit:value>
+            <spirit:value>9:4977e3e8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -625,11 +602,11 @@ mmediate dependency {} format bool minimum {} maximum {}} value true}}}}}}</spir
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 06 15:52:42 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 15:58:58 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:05e40e40</spirit:value>
+            <spirit:value>9:4977e3e8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -645,11 +622,11 @@ mmediate dependency {} format bool minimum {} maximum {}} value true}}}}}}</spir
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 06 15:52:42 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 15:58:58 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7b0c186a</spirit:value>
+            <spirit:value>9:bdf139aa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -665,11 +642,11 @@ mmediate dependency {} format bool minimum {} maximum {}} value true}}}}}}</spir
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 06 15:52:42 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 15:58:58 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7b0c186a</spirit:value>
+            <spirit:value>9:bdf139aa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -683,11 +660,11 @@ mmediate dependency {} format bool minimum {} maximum {}} value true}}}}}}</spir
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 06 15:53:58 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 16:00:41 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:05e40e40</spirit:value>
+            <spirit:value>9:4977e3e8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -880,23 +857,6 @@ mmediate dependency {} format bool minimum {} maximum {}} value true}}}}}}</spir
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>test1</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
         <spirit:name>lorenz_hardware_s_axi_awready</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -1065,82 +1025,90 @@ mmediate dependency {} format bool minimum {} maximum {}} value true}}}}}}</spir
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>lorenz_hardware_mult_gen_v12_0_i5/lorenz_hardware_mult_gen_v12_0_i5.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>lorenz_hardware_mult_gen_v12_0_i6/lorenz_hardware_mult_gen_v12_0_i6.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>constrs/lorenz_hardware.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/conv_pkg.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/conv_pkg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/synth_reg.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/synth_reg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/synth_reg_w_init.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/synth_reg_w_init.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/srl17e.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/srl17e.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/srl33e.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/srl33e.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/synth_reg_reg.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/synth_reg_reg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/single_reg_w_init.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/single_reg_w_init.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/xlclockdriver_rd.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/xlclockdriver_rd.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/lorenz_hardware_entity_declarations.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/lorenz_hardware_entity_declarations.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/lorenz_hardware.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/lorenz_hardware.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/lorenz_hardware_axi_lite_interface_verilog.v</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/lorenz_hardware_axi_lite_interface_verilog.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/conv_pkg.v</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/conv_pkg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/synth_reg.v</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/synth_reg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/synth_reg_w_init.v</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/synth_reg_w_init.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/convert_type.v</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/convert_type.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -1196,92 +1164,100 @@ mmediate dependency {} format bool minimum {} maximum {}} value true}}}}}}</spir
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/conv_pkg.vhd</spirit:name>
+        <spirit:name>lorenz_hardware_mult_gen_v12_0_i5/lorenz_hardware_mult_gen_v12_0_i5.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>lorenz_hardware_mult_gen_v12_0_i6/lorenz_hardware_mult_gen_v12_0_i6.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/d9b0/hdl/conv_pkg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/synth_reg.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/synth_reg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/synth_reg_w_init.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/synth_reg_w_init.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/srl17e.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/srl17e.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/srl33e.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/srl33e.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/synth_reg_reg.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/synth_reg_reg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/single_reg_w_init.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/single_reg_w_init.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/xlclockdriver_rd.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/xlclockdriver_rd.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/lorenz_hardware_entity_declarations.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/lorenz_hardware_entity_declarations.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/lorenz_hardware.vhd</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/lorenz_hardware.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/lorenz_hardware_axi_lite_interface_verilog.v</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/lorenz_hardware_axi_lite_interface_verilog.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/conv_pkg.v</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/conv_pkg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/synth_reg.v</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/synth_reg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/synth_reg_w_init.v</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/synth_reg_w_init.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/97c7/hdl/convert_type.v</spirit:name>
+        <spirit:name>../../ipshared/d9b0/hdl/convert_type.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>work</spirit:logicalName>
@@ -1348,7 +1324,7 @@ mmediate dependency {} format bool minimum {} maximum {}} value true}}}}}}</spir
         <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>311705465</xilinx:coreRevision>
+      <xilinx:coreRevision>312137870</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
@@ -1390,7 +1366,6 @@ mmediate dependency {} format bool minimum {} maximum {}} value true}}}}}}</spir
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LORENZ_HARDWARE_S_AXI.SUPPORTS_NARROW_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LORENZ_HARDWARE_S_AXI.WUSER_BITS_PER_BYTE" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LORENZ_HARDWARE_S_AXI.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TEST1.LAYERED_METADATA" xilinx:valuePermission="bd_and_user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

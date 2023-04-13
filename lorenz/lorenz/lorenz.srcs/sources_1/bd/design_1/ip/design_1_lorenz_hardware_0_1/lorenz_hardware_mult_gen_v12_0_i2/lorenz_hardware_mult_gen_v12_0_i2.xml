@@ -234,11 +234,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 06 15:52:45 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 15:59:02 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5ce2b6eb</spirit:value>
+            <spirit:value>9:db939798</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -249,7 +249,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5ce2b6eb</spirit:value>
+            <spirit:value>9:db939798</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -265,11 +265,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 06 15:52:45 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 15:59:02 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5ce2b6eb</spirit:value>
+            <spirit:value>9:db939798</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -294,11 +294,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 06 15:52:45 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 15:59:02 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fc1ed3de</spirit:value>
+            <spirit:value>9:426424e5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -314,11 +314,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 06 15:52:45 UTC 2023</spirit:value>
+            <spirit:value>Tue Apr 11 15:59:02 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fc1ed3de</spirit:value>
+            <spirit:value>9:426424e5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -342,7 +342,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.CLK" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_LATENCY&apos;)) != 0 or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_MULT_TYPE&apos;)) = 2 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_CCM_IMP&apos;)) = 1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.CLK" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_LATENCY&apos;)) != 0 or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_MULT_TYPE&apos;)) = 2 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_CCM_IMP&apos;)) = 1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -372,7 +372,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_B_WIDTH&apos;)) - 1)">9</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_B_WIDTH&apos;)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -412,7 +412,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.CE" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_LATENCY&apos;)) != 0) and spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_CE&apos;)) != 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.CE" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_LATENCY&apos;)) != 0) and spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_CE&apos;)) != 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -435,7 +435,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.SCLR" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MULT_TYPE&apos;)) = 0 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_MULT_TYPE&apos;)) = 1 or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_MULT_TYPE&apos;)) = 2 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_CCM_IMP&apos;)) != 1)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_LATENCY&apos;)) != 0) and spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_SCLR&apos;)) != 0) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_MULT_TYPE&apos;)) = 2 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_CCM_IMP&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_LATENCY&apos;)) > 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_LATENCY&apos;)) = -1) and spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_SCLR&apos;)) != 0))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.SCLR" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MULT_TYPE&apos;)) = 0 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_MULT_TYPE&apos;)) = 1 or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_MULT_TYPE&apos;)) = 2 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_CCM_IMP&apos;)) != 1)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_LATENCY&apos;)) != 0) and spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_SCLR&apos;)) != 0) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_MULT_TYPE&apos;)) = 2 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_CCM_IMP&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_LATENCY&apos;)) > 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_LATENCY&apos;)) = -1) and spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_SCLR&apos;)) != 0))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -445,7 +445,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_OUT_HIGH&apos;)) - spirit:decode(id(&apos;MODELPARAM_VALUE.C_OUT_LOW&apos;)))">41</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_OUT_HIGH&apos;)) - spirit:decode(id(&apos;MODELPARAM_VALUE.C_OUT_LOW&apos;)))">63</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -480,15 +480,15 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_HAS_CE</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_CE">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_CE">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_HAS_SCLR</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_SCLR">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_SCLR">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_LATENCY</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_LATENCY">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_LATENCY">3</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_A_WIDTH</spirit:name>
@@ -500,7 +500,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_B_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_B_WIDTH">10</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_B_WIDTH">32</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_B_TYPE</spirit:name>
@@ -508,7 +508,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_OUT_HIGH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_OUT_HIGH">41</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_OUT_HIGH">63</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_OUT_LOW</spirit:name>
@@ -520,7 +520,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_CE_OVERRIDES_SCLR</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CE_OVERRIDES_SCLR">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CE_OVERRIDES_SCLR">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_CCM_IMP</spirit:name>
@@ -803,7 +803,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PortBWidth</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PortBWidth" spirit:order="7" spirit:minimum="2" spirit:maximum="64" spirit:rangeType="long">10</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PortBWidth" spirit:order="7" spirit:minimum="2" spirit:maximum="64" spirit:rangeType="long">32</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -869,7 +869,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>OutputWidthHigh</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.OutputWidthHigh" spirit:order="13" spirit:minimum="0" spirit:maximum="127" spirit:rangeType="long">41</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.OutputWidthHigh" spirit:order="13" spirit:minimum="0" spirit:maximum="127" spirit:rangeType="long">63</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -880,7 +880,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>OutputWidthLow</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.OutputWidthLow" spirit:order="14" spirit:minimum="0" spirit:maximum="41" spirit:rangeType="long">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.OutputWidthLow" spirit:order="14" spirit:minimum="0" spirit:maximum="63" spirit:rangeType="long">0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -913,7 +913,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PipeStages</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PipeStages" spirit:choiceRef="choice_list_ae2447ac" spirit:order="17">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PipeStages" spirit:choiceRef="choice_list_ae2447ac" spirit:order="17">3</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -924,33 +924,33 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ClockEnable</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.ClockEnable" spirit:order="18">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.ClockEnable" spirit:order="18">true</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.ClockEnable">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.ClockEnable">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SyncClear</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.SyncClear" spirit:order="19">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.SyncClear" spirit:order="19">true</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.SyncClear">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.SyncClear">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SclrCePriority</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.SclrCePriority" spirit:choiceRef="choice_list_e025b2e6" spirit:order="20">SCLR_Overrides_CE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.SclrCePriority" spirit:choiceRef="choice_list_e025b2e6" spirit:order="20">CE_Overrides_SCLR</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.SclrCePriority">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.SclrCePriority">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>

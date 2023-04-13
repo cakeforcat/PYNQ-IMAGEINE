@@ -58,9 +58,11 @@ USE mult_gen_v12_0_16.mult_gen_v12_0_16;
 
 ENTITY lorenz_hardware_mult_gen_v12_0_i3 IS
   PORT (
-    A : IN STD_LOGIC_VECTOR(32 DOWNTO 0);
-    B : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    P : OUT STD_LOGIC_VECTOR(42 DOWNTO 0)
+    CLK : IN STD_LOGIC;
+    A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    CE : IN STD_LOGIC;
+    SCLR : IN STD_LOGIC;
+    P : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
   );
 END lorenz_hardware_mult_gen_v12_0_i3;
 
@@ -92,11 +94,11 @@ ARCHITECTURE lorenz_hardware_mult_gen_v12_0_i3_arch OF lorenz_hardware_mult_gen_
     );
     PORT (
       CLK : IN STD_LOGIC;
-      A : IN STD_LOGIC_VECTOR(32 DOWNTO 0);
-      B : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      B : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
       CE : IN STD_LOGIC;
       SCLR : IN STD_LOGIC;
-      P : OUT STD_LOGIC_VECTOR(42 DOWNTO 0)
+      P : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
     );
   END COMPONENT mult_gen_v12_0_16;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -104,16 +106,20 @@ ARCHITECTURE lorenz_hardware_mult_gen_v12_0_i3_arch OF lorenz_hardware_mult_gen_
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF lorenz_hardware_mult_gen_v12_0_i3_arch : ARCHITECTURE IS "lorenz_hardware_mult_gen_v12_0_i3,mult_gen_v12_0_16,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF lorenz_hardware_mult_gen_v12_0_i3_arch: ARCHITECTURE IS "lorenz_hardware_mult_gen_v12_0_i3,mult_gen_v12_0_16,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=mult_gen,x_ipVersion=12.0,x_ipCoreRevision=16,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_VERBOSITY=0,C_MODEL_TYPE=0,C_OPTIMIZE_GOAL=1,C_XDEVICEFAMILY=zynq,C_HAS_CE=0,C_HAS_SCLR=0,C_LATENCY=0,C_A_WIDTH=33,C_A_TYPE=0,C_B_WIDTH=10,C_B_TYPE=0,C_OUT_HIGH=42,C_OUT_LOW=0,C_MULT_TYPE=1,C_CE_OVERRIDES_SCLR=0,C_CCM_IMP=0,C_B_VALUE=10000001,C_HAS_ZERO_DETECT=0,C_ROUND_OUTPUT=0,C_ROUND" & 
-"_PT=0}";
+  ATTRIBUTE CORE_GENERATION_INFO OF lorenz_hardware_mult_gen_v12_0_i3_arch: ARCHITECTURE IS "lorenz_hardware_mult_gen_v12_0_i3,mult_gen_v12_0_16,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=mult_gen,x_ipVersion=12.0,x_ipCoreRevision=16,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_VERBOSITY=0,C_MODEL_TYPE=0,C_OPTIMIZE_GOAL=1,C_XDEVICEFAMILY=zynq,C_HAS_CE=1,C_HAS_SCLR=1,C_LATENCY=3,C_A_WIDTH=32,C_A_TYPE=0,C_B_WIDTH=26,C_B_TYPE=1,C_OUT_HIGH=63,C_OUT_LOW=0,C_MULT_TYPE=2,C_CE_OVERRIDES_SCLR=0,C_CCM_IMP=0,C_B_VALUE=10101010101010101010101011,C_HAS_ZERO_DETECT=0,C_ROUN" & 
+"D_OUTPUT=0,C_ROUND_PT=0}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF P: SIGNAL IS "XIL_INTERFACENAME p_intf, LAYERED_METADATA undef";
   ATTRIBUTE X_INTERFACE_INFO OF P: SIGNAL IS "xilinx.com:signal:data:1.0 p_intf DATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF B: SIGNAL IS "XIL_INTERFACENAME b_intf, LAYERED_METADATA undef";
-  ATTRIBUTE X_INTERFACE_INFO OF B: SIGNAL IS "xilinx.com:signal:data:1.0 b_intf DATA";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF SCLR: SIGNAL IS "XIL_INTERFACENAME sclr_intf, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF SCLR: SIGNAL IS "xilinx.com:signal:reset:1.0 sclr_intf RST";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF CE: SIGNAL IS "XIL_INTERFACENAME ce_intf, POLARITY ACTIVE_HIGH";
+  ATTRIBUTE X_INTERFACE_INFO OF CE: SIGNAL IS "xilinx.com:signal:clockenable:1.0 ce_intf CE";
   ATTRIBUTE X_INTERFACE_PARAMETER OF A: SIGNAL IS "XIL_INTERFACENAME a_intf, LAYERED_METADATA undef";
   ATTRIBUTE X_INTERFACE_INFO OF A: SIGNAL IS "xilinx.com:signal:data:1.0 a_intf DATA";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF CLK: SIGNAL IS "XIL_INTERFACENAME clk_intf, ASSOCIATED_BUSIF p_intf:b_intf:a_intf, ASSOCIATED_RESET sclr, ASSOCIATED_CLKEN ce, FREQ_HZ 10000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF CLK: SIGNAL IS "xilinx.com:signal:clock:1.0 clk_intf CLK";
 BEGIN
   U0 : mult_gen_v12_0_16
     GENERIC MAP (
@@ -121,29 +127,29 @@ BEGIN
       C_MODEL_TYPE => 0,
       C_OPTIMIZE_GOAL => 1,
       C_XDEVICEFAMILY => "zynq",
-      C_HAS_CE => 0,
-      C_HAS_SCLR => 0,
-      C_LATENCY => 0,
-      C_A_WIDTH => 33,
+      C_HAS_CE => 1,
+      C_HAS_SCLR => 1,
+      C_LATENCY => 3,
+      C_A_WIDTH => 32,
       C_A_TYPE => 0,
-      C_B_WIDTH => 10,
-      C_B_TYPE => 0,
-      C_OUT_HIGH => 42,
+      C_B_WIDTH => 26,
+      C_B_TYPE => 1,
+      C_OUT_HIGH => 63,
       C_OUT_LOW => 0,
-      C_MULT_TYPE => 1,
+      C_MULT_TYPE => 2,
       C_CE_OVERRIDES_SCLR => 0,
       C_CCM_IMP => 0,
-      C_B_VALUE => "10000001",
+      C_B_VALUE => "10101010101010101010101011",
       C_HAS_ZERO_DETECT => 0,
       C_ROUND_OUTPUT => 0,
       C_ROUND_PT => 0
     )
     PORT MAP (
-      CLK => '1',
+      CLK => CLK,
       A => A,
-      B => B,
-      CE => '1',
-      SCLR => '0',
+      B => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 26)),
+      CE => CE,
+      SCLR => SCLR,
       P => P
     );
 END lorenz_hardware_mult_gen_v12_0_i3_arch;
