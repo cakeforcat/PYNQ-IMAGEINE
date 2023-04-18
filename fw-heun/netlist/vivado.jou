@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Apr 13 16:52:05 2023
+# Process ID: 25712
+# Current directory: C:/Users/cakef/Documents/GitHub/pynq-math-visualisations/fw-heun/netlist
+# Command line: vivado.exe -mode batch -source ProjectGeneration.tcl -notrace
+# Log file: C:/Users/cakef/Documents/GitHub/pynq-math-visualisations/fw-heun/netlist/vivado.log
+# Journal file: C:/Users/cakef/Documents/GitHub/pynq-math-visualisations/fw-heun/netlist\vivado.jou
+#-----------------------------------------------------------
+source ProjectGeneration.tcl -notrace
