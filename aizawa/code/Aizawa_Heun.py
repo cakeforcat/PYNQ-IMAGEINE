@@ -10,7 +10,7 @@ e = 0.25
 f = 0.1
 
 #sim parameters
-dt = 0.01
+dt = 0.005
 num_steps = 50000
 
 #initialize arrays to store trajectory
@@ -54,3 +54,6 @@ ax.set_ylabel('Y')
 ax.set_zlabel('Z')
 ax.set_title("Aizawa Attractor (Huen's Method)")
 plt.show()
+print(x[1])
+print(y[1])
+print(z[1])
