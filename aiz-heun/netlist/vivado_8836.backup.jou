@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Apr 20 11:59:52 2023
+# Process ID: 8836
+# Current directory: H:/MyDocuments/Year3/pynq-math-visualisations/aiz-heun/netlist
+# Command line: vivado.exe -mode batch -source ProjectGeneration.tcl -notrace
+# Log file: H:/MyDocuments/Year3/pynq-math-visualisations/aiz-heun/netlist/vivado.log
+# Journal file: H:/MyDocuments/Year3/pynq-math-visualisations/aiz-heun/netlist\vivado.jou
+#-----------------------------------------------------------
+source ProjectGeneration.tcl -notrace
