@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Wed Apr 12 16:39:54 2023
---Host        : Laptopiszcze running 64-bit major release  (build 9200)
+--Date        : Thu Apr 20 16:50:42 2023
+--Host        : EEE-R448-21 running 64-bit major release  (build 9200)
 --Command     : generate_target lorenz_hardware_bd_wrapper.bd
 --Design      : lorenz_hardware_bd_wrapper
 --Purpose     : IP block netlist

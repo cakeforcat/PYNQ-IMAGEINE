@@ -429,11 +429,11 @@ entity lorenz_hardware_xladdsub is
 
  component lorenz_hardware_c_addsub_v12_0_i0
     port ( 
-    a: in std_logic_vector(33 - 1 downto 0);
+    a: in std_logic_vector(36 - 1 downto 0);
     clk: in std_logic:= '0';
     ce: in std_logic:= '0';
     s: out std_logic_vector(c_output_width - 1 downto 0);
-    b: in std_logic_vector(33 - 1 downto 0) 
+    b: in std_logic_vector(36 - 1 downto 0) 
  		  ); 
  end component;
 
@@ -449,31 +449,21 @@ entity lorenz_hardware_xladdsub is
 
  component lorenz_hardware_c_addsub_v12_0_i2
     port ( 
-    a: in std_logic_vector(66 - 1 downto 0);
+    a: in std_logic_vector(36 - 1 downto 0);
     clk: in std_logic:= '0';
     ce: in std_logic:= '0';
     s: out std_logic_vector(c_output_width - 1 downto 0);
-    b: in std_logic_vector(66 - 1 downto 0) 
+    b: in std_logic_vector(36 - 1 downto 0) 
  		  ); 
  end component;
 
  component lorenz_hardware_c_addsub_v12_0_i3
     port ( 
-    a: in std_logic_vector(34 - 1 downto 0);
+    a: in std_logic_vector(69 - 1 downto 0);
     clk: in std_logic:= '0';
     ce: in std_logic:= '0';
     s: out std_logic_vector(c_output_width - 1 downto 0);
-    b: in std_logic_vector(34 - 1 downto 0) 
- 		  ); 
- end component;
-
- component lorenz_hardware_c_addsub_v12_0_i4
-    port ( 
-    a: in std_logic_vector(67 - 1 downto 0);
-    clk: in std_logic:= '0';
-    ce: in std_logic:= '0';
-    s: out std_logic_vector(c_output_width - 1 downto 0);
-    b: in std_logic_vector(67 - 1 downto 0) 
+    b: in std_logic_vector(69 - 1 downto 0) 
  		  ); 
  end component;
 
@@ -527,17 +517,6 @@ begin
 
  comp3: if ((core_name0 = "lorenz_hardware_c_addsub_v12_0_i3")) generate 
   core_instance3:lorenz_hardware_c_addsub_v12_0_i3
-   port map ( 
-         a => full_a,
-         clk => clk,
-         ce => internal_ce,
-         s => core_s,
-         b => full_b
-  ); 
-   end generate;
-
- comp4: if ((core_name0 = "lorenz_hardware_c_addsub_v12_0_i4")) generate 
-  core_instance4:lorenz_hardware_c_addsub_v12_0_i4
    port map ( 
          a => full_a,
          clk => clk,
@@ -758,7 +737,7 @@ entity lorenz_hardware_xlcmult is
  		  ); 
  end component;
 
- component lorenz_hardware_mult_gen_v12_0_i4
+ component lorenz_hardware_mult_gen_v12_0_i5
     port ( 
       clk: in std_logic;
       ce: in std_logic;
@@ -778,7 +757,7 @@ entity lorenz_hardware_xlcmult is
  		  ); 
  end component;
 
- component lorenz_hardware_mult_gen_v12_0_i7
+ component lorenz_hardware_mult_gen_v12_0_i8
     port ( 
       clk: in std_logic;
       ce: in std_logic;
@@ -851,8 +830,8 @@ begin
   ); 
    end generate;
 
- comp4: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i4")) generate 
-  core_instance4:lorenz_hardware_mult_gen_v12_0_i4
+ comp4: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i5")) generate 
+  core_instance4:lorenz_hardware_mult_gen_v12_0_i5
    port map ( 
       sclr => internal_clr,
       clk => clk,
@@ -873,8 +852,8 @@ begin
   ); 
    end generate;
 
- comp6: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i7")) generate 
-  core_instance6:lorenz_hardware_mult_gen_v12_0_i7
+ comp6: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i8")) generate 
+  core_instance6:lorenz_hardware_mult_gen_v12_0_i8
    port map ( 
       sclr => internal_clr,
       clk => clk,
@@ -1013,7 +992,18 @@ entity lorenz_hardware_xlmult is
  end component;
 
 
- component lorenz_hardware_mult_gen_v12_0_i5
+ component lorenz_hardware_mult_gen_v12_0_i4
+    port ( 
+      b: in std_logic_vector(c_b_width - 1 downto 0);
+      p: out std_logic_vector(c_output_width - 1 downto 0);
+      clk: in std_logic;
+      ce: in std_logic;
+      sclr: in std_logic;
+      a: in std_logic_vector(c_a_width - 1 downto 0) 
+ 		  ); 
+ end component;
+
+ component lorenz_hardware_mult_gen_v12_0_i7
     port ( 
       b: in std_logic_vector(c_b_width - 1 downto 0);
       p: out std_logic_vector(c_output_width - 1 downto 0);
@@ -1058,8 +1048,20 @@ signal tmp_a: std_logic_vector(c_a_width - 1 downto 0);
  end process;
 
 
- comp0: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i5")) generate 
-  core_instance0:lorenz_hardware_mult_gen_v12_0_i5
+ comp0: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i4")) generate 
+  core_instance0:lorenz_hardware_mult_gen_v12_0_i4
+   port map ( 
+        a => tmp_a,
+        clk => clk,
+        ce => internal_ce,
+        sclr => internal_clr,
+        p => tmp_p,
+        b => tmp_b
+  ); 
+   end generate;
+
+ comp1: if ((core_name0 = "lorenz_hardware_mult_gen_v12_0_i7")) generate 
+  core_instance1:lorenz_hardware_mult_gen_v12_0_i7
    port map ( 
         a => tmp_a,
         clk => clk,

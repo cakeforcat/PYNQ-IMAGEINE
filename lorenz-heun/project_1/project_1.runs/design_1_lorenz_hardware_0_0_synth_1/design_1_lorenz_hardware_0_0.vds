@@ -1,0 +1,1435 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Apr 20 16:58:19 2023
+# Process ID: 4456
+# Current directory: H:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.runs/design_1_lorenz_hardware_0_0_synth_1
+# Command line: vivado.exe -log design_1_lorenz_hardware_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_lorenz_hardware_0_0.tcl
+# Log file: H:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.runs/design_1_lorenz_hardware_0_0_synth_1/design_1_lorenz_hardware_0_0.vds
+# Journal file: H:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.runs/design_1_lorenz_hardware_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_lorenz_hardware_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/netlist/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.cache/ip 
+Command: synth_design -top design_1_lorenz_hardware_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2332
+WARNING: [Synth 8-1958] event expressions must result in a singular type [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_axi_lite_interface_verilog.v:271]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1068.836 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_lorenz_hardware_0_0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/synth/design_1_lorenz_hardware_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:2037]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_axi_lite_interface' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:227]
+INFO: [Synth 8-3491] module 'lorenz_hardware_axi_lite_interface_verilog' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_axi_lite_interface_verilog.v:38' bound to instance 'inst' of component 'lorenz_hardware_axi_lite_interface_verilog' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:259]
+INFO: [Synth 8-6157] synthesizing module 'lorenz_hardware_axi_lite_interface_verilog' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_axi_lite_interface_verilog.v:38]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_NUM_OFFSETS bound to: 6 - type: integer 
+	Parameter ADDR_LSB bound to: 3 - type: integer 
+	Parameter ADDR_MSB bound to: 5 - type: integer 
+	Parameter DEC_SIZE bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lorenz_hardware_axi_lite_interface_verilog' (1#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_axi_lite_interface_verilog.v:38]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_axi_lite_interface' (2#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:227]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_default_clock_driver' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:1994]
+INFO: [Synth 8-638] synthesizing module 'xlclockdriver' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/xlclockdriver_rd.vhd:59]
+	Parameter period bound to: 1 - type: integer 
+	Parameter log_2_period bound to: 1 - type: integer 
+	Parameter pipeline_regs bound to: 5 - type: integer 
+	Parameter use_bufg bound to: 0 - type: integer 
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 4'b0000 
+	Parameter latency bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'synth_reg_w_init' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg_w_init.vhd:31' bound to instance 'clr_reg' of component 'synth_reg_w_init' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/xlclockdriver_rd.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_synth_reg_w_init' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg_w_init.vhd:47]
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 4'b0000 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 4'b0000 
+INFO: [Synth 8-3491] module 'single_reg_w_init' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:22' bound to instance 'reg_comp' of component 'single_reg_w_init' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg_w_init.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_single_reg_w_init' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:37]
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 4'b0000 
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_single_reg_w_init' (3#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_synth_reg_w_init' (4#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg_w_init.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'xlclockdriver' (5#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/xlclockdriver_rd.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_default_clock_driver' (6#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:1994]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_struct' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:1950]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_subsystem' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:1349]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_lorenz_derivatives1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xladdsub' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+	Parameter core_name0 bound to: lorenz_hardware_c_addsub_v12_0_i0 - type: string 
+	Parameter a_width bound to: 32 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter c_in_width bound to: 16 - type: integer 
+	Parameter c_in_bin_pt bound to: 4 - type: integer 
+	Parameter c_in_arith bound to: 1 - type: integer 
+	Parameter c_out_width bound to: 16 - type: integer 
+	Parameter c_out_bin_pt bound to: 4 - type: integer 
+	Parameter c_out_arith bound to: 1 - type: integer 
+	Parameter b_width bound to: 35 - type: integer 
+	Parameter b_bin_pt bound to: 24 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter s_width bound to: 35 - type: integer 
+	Parameter s_bin_pt bound to: 24 - type: integer 
+	Parameter s_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter full_s_width bound to: 36 - type: integer 
+	Parameter full_s_arith bound to: 2 - type: integer 
+	Parameter mode bound to: 1 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 1 - type: integer 
+	Parameter c_latency bound to: 1 - type: integer 
+	Parameter c_output_width bound to: 36 - type: integer 
+	Parameter c_has_c_in bound to: 0 - type: integer 
+	Parameter c_has_c_out bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_c_addsub_v12_0_i0' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/synth/lorenz_hardware_c_addsub_v12_0_i0.vhd:59' bound to instance 'core_instance0' of component 'lorenz_hardware_c_addsub_v12_0_i0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:486]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_c_addsub_v12_0_i0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/synth/lorenz_hardware_c_addsub_v12_0_i0.vhd:69]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 36 - type: integer 
+	Parameter C_B_WIDTH bound to: 36 - type: integer 
+	Parameter C_OUT_WIDTH bound to: 36 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_TYPE bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_ADD_MODE bound to: 0 - type: integer 
+	Parameter C_B_CONSTANT bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 000000000000000000000000000000000000 - type: string 
+	Parameter C_AINIT_VAL bound to: 0 - type: string 
+	Parameter C_SINIT_VAL bound to: 0 - type: string 
+	Parameter C_CE_OVERRIDES_BYPASS bound to: 1 - type: integer 
+	Parameter C_BYPASS_LOW bound to: 0 - type: integer 
+	Parameter C_SCLR_OVERRIDES_SSET bound to: 1 - type: integer 
+	Parameter C_HAS_C_IN bound to: 0 - type: integer 
+	Parameter C_HAS_C_OUT bound to: 0 - type: integer 
+	Parameter C_BORROW_LOW bound to: 1 - type: integer 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_BYPASS bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_HAS_SSET bound to: 0 - type: integer 
+	Parameter C_HAS_SINIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_14' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i3/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_14' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/synth/lorenz_hardware_c_addsub_v12_0_i0.vhd:136]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_c_addsub_v12_0_i0' (13#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/synth/lorenz_hardware_c_addsub_v12_0_i0.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xladdsub' (14#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xladdsub__parameterized0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+	Parameter core_name0 bound to: lorenz_hardware_c_addsub_v12_0_i1 - type: string 
+	Parameter a_width bound to: 32 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter c_in_width bound to: 16 - type: integer 
+	Parameter c_in_bin_pt bound to: 4 - type: integer 
+	Parameter c_in_arith bound to: 1 - type: integer 
+	Parameter c_out_width bound to: 16 - type: integer 
+	Parameter c_out_bin_pt bound to: 4 - type: integer 
+	Parameter c_out_arith bound to: 1 - type: integer 
+	Parameter b_width bound to: 32 - type: integer 
+	Parameter b_bin_pt bound to: 24 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter s_width bound to: 35 - type: integer 
+	Parameter s_bin_pt bound to: 24 - type: integer 
+	Parameter s_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter full_s_width bound to: 33 - type: integer 
+	Parameter full_s_arith bound to: 2 - type: integer 
+	Parameter mode bound to: 1 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 1 - type: integer 
+	Parameter c_latency bound to: 1 - type: integer 
+	Parameter c_output_width bound to: 33 - type: integer 
+	Parameter c_has_c_in bound to: 0 - type: integer 
+	Parameter c_has_c_out bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_c_addsub_v12_0_i1' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i1/synth/lorenz_hardware_c_addsub_v12_0_i1.vhd:59' bound to instance 'core_instance1' of component 'lorenz_hardware_c_addsub_v12_0_i1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:497]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_c_addsub_v12_0_i1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i1/synth/lorenz_hardware_c_addsub_v12_0_i1.vhd:69]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 33 - type: integer 
+	Parameter C_B_WIDTH bound to: 33 - type: integer 
+	Parameter C_OUT_WIDTH bound to: 33 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_TYPE bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_ADD_MODE bound to: 1 - type: integer 
+	Parameter C_B_CONSTANT bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 000000000000000000000000000000000 - type: string 
+	Parameter C_AINIT_VAL bound to: 0 - type: string 
+	Parameter C_SINIT_VAL bound to: 0 - type: string 
+	Parameter C_CE_OVERRIDES_BYPASS bound to: 1 - type: integer 
+	Parameter C_BYPASS_LOW bound to: 0 - type: integer 
+	Parameter C_SCLR_OVERRIDES_SSET bound to: 1 - type: integer 
+	Parameter C_HAS_C_IN bound to: 0 - type: integer 
+	Parameter C_HAS_C_OUT bound to: 0 - type: integer 
+	Parameter C_BORROW_LOW bound to: 1 - type: integer 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_BYPASS bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_HAS_SSET bound to: 0 - type: integer 
+	Parameter C_HAS_SINIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_14' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i3/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_14' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i1/synth/lorenz_hardware_c_addsub_v12_0_i1.vhd:136]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_c_addsub_v12_0_i1' (15#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i1/synth/lorenz_hardware_c_addsub_v12_0_i1.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xladdsub__parameterized0' (15#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xladdsub__parameterized1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+	Parameter core_name0 bound to: lorenz_hardware_c_addsub_v12_0_i2 - type: string 
+	Parameter a_width bound to: 35 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter c_in_width bound to: 16 - type: integer 
+	Parameter c_in_bin_pt bound to: 4 - type: integer 
+	Parameter c_in_arith bound to: 1 - type: integer 
+	Parameter c_out_width bound to: 16 - type: integer 
+	Parameter c_out_bin_pt bound to: 4 - type: integer 
+	Parameter c_out_arith bound to: 1 - type: integer 
+	Parameter b_width bound to: 35 - type: integer 
+	Parameter b_bin_pt bound to: 24 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter s_width bound to: 35 - type: integer 
+	Parameter s_bin_pt bound to: 24 - type: integer 
+	Parameter s_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter full_s_width bound to: 36 - type: integer 
+	Parameter full_s_arith bound to: 2 - type: integer 
+	Parameter mode bound to: 1 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 1 - type: integer 
+	Parameter c_latency bound to: 1 - type: integer 
+	Parameter c_output_width bound to: 36 - type: integer 
+	Parameter c_has_c_in bound to: 0 - type: integer 
+	Parameter c_has_c_out bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_c_addsub_v12_0_i2' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i2/synth/lorenz_hardware_c_addsub_v12_0_i2.vhd:59' bound to instance 'core_instance2' of component 'lorenz_hardware_c_addsub_v12_0_i2' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:508]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_c_addsub_v12_0_i2' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i2/synth/lorenz_hardware_c_addsub_v12_0_i2.vhd:69]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 36 - type: integer 
+	Parameter C_B_WIDTH bound to: 36 - type: integer 
+	Parameter C_OUT_WIDTH bound to: 36 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_TYPE bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_ADD_MODE bound to: 1 - type: integer 
+	Parameter C_B_CONSTANT bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 000000000000000000000000000000000000 - type: string 
+	Parameter C_AINIT_VAL bound to: 0 - type: string 
+	Parameter C_SINIT_VAL bound to: 0 - type: string 
+	Parameter C_CE_OVERRIDES_BYPASS bound to: 1 - type: integer 
+	Parameter C_BYPASS_LOW bound to: 0 - type: integer 
+	Parameter C_SCLR_OVERRIDES_SSET bound to: 1 - type: integer 
+	Parameter C_HAS_C_IN bound to: 0 - type: integer 
+	Parameter C_HAS_C_OUT bound to: 0 - type: integer 
+	Parameter C_BORROW_LOW bound to: 1 - type: integer 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_BYPASS bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_HAS_SSET bound to: 0 - type: integer 
+	Parameter C_HAS_SINIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_14' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i3/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_14' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i2/synth/lorenz_hardware_c_addsub_v12_0_i2.vhd:136]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_c_addsub_v12_0_i2' (16#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i2/synth/lorenz_hardware_c_addsub_v12_0_i2.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xladdsub__parameterized1' (16#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xlcmult' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+	Parameter core_name0 bound to: lorenz_hardware_mult_gen_v12_0_i1 - type: string 
+	Parameter a_width bound to: 32 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter b_width bound to: 4 - type: integer 
+	Parameter b_bin_pt bound to: 0 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter p_width bound to: 35 - type: integer 
+	Parameter p_bin_pt bound to: 24 - type: integer 
+	Parameter p_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter multsign bound to: 2 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 2 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter c_a_width bound to: 32 - type: integer 
+	Parameter c_b_width bound to: 5 - type: integer 
+	Parameter c_a_type bound to: 0 - type: integer 
+	Parameter c_b_type bound to: 1 - type: integer 
+	Parameter c_type bound to: 0 - type: integer 
+	Parameter const_bin_pt bound to: 1 - type: integer 
+	Parameter zero_const bound to: 0 - type: integer 
+	Parameter c_output_width bound to: 37 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_mult_gen_v12_0_i1' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i1/synth/lorenz_hardware_mult_gen_v12_0_i1.vhd:59' bound to instance 'core_instance1' of component 'lorenz_hardware_mult_gen_v12_0_i1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:801]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_mult_gen_v12_0_i1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i1/synth/lorenz_hardware_mult_gen_v12_0_i1.vhd:69]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i1/synth/lorenz_hardware_mult_gen_v12_0_i1.vhd:72]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i1/synth/lorenz_hardware_mult_gen_v12_0_i1.vhd:72]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 5 - type: integer 
+	Parameter C_B_TYPE bound to: 1 - type: integer 
+	Parameter C_OUT_HIGH bound to: 36 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 2 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 11100 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_16' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_16' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i1/synth/lorenz_hardware_mult_gen_v12_0_i1.vhd:124]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_mult_gen_v12_0_i1' (25#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i1/synth/lorenz_hardware_mult_gen_v12_0_i1.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xlcmult' (26#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xlcmult__parameterized0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+	Parameter core_name0 bound to: lorenz_hardware_mult_gen_v12_0_i2 - type: string 
+	Parameter a_width bound to: 35 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter b_width bound to: 4 - type: integer 
+	Parameter b_bin_pt bound to: 0 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter p_width bound to: 35 - type: integer 
+	Parameter p_bin_pt bound to: 24 - type: integer 
+	Parameter p_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter multsign bound to: 2 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 2 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter c_a_width bound to: 35 - type: integer 
+	Parameter c_b_width bound to: 4 - type: integer 
+	Parameter c_a_type bound to: 0 - type: integer 
+	Parameter c_b_type bound to: 1 - type: integer 
+	Parameter c_type bound to: 0 - type: integer 
+	Parameter const_bin_pt bound to: 1 - type: integer 
+	Parameter zero_const bound to: 0 - type: integer 
+	Parameter c_output_width bound to: 39 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_mult_gen_v12_0_i2' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i2/synth/lorenz_hardware_mult_gen_v12_0_i2.vhd:59' bound to instance 'core_instance2' of component 'lorenz_hardware_mult_gen_v12_0_i2' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:812]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_mult_gen_v12_0_i2' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i2/synth/lorenz_hardware_mult_gen_v12_0_i2.vhd:69]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i2/synth/lorenz_hardware_mult_gen_v12_0_i2.vhd:72]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i2/synth/lorenz_hardware_mult_gen_v12_0_i2.vhd:72]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_A_WIDTH bound to: 35 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 4 - type: integer 
+	Parameter C_B_TYPE bound to: 1 - type: integer 
+	Parameter C_OUT_HIGH bound to: 38 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 2 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 1010 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_16' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_16' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i2/synth/lorenz_hardware_mult_gen_v12_0_i2.vhd:124]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_mult_gen_v12_0_i2' (27#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i2/synth/lorenz_hardware_mult_gen_v12_0_i2.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xlcmult__parameterized0' (27#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xlcmult__parameterized1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+	Parameter core_name0 bound to: lorenz_hardware_mult_gen_v12_0_i3 - type: string 
+	Parameter a_width bound to: 32 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter b_width bound to: 4 - type: integer 
+	Parameter b_bin_pt bound to: 24 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter p_width bound to: 35 - type: integer 
+	Parameter p_bin_pt bound to: 24 - type: integer 
+	Parameter p_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter multsign bound to: 2 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 2 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter c_a_width bound to: 32 - type: integer 
+	Parameter c_b_width bound to: 32 - type: integer 
+	Parameter c_a_type bound to: 0 - type: integer 
+	Parameter c_b_type bound to: 1 - type: integer 
+	Parameter c_type bound to: 0 - type: integer 
+	Parameter const_bin_pt bound to: 1 - type: integer 
+	Parameter zero_const bound to: 0 - type: integer 
+	Parameter c_output_width bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_mult_gen_v12_0_i3' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i3/synth/lorenz_hardware_mult_gen_v12_0_i3.vhd:59' bound to instance 'core_instance3' of component 'lorenz_hardware_mult_gen_v12_0_i3' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:823]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_mult_gen_v12_0_i3' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i3/synth/lorenz_hardware_mult_gen_v12_0_i3.vhd:69]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i3/synth/lorenz_hardware_mult_gen_v12_0_i3.vhd:72]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i3/synth/lorenz_hardware_mult_gen_v12_0_i3.vhd:72]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 26 - type: integer 
+	Parameter C_B_TYPE bound to: 1 - type: integer 
+	Parameter C_OUT_HIGH bound to: 63 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 2 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 10101010101010101010101011 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_16' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_16' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i3/synth/lorenz_hardware_mult_gen_v12_0_i3.vhd:124]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_mult_gen_v12_0_i3' (28#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i3/synth/lorenz_hardware_mult_gen_v12_0_i3.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xlcmult__parameterized1' (28#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xldelay' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:60]
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 3 - type: integer 
+	Parameter reg_retiming bound to: 0 - type: integer 
+	Parameter reset bound to: 0 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'synth_reg' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:20' bound to instance 'synth_reg_srl_inst' of component 'synth_reg' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_synth_reg' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:30]
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 3 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'srlc33e' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:22' bound to instance 'last_srlc33e' of component 'srlc33e' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_srlc33e' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:31]
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 3 - type: integer 
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-113] binding component instance 'u1' to cell 'SRLC32E' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:64]
+INFO: [Synth 8-113] binding component instance 'u2' to cell 'FDE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_srlc33e' (29#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_synth_reg' (30#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xldelay' (31#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xlmult' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:979]
+	Parameter core_name0 bound to: lorenz_hardware_mult_gen_v12_0_i4 - type: string 
+	Parameter a_width bound to: 32 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter b_width bound to: 32 - type: integer 
+	Parameter b_bin_pt bound to: 24 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter p_width bound to: 35 - type: integer 
+	Parameter p_bin_pt bound to: 24 - type: integer 
+	Parameter p_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 1 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter c_a_width bound to: 32 - type: integer 
+	Parameter c_b_width bound to: 32 - type: integer 
+	Parameter c_type bound to: 0 - type: integer 
+	Parameter c_a_type bound to: 0 - type: integer 
+	Parameter c_b_type bound to: 0 - type: integer 
+	Parameter c_pipelined bound to: 1 - type: integer 
+	Parameter c_baat bound to: 32 - type: integer 
+	Parameter multsign bound to: 2 - type: integer 
+	Parameter c_output_width bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_mult_gen_v12_0_i4' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i4/synth/lorenz_hardware_mult_gen_v12_0_i4.vhd:59' bound to instance 'core_instance0' of component 'lorenz_hardware_mult_gen_v12_0_i4' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:1052]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_mult_gen_v12_0_i4' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i4/synth/lorenz_hardware_mult_gen_v12_0_i4.vhd:70]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i4/synth/lorenz_hardware_mult_gen_v12_0_i4.vhd:73]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i4/synth/lorenz_hardware_mult_gen_v12_0_i4.vhd:73]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TYPE bound to: 0 - type: integer 
+	Parameter C_OUT_HIGH bound to: 63 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 1 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 1 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 10000001 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_16' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_16' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i4/synth/lorenz_hardware_mult_gen_v12_0_i4.vhd:127]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_mult_gen_v12_0_i4' (34#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i4/synth/lorenz_hardware_mult_gen_v12_0_i4.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xlmult' (35#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:979]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xlregister' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:151]
+	Parameter d_width bound to: 32 - type: integer 
+	Parameter init_value bound to: 32'b00000000000000000000000000000000 
+	Parameter width bound to: 32 - type: integer 
+	Parameter init_index bound to: 2 - type: integer 
+	Parameter init_value bound to: 0 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'synth_reg_w_init' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg_w_init.vhd:31' bound to instance 'synth_reg_inst' of component 'synth_reg_w_init' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_synth_reg_w_init__parameterized0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg_w_init.vhd:47]
+	Parameter width bound to: 32 - type: integer 
+	Parameter init_index bound to: 2 - type: integer 
+	Parameter init_value bound to: 0 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+	Parameter init_index bound to: 2 - type: integer 
+	Parameter init_value bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'single_reg_w_init' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:22' bound to instance 'reg_comp' of component 'single_reg_w_init' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg_w_init.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_single_reg_w_init__parameterized0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:37]
+	Parameter width bound to: 32 - type: integer 
+	Parameter init_index bound to: 2 - type: integer 
+	Parameter init_value bound to: 0 - type: integer 
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_single_reg_w_init__parameterized0' (35#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_synth_reg_w_init__parameterized0' (35#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg_w_init.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xlregister' (36#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xlregister__parameterized0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:151]
+	Parameter d_width bound to: 35 - type: integer 
+	Parameter init_value bound to: 35'b00000000000000000000000000000000000 
+	Parameter width bound to: 35 - type: integer 
+	Parameter init_index bound to: 2 - type: integer 
+	Parameter init_value bound to: 35'b00000000000000000000000000000000000 
+	Parameter latency bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'synth_reg_w_init' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg_w_init.vhd:31' bound to instance 'synth_reg_inst' of component 'synth_reg_w_init' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_synth_reg_w_init__parameterized1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg_w_init.vhd:47]
+	Parameter width bound to: 35 - type: integer 
+	Parameter init_index bound to: 2 - type: integer 
+	Parameter init_value bound to: 35'b00000000000000000000000000000000000 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter width bound to: 35 - type: integer 
+	Parameter init_index bound to: 2 - type: integer 
+	Parameter init_value bound to: 35'b00000000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'single_reg_w_init' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:22' bound to instance 'reg_comp' of component 'single_reg_w_init' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg_w_init.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_single_reg_w_init__parameterized1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:37]
+	Parameter width bound to: 35 - type: integer 
+	Parameter init_index bound to: 2 - type: integer 
+	Parameter init_value bound to: 35'b00000000000000000000000000000000000 
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:86]
+INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_single_reg_w_init__parameterized1' (36#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/single_reg_w_init.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_synth_reg_w_init__parameterized1' (36#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg_w_init.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xlregister__parameterized0' (36#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:151]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_lorenz_derivatives1' (37#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_lorenz_derivatives2' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:445]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xladdsub__parameterized2' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+	Parameter core_name0 bound to: lorenz_hardware_c_addsub_v12_0_i0 - type: string 
+	Parameter a_width bound to: 35 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter c_in_width bound to: 16 - type: integer 
+	Parameter c_in_bin_pt bound to: 4 - type: integer 
+	Parameter c_in_arith bound to: 1 - type: integer 
+	Parameter c_out_width bound to: 16 - type: integer 
+	Parameter c_out_bin_pt bound to: 4 - type: integer 
+	Parameter c_out_arith bound to: 1 - type: integer 
+	Parameter b_width bound to: 35 - type: integer 
+	Parameter b_bin_pt bound to: 24 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter s_width bound to: 35 - type: integer 
+	Parameter s_bin_pt bound to: 24 - type: integer 
+	Parameter s_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter full_s_width bound to: 36 - type: integer 
+	Parameter full_s_arith bound to: 2 - type: integer 
+	Parameter mode bound to: 1 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 1 - type: integer 
+	Parameter c_latency bound to: 1 - type: integer 
+	Parameter c_output_width bound to: 36 - type: integer 
+	Parameter c_has_c_in bound to: 0 - type: integer 
+	Parameter c_has_c_out bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_c_addsub_v12_0_i0' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/synth/lorenz_hardware_c_addsub_v12_0_i0.vhd:59' bound to instance 'core_instance0' of component 'lorenz_hardware_c_addsub_v12_0_i0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:486]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xladdsub__parameterized2' (37#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xlcmult__parameterized2' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+	Parameter core_name0 bound to: lorenz_hardware_mult_gen_v12_0_i5 - type: string 
+	Parameter a_width bound to: 35 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter b_width bound to: 4 - type: integer 
+	Parameter b_bin_pt bound to: 0 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter p_width bound to: 35 - type: integer 
+	Parameter p_bin_pt bound to: 24 - type: integer 
+	Parameter p_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter multsign bound to: 2 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 2 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter c_a_width bound to: 35 - type: integer 
+	Parameter c_b_width bound to: 5 - type: integer 
+	Parameter c_a_type bound to: 0 - type: integer 
+	Parameter c_b_type bound to: 1 - type: integer 
+	Parameter c_type bound to: 0 - type: integer 
+	Parameter const_bin_pt bound to: 1 - type: integer 
+	Parameter zero_const bound to: 0 - type: integer 
+	Parameter c_output_width bound to: 40 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_mult_gen_v12_0_i5' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i5/synth/lorenz_hardware_mult_gen_v12_0_i5.vhd:59' bound to instance 'core_instance4' of component 'lorenz_hardware_mult_gen_v12_0_i5' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:834]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_mult_gen_v12_0_i5' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i5/synth/lorenz_hardware_mult_gen_v12_0_i5.vhd:69]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i5/synth/lorenz_hardware_mult_gen_v12_0_i5.vhd:72]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i5/synth/lorenz_hardware_mult_gen_v12_0_i5.vhd:72]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_A_WIDTH bound to: 35 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 5 - type: integer 
+	Parameter C_B_TYPE bound to: 1 - type: integer 
+	Parameter C_OUT_HIGH bound to: 39 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 2 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 11100 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_16' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_16' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i5/synth/lorenz_hardware_mult_gen_v12_0_i5.vhd:124]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_mult_gen_v12_0_i5' (38#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i5/synth/lorenz_hardware_mult_gen_v12_0_i5.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xlcmult__parameterized2' (38#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xlcmult__parameterized3' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+	Parameter core_name0 bound to: lorenz_hardware_mult_gen_v12_0_i6 - type: string 
+	Parameter a_width bound to: 35 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter b_width bound to: 4 - type: integer 
+	Parameter b_bin_pt bound to: 24 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter p_width bound to: 35 - type: integer 
+	Parameter p_bin_pt bound to: 24 - type: integer 
+	Parameter p_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter multsign bound to: 2 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 2 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter c_a_width bound to: 35 - type: integer 
+	Parameter c_b_width bound to: 32 - type: integer 
+	Parameter c_a_type bound to: 0 - type: integer 
+	Parameter c_b_type bound to: 1 - type: integer 
+	Parameter c_type bound to: 0 - type: integer 
+	Parameter const_bin_pt bound to: 1 - type: integer 
+	Parameter zero_const bound to: 0 - type: integer 
+	Parameter c_output_width bound to: 67 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_mult_gen_v12_0_i6' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i6/synth/lorenz_hardware_mult_gen_v12_0_i6.vhd:59' bound to instance 'core_instance5' of component 'lorenz_hardware_mult_gen_v12_0_i6' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:845]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_mult_gen_v12_0_i6' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i6/synth/lorenz_hardware_mult_gen_v12_0_i6.vhd:69]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i6/synth/lorenz_hardware_mult_gen_v12_0_i6.vhd:72]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i6/synth/lorenz_hardware_mult_gen_v12_0_i6.vhd:72]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_A_WIDTH bound to: 35 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 26 - type: integer 
+	Parameter C_B_TYPE bound to: 1 - type: integer 
+	Parameter C_OUT_HIGH bound to: 66 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 2 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 10101010101010101010101011 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_16' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_16' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i6/synth/lorenz_hardware_mult_gen_v12_0_i6.vhd:124]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_mult_gen_v12_0_i6' (39#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i6/synth/lorenz_hardware_mult_gen_v12_0_i6.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xlcmult__parameterized3' (39#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xldelay__parameterized0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:60]
+	Parameter width bound to: 35 - type: integer 
+	Parameter latency bound to: 3 - type: integer 
+	Parameter reg_retiming bound to: 0 - type: integer 
+	Parameter reset bound to: 0 - type: integer 
+	Parameter width bound to: 35 - type: integer 
+	Parameter latency bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'synth_reg' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:20' bound to instance 'synth_reg_srl_inst' of component 'synth_reg' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_synth_reg__parameterized0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:30]
+	Parameter width bound to: 35 - type: integer 
+	Parameter latency bound to: 3 - type: integer 
+	Parameter width bound to: 35 - type: integer 
+	Parameter latency bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'srlc33e' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:22' bound to instance 'last_srlc33e' of component 'srlc33e' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_srlc33e__parameterized0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:31]
+	Parameter width bound to: 35 - type: integer 
+	Parameter latency bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_srlc33e__parameterized0' (39#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_synth_reg__parameterized0' (39#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xldelay__parameterized0' (39#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xlmult__parameterized0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:979]
+	Parameter core_name0 bound to: lorenz_hardware_mult_gen_v12_0_i7 - type: string 
+	Parameter a_width bound to: 35 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter b_width bound to: 35 - type: integer 
+	Parameter b_bin_pt bound to: 24 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter p_width bound to: 35 - type: integer 
+	Parameter p_bin_pt bound to: 24 - type: integer 
+	Parameter p_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 1 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter c_a_width bound to: 35 - type: integer 
+	Parameter c_b_width bound to: 35 - type: integer 
+	Parameter c_type bound to: 0 - type: integer 
+	Parameter c_a_type bound to: 0 - type: integer 
+	Parameter c_b_type bound to: 0 - type: integer 
+	Parameter c_pipelined bound to: 1 - type: integer 
+	Parameter c_baat bound to: 35 - type: integer 
+	Parameter multsign bound to: 2 - type: integer 
+	Parameter c_output_width bound to: 70 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_mult_gen_v12_0_i7' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i7/synth/lorenz_hardware_mult_gen_v12_0_i7.vhd:59' bound to instance 'core_instance1' of component 'lorenz_hardware_mult_gen_v12_0_i7' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:1064]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_mult_gen_v12_0_i7' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i7/synth/lorenz_hardware_mult_gen_v12_0_i7.vhd:70]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i7/synth/lorenz_hardware_mult_gen_v12_0_i7.vhd:73]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i7/synth/lorenz_hardware_mult_gen_v12_0_i7.vhd:73]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_A_WIDTH bound to: 35 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 35 - type: integer 
+	Parameter C_B_TYPE bound to: 0 - type: integer 
+	Parameter C_OUT_HIGH bound to: 69 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 1 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 1 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 10000001 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_16' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_16' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i7/synth/lorenz_hardware_mult_gen_v12_0_i7.vhd:127]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_mult_gen_v12_0_i7' (40#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i7/synth/lorenz_hardware_mult_gen_v12_0_i7.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xlmult__parameterized0' (40#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:979]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_lorenz_derivatives2' (41#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:445]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_subsystem1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:870]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xladdsub__parameterized3' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+	Parameter core_name0 bound to: lorenz_hardware_c_addsub_v12_0_i0 - type: string 
+	Parameter a_width bound to: 35 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter c_in_width bound to: 16 - type: integer 
+	Parameter c_in_bin_pt bound to: 4 - type: integer 
+	Parameter c_in_arith bound to: 1 - type: integer 
+	Parameter c_out_width bound to: 16 - type: integer 
+	Parameter c_out_bin_pt bound to: 4 - type: integer 
+	Parameter c_out_arith bound to: 1 - type: integer 
+	Parameter b_width bound to: 35 - type: integer 
+	Parameter b_bin_pt bound to: 24 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter s_width bound to: 36 - type: integer 
+	Parameter s_bin_pt bound to: 24 - type: integer 
+	Parameter s_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter full_s_width bound to: 36 - type: integer 
+	Parameter full_s_arith bound to: 2 - type: integer 
+	Parameter mode bound to: 1 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 1 - type: integer 
+	Parameter c_latency bound to: 1 - type: integer 
+	Parameter c_output_width bound to: 36 - type: integer 
+	Parameter c_has_c_in bound to: 0 - type: integer 
+	Parameter c_has_c_out bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_c_addsub_v12_0_i0' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/synth/lorenz_hardware_c_addsub_v12_0_i0.vhd:59' bound to instance 'core_instance0' of component 'lorenz_hardware_c_addsub_v12_0_i0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:486]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xladdsub__parameterized3' (41#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xladdsub__parameterized4' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+	Parameter core_name0 bound to: lorenz_hardware_c_addsub_v12_0_i3 - type: string 
+	Parameter a_width bound to: 68 - type: integer 
+	Parameter a_bin_pt bound to: 48 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter c_in_width bound to: 16 - type: integer 
+	Parameter c_in_bin_pt bound to: 4 - type: integer 
+	Parameter c_in_arith bound to: 1 - type: integer 
+	Parameter c_out_width bound to: 16 - type: integer 
+	Parameter c_out_bin_pt bound to: 4 - type: integer 
+	Parameter c_out_arith bound to: 1 - type: integer 
+	Parameter b_width bound to: 32 - type: integer 
+	Parameter b_bin_pt bound to: 24 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter s_width bound to: 32 - type: integer 
+	Parameter s_bin_pt bound to: 24 - type: integer 
+	Parameter s_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter full_s_width bound to: 69 - type: integer 
+	Parameter full_s_arith bound to: 2 - type: integer 
+	Parameter mode bound to: 1 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 1 - type: integer 
+	Parameter c_latency bound to: 1 - type: integer 
+	Parameter c_output_width bound to: 69 - type: integer 
+	Parameter c_has_c_in bound to: 0 - type: integer 
+	Parameter c_has_c_out bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_c_addsub_v12_0_i3' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i3/synth/lorenz_hardware_c_addsub_v12_0_i3.vhd:59' bound to instance 'core_instance3' of component 'lorenz_hardware_c_addsub_v12_0_i3' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:519]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_c_addsub_v12_0_i3' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i3/synth/lorenz_hardware_c_addsub_v12_0_i3.vhd:69]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 69 - type: integer 
+	Parameter C_B_WIDTH bound to: 69 - type: integer 
+	Parameter C_OUT_WIDTH bound to: 69 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_TYPE bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_ADD_MODE bound to: 0 - type: integer 
+	Parameter C_B_CONSTANT bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 000000000000000000000000000000000000000000000000000000000000000000000 - type: string 
+	Parameter C_AINIT_VAL bound to: 0 - type: string 
+	Parameter C_SINIT_VAL bound to: 0 - type: string 
+	Parameter C_CE_OVERRIDES_BYPASS bound to: 1 - type: integer 
+	Parameter C_BYPASS_LOW bound to: 0 - type: integer 
+	Parameter C_SCLR_OVERRIDES_SSET bound to: 1 - type: integer 
+	Parameter C_HAS_C_IN bound to: 0 - type: integer 
+	Parameter C_HAS_C_OUT bound to: 0 - type: integer 
+	Parameter C_BORROW_LOW bound to: 1 - type: integer 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_BYPASS bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_HAS_SSET bound to: 0 - type: integer 
+	Parameter C_HAS_SINIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_14' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i3/hdl/c_addsub_v12_0_vh_rfs.vhd:7026' bound to instance 'U0' of component 'c_addsub_v12_0_14' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i3/synth/lorenz_hardware_c_addsub_v12_0_i3.vhd:136]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_c_addsub_v12_0_i3' (42#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i3/synth/lorenz_hardware_c_addsub_v12_0_i3.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xladdsub__parameterized4' (42#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xlcmult__parameterized4' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+	Parameter core_name0 bound to: lorenz_hardware_mult_gen_v12_0_i8 - type: string 
+	Parameter a_width bound to: 36 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter b_width bound to: 4 - type: integer 
+	Parameter b_bin_pt bound to: 24 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter p_width bound to: 68 - type: integer 
+	Parameter p_bin_pt bound to: 48 - type: integer 
+	Parameter p_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter multsign bound to: 2 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 1 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter c_a_width bound to: 36 - type: integer 
+	Parameter c_b_width bound to: 32 - type: integer 
+	Parameter c_a_type bound to: 0 - type: integer 
+	Parameter c_b_type bound to: 1 - type: integer 
+	Parameter c_type bound to: 0 - type: integer 
+	Parameter const_bin_pt bound to: 1 - type: integer 
+	Parameter zero_const bound to: 0 - type: integer 
+	Parameter c_output_width bound to: 68 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_mult_gen_v12_0_i8' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/synth/lorenz_hardware_mult_gen_v12_0_i8.vhd:59' bound to instance 'core_instance6' of component 'lorenz_hardware_mult_gen_v12_0_i8' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:856]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_mult_gen_v12_0_i8' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/synth/lorenz_hardware_mult_gen_v12_0_i8.vhd:69]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/synth/lorenz_hardware_mult_gen_v12_0_i8.vhd:72]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/synth/lorenz_hardware_mult_gen_v12_0_i8.vhd:72]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_A_WIDTH bound to: 36 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 17 - type: integer 
+	Parameter C_B_TYPE bound to: 1 - type: integer 
+	Parameter C_OUT_HIGH bound to: 67 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 2 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 10100011110101110 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_16' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_16' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/synth/lorenz_hardware_mult_gen_v12_0_i8.vhd:124]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_mult_gen_v12_0_i8' (43#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/synth/lorenz_hardware_mult_gen_v12_0_i8.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xlcmult__parameterized4' (43#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xldelay__parameterized1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:60]
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter reg_retiming bound to: 0 - type: integer 
+	Parameter reset bound to: 0 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'synth_reg' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:20' bound to instance 'synth_reg_srl_inst' of component 'synth_reg' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_synth_reg__parameterized1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:30]
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'srlc33e' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:22' bound to instance 'last_srlc33e' of component 'srlc33e' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_srlc33e__parameterized1' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:31]
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_srlc33e__parameterized1' (43#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_synth_reg__parameterized1' (43#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xldelay__parameterized1' (43#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_subsystem1' (44#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:870]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_subsystem2' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:1029]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_subsystem2' (45#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:1029]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_subsystem3' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:1188]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_subsystem3' (46#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:1188]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xlcmult__parameterized5' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+	Parameter core_name0 bound to: lorenz_hardware_mult_gen_v12_0_i0 - type: string 
+	Parameter a_width bound to: 35 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter b_width bound to: 4 - type: integer 
+	Parameter b_bin_pt bound to: 56 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter p_width bound to: 35 - type: integer 
+	Parameter p_bin_pt bound to: 24 - type: integer 
+	Parameter p_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter multsign bound to: 2 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 2 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter c_a_width bound to: 35 - type: integer 
+	Parameter c_b_width bound to: 64 - type: integer 
+	Parameter c_a_type bound to: 0 - type: integer 
+	Parameter c_b_type bound to: 1 - type: integer 
+	Parameter c_type bound to: 0 - type: integer 
+	Parameter const_bin_pt bound to: 1 - type: integer 
+	Parameter zero_const bound to: 0 - type: integer 
+	Parameter c_output_width bound to: 99 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_mult_gen_v12_0_i0' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i0/synth/lorenz_hardware_mult_gen_v12_0_i0.vhd:59' bound to instance 'core_instance0' of component 'lorenz_hardware_mult_gen_v12_0_i0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:790]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_mult_gen_v12_0_i0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i0/synth/lorenz_hardware_mult_gen_v12_0_i0.vhd:69]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i0/synth/lorenz_hardware_mult_gen_v12_0_i0.vhd:72]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i0/synth/lorenz_hardware_mult_gen_v12_0_i0.vhd:72]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_A_WIDTH bound to: 35 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 49 - type: integer 
+	Parameter C_B_TYPE bound to: 1 - type: integer 
+	Parameter C_OUT_HIGH bound to: 98 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 2 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 1010001111010111000010100011110101110000101001000 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_16' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i8/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_16' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i0/synth/lorenz_hardware_mult_gen_v12_0_i0.vhd:124]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_mult_gen_v12_0_i0' (47#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_mult_gen_v12_0_i0/synth/lorenz_hardware_mult_gen_v12_0_i0.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xlcmult__parameterized5' (47#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:674]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xldelay__parameterized2' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:60]
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 6 - type: integer 
+	Parameter reg_retiming bound to: 0 - type: integer 
+	Parameter reset bound to: 0 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'synth_reg' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:20' bound to instance 'synth_reg_srl_inst' of component 'synth_reg' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_synth_reg__parameterized2' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:30]
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 6 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'srlc33e' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:22' bound to instance 'last_srlc33e' of component 'srlc33e' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_srlc33e__parameterized2' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:31]
+	Parameter width bound to: 32 - type: integer 
+	Parameter latency bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_srlc33e__parameterized2' (47#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_synth_reg__parameterized2' (47#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xldelay__parameterized2' (47#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xldelay__parameterized3' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:60]
+	Parameter width bound to: 35 - type: integer 
+	Parameter latency bound to: 6 - type: integer 
+	Parameter reg_retiming bound to: 0 - type: integer 
+	Parameter reset bound to: 0 - type: integer 
+	Parameter width bound to: 35 - type: integer 
+	Parameter latency bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'synth_reg' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:20' bound to instance 'synth_reg_srl_inst' of component 'synth_reg' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_synth_reg__parameterized3' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:30]
+	Parameter width bound to: 35 - type: integer 
+	Parameter latency bound to: 6 - type: integer 
+	Parameter width bound to: 35 - type: integer 
+	Parameter latency bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'srlc33e' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:22' bound to instance 'last_srlc33e' of component 'srlc33e' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_srlc33e__parameterized3' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:31]
+	Parameter width bound to: 35 - type: integer 
+	Parameter latency bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_srlc33e__parameterized3' (47#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/srl33e.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_synth_reg__parameterized3' (47#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/synth_reg.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xldelay__parameterized3' (47#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'lorenz_hardware_xladdsub__parameterized5' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+	Parameter core_name0 bound to: lorenz_hardware_c_addsub_v12_0_i0 - type: string 
+	Parameter a_width bound to: 35 - type: integer 
+	Parameter a_bin_pt bound to: 24 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter c_in_width bound to: 16 - type: integer 
+	Parameter c_in_bin_pt bound to: 4 - type: integer 
+	Parameter c_in_arith bound to: 1 - type: integer 
+	Parameter c_out_width bound to: 16 - type: integer 
+	Parameter c_out_bin_pt bound to: 4 - type: integer 
+	Parameter c_out_arith bound to: 1 - type: integer 
+	Parameter b_width bound to: 32 - type: integer 
+	Parameter b_bin_pt bound to: 24 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter s_width bound to: 35 - type: integer 
+	Parameter s_bin_pt bound to: 24 - type: integer 
+	Parameter s_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter full_s_width bound to: 36 - type: integer 
+	Parameter full_s_arith bound to: 2 - type: integer 
+	Parameter mode bound to: 1 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 1 - type: integer 
+	Parameter c_latency bound to: 1 - type: integer 
+	Parameter c_output_width bound to: 36 - type: integer 
+	Parameter c_has_c_in bound to: 0 - type: integer 
+	Parameter c_has_c_out bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'lorenz_hardware_c_addsub_v12_0_i0' declared at 'h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/lorenz_hardware_c_addsub_v12_0_i0/synth/lorenz_hardware_c_addsub_v12_0_i0.vhd:59' bound to instance 'core_instance0' of component 'lorenz_hardware_c_addsub_v12_0_i0' [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:486]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_xladdsub__parameterized5' (47#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware_entity_declarations.vhd:381]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_subsystem' (48#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:1349]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware_struct' (49#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:1950]
+INFO: [Synth 8-256] done synthesizing module 'lorenz_hardware' (50#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/24dc/hdl/lorenz_hardware.vhd:2037]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_lorenz_hardware_0_0' (51#1) [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/synth/design_1_lorenz_hardware_0_0.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1169.191 ; gain = 100.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1169.191 ; gain = 100.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1169.191 ; gain = 100.355
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.618 . Memory (MB): peak = 1169.191 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2038 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/constrs/lorenz_hardware.xdc] for cell 'inst'
+Finished Parsing XDC File [h:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_lorenz_hardware_0_0/constrs/lorenz_hardware.xdc] for cell 'inst'
+Parsing XDC File [H:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.runs/design_1_lorenz_hardware_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [H:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.runs/design_1_lorenz_hardware_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1249.270 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 623 instances were transformed.
+  FDE => FDRE: 623 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.251 . Memory (MB): peak = 1251.285 ; gain = 2.016
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 1251.285 ; gain = 182.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 1251.285 ; gain = 182.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  H:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.runs/design_1_lorenz_hardware_0_0_synth_1/dont_touch.xdc, line 48).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/subsystem1/cmult3/\comp6.core_instance6 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/subsystem2/cmult3/\comp6.core_instance6 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/subsystem3/cmult3/\comp6.core_instance6 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives2/mult1/\comp1.core_instance1 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives2/mult2/\comp1.core_instance1 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives2/cmult2/\comp5.core_instance5 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives2/cmult/\comp4.core_instance4 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives1/mult1/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives1/mult2/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives1/cmult2/\comp3.core_instance3 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives1/cmult1/\comp2.core_instance2 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives2/cmult1/\comp2.core_instance2 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives1/cmult/\comp1.core_instance1 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/cmult1/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/cmult2/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/cmult3/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/subsystem1/addsub21/\comp3.core_instance3 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/subsystem2/addsub21/\comp3.core_instance3 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/subsystem3/addsub21/\comp3.core_instance3 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives1/addsub4/\comp2.core_instance2 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives1/addsub5/\comp2.core_instance2 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives2/addsub3/\comp2.core_instance2 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives2/addsub4/\comp2.core_instance2 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives2/addsub5/\comp2.core_instance2 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives1/addsub3/\comp1.core_instance1 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives1/addsub1/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/lorenz_derivatives2/addsub1/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/subsystem1/addsub18/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/subsystem2/addsub18/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/subsystem3/addsub18/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/addsub2/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/addsub1/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/lorenz_hardware_struct/subsystem/addsub3/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1251.285 ; gain = 182.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:01:17 . Memory (MB): peak = 1251.285 ; gain = 182.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:31 . Memory (MB): peak = 1251.285 ; gain = 182.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:44 . Memory (MB): peak = 1272.410 ; gain = 203.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:44 . Memory (MB): peak = 1274.648 ; gain = 205.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:06 ; elapsed = 00:01:47 . Memory (MB): peak = 1311.344 ; gain = 242.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:10 ; elapsed = 00:01:51 . Memory (MB): peak = 1316.121 ; gain = 247.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:10 ; elapsed = 00:01:51 . Memory (MB): peak = 1316.121 ; gain = 247.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:11 ; elapsed = 00:01:52 . Memory (MB): peak = 1316.121 ; gain = 247.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:11 ; elapsed = 00:01:52 . Memory (MB): peak = 1316.121 ; gain = 247.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:11 ; elapsed = 00:01:52 . Memory (MB): peak = 1316.121 ; gain = 247.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:11 ; elapsed = 00:01:53 . Memory (MB): peak = 1316.121 ; gain = 247.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   461|
+|2     |DSP48E1 |    16|
+|6     |LUT1    |     1|
+|7     |LUT2    |  1805|
+|8     |LUT3    |   288|
+|9     |LUT4    |   139|
+|10    |LUT5    |   189|
+|11    |LUT6    |  1003|
+|12    |MUXCY   |   691|
+|13    |SRLC32E |   431|
+|14    |XORCY   |   708|
+|15    |FDE     |   623|
+|16    |FDRE    |  2698|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:11 ; elapsed = 00:01:53 . Memory (MB): peak = 1316.121 ; gain = 247.285
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:01:42 . Memory (MB): peak = 1316.121 ; gain = 165.191
+Synthesis Optimization Complete : Time (s): cpu = 00:01:11 ; elapsed = 00:01:53 . Memory (MB): peak = 1316.121 ; gain = 247.285
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.489 . Memory (MB): peak = 1316.121 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2499 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1326.176 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 803 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 180 instances
+  FDE => FDRE: 623 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+296 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:02:21 . Memory (MB): peak = 1326.176 ; gain = 257.340
+INFO: [Common 17-1381] The checkpoint 'H:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.runs/design_1_lorenz_hardware_0_0_synth_1/design_1_lorenz_hardware_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_lorenz_hardware_0_0, cache-ID = 294a6248bcde1c71
+INFO: [Coretcl 2-1174] Renamed 447 cell refs.
+INFO: [Common 17-1381] The checkpoint 'H:/MyDocuments/Year3/pynq-math-visualisations/lorenz-heun/project_1/project_1.runs/design_1_lorenz_hardware_0_0_synth_1/design_1_lorenz_hardware_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_lorenz_hardware_0_0_utilization_synth.rpt -pb design_1_lorenz_hardware_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 20 17:01:28 2023...
