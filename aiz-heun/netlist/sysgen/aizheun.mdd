@@ -1,8 +1,0 @@
-OPTION psf_version = 2.1;
-BEGIN driver aizheun
- OPTION supported_peripherals = (aizheun_v1_0);
- OPTION driver_state = ACTIVE;
- OPTION copyfiles = all;
- OPTION name = aizheun;
- OPTION version = 1.0;
-END driver
