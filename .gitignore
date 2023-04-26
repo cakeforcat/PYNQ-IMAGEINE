@@ -10,3 +10,5 @@
 *.srcs
 *.xpr
 *.xsa
+*.htm
+*.autosave
